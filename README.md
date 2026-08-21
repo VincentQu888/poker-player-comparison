@@ -1,3 +1,5 @@
+## incredibly vibecoded experiment i wanted to try
+
 # Poker player comparison
 
 Can we rank online-poker players by **empirical decision quality** from hand

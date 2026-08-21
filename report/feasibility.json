@@ -1,0 +1,290 @@
+{
+  "totals": {
+    "hand_players": 116861965,
+    "decisions": 174164978
+  },
+  "n_hands": 21605555,
+  "by_site_level": [
+    {
+      "site": "PS",
+      "nl_level": 25,
+      "hand_players": 29076609,
+      "players": 92390
+    },
+    {
+      "site": "IPN",
+      "nl_level": 100,
+      "hand_players": 10942985,
+      "players": 21455
+    },
+    {
+      "site": "PTY",
+      "nl_level": 25,
+      "hand_players": 9124964,
+      "players": 30591
+    },
+    {
+      "site": "IPN",
+      "nl_level": 200,
+      "hand_players": 9109046,
+      "players": 14442
+    },
+    {
+      "site": "PS",
+      "nl_level": 200,
+      "hand_players": 6172641,
+      "players": 24525
+    },
+    {
+      "site": "IPN",
+      "nl_level": 400,
+      "hand_players": 5517396,
+      "players": 7668
+    },
+    {
+      "site": "PS",
+      "nl_level": 50,
+      "hand_players": 5227275,
+      "players": 39166
+    },
+    {
+      "site": "ONG",
+      "nl_level": 400,
+      "hand_players": 4642904,
+      "players": 7944
+    },
+    {
+      "site": "PS",
+      "nl_level": 400,
+      "hand_players": 4539547,
+      "players": 14483
+    },
+    {
+      "site": "PTY",
+      "nl_level": 400,
+      "hand_players": 3934595,
+      "players": 5352
+    },
+    {
+      "site": "FTP",
+      "nl_level": 50,
+      "hand_players": 3180503,
+      "players": 28333
+    },
+    {
+      "site": "IPN",
+      "nl_level": 1000,
+      "hand_players": 3098304,
+      "players": 3274
+    },
+    {
+      "site": "ABS",
+      "nl_level": 50,
+      "hand_players": 2273209,
+      "players": 13721
+    },
+    {
+      "site": "PTY",
+      "nl_level": 1000,
+      "hand_players": 2236638,
+      "players": 2342
+    },
+    {
+      "site": "FTP",
+      "nl_level": 600,
+      "hand_players": 1920938,
+      "players": 6904
+    },
+    {
+      "site": "PS",
+      "nl_level": 600,
+      "hand_players": 1865954,
+      "players": 7170
+    },
+    {
+      "site": "FTP",
+      "nl_level": 1000,
+      "hand_players": 1759731,
+      "players": 4672
+    },
+    {
+      "site": "ABS",
+      "nl_level": 100,
+      "hand_players": 1758511,
+      "players": 8682
+    },
+    {
+      "site": "IPN",
+      "nl_level": 600,
+      "hand_players": 1737475,
+      "players": 3678
+    },
+    {
+      "site": "ABS",
+      "nl_level": 200,
+      "hand_players": 1653597,
+      "players": 5506
+    },
+    {
+      "site": "PS",
+      "nl_level": 1000,
+      "hand_players": 1546552,
+      "players": 4083
+    },
+    {
+      "site": "ONG",
+      "nl_level": 600,
+      "hand_players": 1515608,
+      "players": 3238
+    },
+    {
+      "site": "PTY",
+      "nl_level": 600,
+      "hand_players": 1484919,
+      "players": 2770
+    },
+    {
+      "site": "ONG",
+      "nl_level": 1000,
+      "hand_players": 1443573,
+      "players": 2347
+    },
+    {
+      "site": "ABS",
+      "nl_level": 400,
+      "hand_players": 665972,
+      "players": 2148
+    },
+    {
+      "site": "ABS",
+      "nl_level": 1000,
+      "hand_players": 276213,
+      "players": 753
+    },
+    {
+      "site": "ABS",
+      "nl_level": 600,
+      "hand_players": 156306,
+      "players": 777
+    }
+  ],
+  "by_site": [
+    {
+      "site": "PS",
+      "hand_players": 48428578,
+      "players": 145343
+    },
+    {
+      "site": "IPN",
+      "hand_players": 30405206,
+      "players": 30604
+    },
+    {
+      "site": "PTY",
+      "hand_players": 16781116,
+      "players": 36634
+    },
+    {
+      "site": "ONG",
+      "hand_players": 7602085,
+      "players": 9196
+    },
+    {
+      "site": "FTP",
+      "hand_players": 6861172,
+      "players": 36812
+    },
+    {
+      "site": "ABS",
+      "hand_players": 6783808,
+      "players": 21800
+    }
+  ],
+  "n_players": 280389,
+  "hands_per_player_quantiles": {
+    "min": 1,
+    "p25": 20.0,
+    "p50": 60.0,
+    "p75": 194.0,
+    "p90": 640.0,
+    "p99": 7426.719999999972,
+    "max": 106809,
+    "mean": 416.78512709129103
+  },
+  "players_ge": {
+    "ge_1k": 19359.0,
+    "ge_5k": 4371.0,
+    "ge_10k": 1876.0,
+    "ge_25k": 318.0,
+    "ge_50k": 39.0
+  },
+  "volume_share": {
+    "total_hands": 116861965.0,
+    "share_ge_1k": 0.7222569379181669,
+    "share_ge_5k": 0.4525955643480751,
+    "share_ge_10k": 0.3029131420133146
+  },
+  "decisions_per_player_quantiles": {
+    "min": 1,
+    "p50": 113.0,
+    "p90": 1080.0,
+    "p99": 10031.369999999937,
+    "max": 128409,
+    "mean": 621.5249980372704
+  },
+  "players_dec_ge": {
+    "ge_1k": 30121.0,
+    "ge_5k": 6306.0,
+    "ge_25k": 588.0
+  },
+  "visibility_overall": {
+    "frac_saw_hole": 0.03806093796215047,
+    "frac_reached_sd": 0.05947290035727193,
+    "frac_shown_given_sd": 0.6399711084125166,
+    "frac_shown_given_no_sd": 0.0
+  },
+  "missing_card_bias": {
+    "shown_given_vpip": 0.13652044281590126,
+    "shown_given_novpip": 0.003185188822147961,
+    "mean_net_shown": 5.849236016718206,
+    "mean_net_notshown": -0.2906403487859226,
+    "mean_inv_shown": 20.184514350308348,
+    "mean_inv_notshown": 1.5779921362843223
+  },
+  "net_source_dist": [
+    {
+      "net_source": "uncontested",
+      "n": 96457781,
+      "mean_net": -0.03376239079247652
+    },
+    {
+      "net_source": "showdown_eval",
+      "n": 8442461,
+      "mean_net": -0.1876868621299995
+    },
+    {
+      "net_source": "sd_heuristic",
+      "n": 7015664,
+      "mean_net": -0.1918569140898316
+    },
+    {
+      "net_source": "unknown",
+      "n": 4831615,
+      "mean_net": NaN
+    },
+    {
+      "net_source": "winnings_winner",
+      "n": 114444,
+      "mean_net": -0.0899007150600205
+    }
+  ],
+  "conservation": {
+    "hands_with_net": 20719712,
+    "mean_sum_net_bb": -0.2991101687903513,
+    "p01": -3.0,
+    "p50": -2.9802322387695312e-08,
+    "p99": 0.0,
+    "hands_money_created": 0.0,
+    "hands_exact_zero": 11206073.0
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "cohort_ge_1000": {
+    "players": 18783,
+    "decisions": 115018102,
+    "s_core": {
+      "distinct_states": 1794,
+      "supported_decision_frac": {
+        "f3": 0.9751,
+        "f5": 0.9575,
+        "f10": 0.9244
+      },
+      "common_state_coverage": {
+        "n3_X10": {
+          "states": 301,
+          "dec_coverage": 0.9728
+        },
+        "n3_X20": {
+          "states": 186,
+          "dec_coverage": 0.9424
+        },
+        "n3_X30": {
+          "states": 141,
+          "dec_coverage": 0.9178
+        },
+        "n3_X50": {
+          "states": 64,
+          "dec_coverage": 0.7839
+        },
+        "n5_X10": {
+          "states": 210,
+          "dec_coverage": 0.9539
+        },
+        "n5_X20": {
+          "states": 142,
+          "dec_coverage": 0.9232
+        },
+        "n5_X30": {
+          "states": 90,
+          "dec_coverage": 0.8406
+        },
+        "n5_X50": {
+          "states": 41,
+          "dec_coverage": 0.7459
+        },
+        "n10_X10": {
+          "states": 137,
+          "dec_coverage": 0.9217
+        },
+        "n10_X20": {
+          "states": 82,
+          "dec_coverage": 0.871
+        },
+        "n10_X30": {
+          "states": 48,
+          "dec_coverage": 0.7755
+        },
+        "n10_X50": {
+          "states": 25,
+          "dec_coverage": 0.6985
+        }
+      }
+    },
+    "s_fine": {
+      "distinct_states": 16796,
+      "supported_decision_frac": {
+        "f3": 0.9361,
+        "f5": 0.9047,
+        "f10": 0.8566
+      },
+      "common_state_coverage": {
+        "n3_X10": {
+          "states": 404,
+          "dec_coverage": 0.9156
+        },
+        "n3_X20": {
+          "states": 228,
+          "dec_coverage": 0.8687
+        },
+        "n3_X30": {
+          "states": 139,
+          "dec_coverage": 0.7847
+        },
+        "n3_X50": {
+          "states": 68,
+          "dec_coverage": 0.6991
+        },
+        "n5_X10": {
+          "states": 261,
+          "dec_coverage": 0.886
+        },
+        "n5_X20": {
+          "states": 152,
+          "dec_coverage": 0.827
+        },
+        "n5_X30": {
+          "states": 101,
+          "dec_coverage": 0.7565
+        },
+        "n5_X50": {
+          "states": 44,
+          "dec_coverage": 0.6574
+        },
+        "n10_X10": {
+          "states": 156,
+          "dec_coverage": 0.8403
+        },
+        "n10_X20": {
+          "states": 78,
+          "dec_coverage": 0.7487
+        },
+        "n10_X30": {
+          "states": 53,
+          "dec_coverage": 0.6928
+        },
+        "n10_X50": {
+          "states": 27,
+          "dec_coverage": 0.6082
+        }
+      }
+    }
+  },
+  "cohort_ge_5000": {
+    "players": 4249,
+    "decisions": 68415597,
+    "s_core": {
+      "distinct_states": 1766,
+      "supported_decision_frac": {
+        "f3": 0.9896,
+        "f5": 0.9817,
+        "f10": 0.9654
+      },
+      "common_state_coverage": {
+        "n3_X10": {
+          "states": 413,
+          "dec_coverage": 0.9882
+        },
+        "n3_X20": {
+          "states": 283,
+          "dec_coverage": 0.9714
+        },
+        "n3_X30": {
+          "states": 200,
+          "dec_coverage": 0.9117
+        },
+        "n3_X50": {
+          "states": 123,
+          "dec_coverage": 0.8584
+        },
+        "n5_X10": {
+          "states": 324,
+          "dec_coverage": 0.98
+        },
+        "n5_X20": {
+          "states": 216,
+          "dec_coverage": 0.953
+        },
+        "n5_X30": {
+          "states": 161,
+          "dec_coverage": 0.8988
+        },
+        "n5_X50": {
+          "states": 89,
+          "dec_coverage": 0.8329
+        },
+        "n10_X10": {
+          "states": 224,
+          "dec_coverage": 0.9646
+        },
+        "n10_X20": {
+          "states": 148,
+          "dec_coverage": 0.8953
+        },
+        "n10_X30": {
+          "states": 107,
+          "dec_coverage": 0.8651
+        },
+        "n10_X50": {
+          "states": 57,
+          "dec_coverage": 0.7996
+        }
+      }
+    },
+    "s_fine": {
+      "distinct_states": 14954,
+      "supported_decision_frac": {
+        "f3": 0.9672,
+        "f5": 0.9486,
+        "f10": 0.9176
+      },
+      "common_state_coverage": {
+        "n3_X10": {
+          "states": 724,
+          "dec_coverage": 0.9594
+        },
+        "n3_X20": {
+          "states": 433,
+          "dec_coverage": 0.8931
+        },
+        "n3_X30": {
+          "states": 288,
+          "dec_coverage": 0.863
+        },
+        "n3_X50": {
+          "states": 145,
+          "dec_coverage": 0.7961
+        },
+        "n5_X10": {
+          "states": 498,
+          "dec_coverage": 0.9415
+        },
+        "n5_X20": {
+          "states": 282,
+          "dec_coverage": 0.8642
+        },
+        "n5_X30": {
+          "states": 192,
+          "dec_coverage": 0.833
+        },
+        "n5_X50": {
+          "states": 106,
+          "dec_coverage": 0.7681
+        },
+        "n10_X10": {
+          "states": 279,
+          "dec_coverage": 0.9088
+        },
+        "n10_X20": {
+          "states": 168,
+          "dec_coverage": 0.8264
+        },
+        "n10_X30": {
+          "states": 128,
+          "dec_coverage": 0.8048
+        },
+        "n10_X50": {
+          "states": 61,
+          "dec_coverage": 0.7149
+        }
+      }
+    }
+  }
+}

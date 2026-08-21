@@ -1,0 +1,7 @@
+# regenerated data (multi-GB, not distributed; see README)
+data/
+figs/
+# python
+__pycache__/
+*.pyc
+.DS_Store

@@ -129,11 +129,19 @@ def ensure_vtt(url: str, out_dir: Path, basename: str) -> Path:
     return existing
 
 
+def add_caption(parts: list[str], text: str) -> list[str]:
+    if not text:
+        return parts
+    if parts and (text in parts[-1] or parts[-1] in text):
+        return [*parts[:-1], max(parts[-1], text, key=len)]
+    return [*parts, text]
+
+
 def snippet_near(cues: list[Cue], start: float, seconds: int = 45) -> str:
     parts: list[str] = []
     for cue in cues:
-        if start <= cue.start <= start + seconds and cue.text not in parts[-3:]:
-            parts.append(cue.text)
+        if start <= cue.start <= start + seconds:
+            parts = add_caption(parts, cue.text)
     return re.sub(r"\s+", " ", " ".join(parts)).strip()[:500]
 
 
@@ -202,6 +210,7 @@ def self_test() -> None:
         assert cues == [Cue(1.0, 2.0, "Phil raises to 1000")]
         assert pick_candidates([Cue(1300, 1301, "Phil raises")], 1, 120, 1200) == [1300]
         assert snippet_near([Cue(1, 2, "Phil raises"), Cue(2, 3, "Phil raises")], 1) == "Phil raises"
+        assert snippet_near([Cue(1, 2, "Phil"), Cue(2, 3, "Phil raises")], 1) == "Phil raises"
     finally:
         tmp.unlink(missing_ok=True)
 

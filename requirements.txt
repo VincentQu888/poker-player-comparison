@@ -3,6 +3,3 @@ pyarrow>=15
 numpy>=1.26
 pandas>=2.0
 eval7>=0.1.10
-yt-dlp>=2026.8.19
-opencv-python-headless>=5.0.0.93
-easyocr>=1.7.2

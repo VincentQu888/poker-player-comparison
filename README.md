@@ -90,10 +90,15 @@ python src/tournament.py
 
 ## Data
 
-Not included (multi-GB, and upstream-owned). Source: the University of Toronto
-Computer Poker Research Group PHH release of the HandHQ obfuscated online NLHE cash
-hands. Place the `.phhs` files where `parse_phh.py` expects them
-(`phh-dataset-src/data/handhq/...`) and regenerate `research/data/` locally.
+Not included (multi-GB, upstream-owned). Use public research datasets instead of
+livestream/video extraction:
 
-Player IDs are the dataset's own per-site obfuscated tokens; all published numbers
-here are aggregate stats keyed by those anonymized IDs.
+- Pluribus dataset: https://zenodo.org/records/17136841
+- ACPC dataset: https://zenodo.org/records/10796886
+
+Download them outside git, then add a tiny local path adapter rather than committing
+raw hands. The old HCL livestream OCR/template data was removed because player/action
+extraction was too noisy for ranking.
+
+Player IDs should remain the dataset's own anonymized/bot identifiers; published
+numbers should stay aggregate unless a dataset license explicitly allows more.

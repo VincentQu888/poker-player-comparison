@@ -67,7 +67,7 @@ def frame_at(cap: cv2.VideoCapture, second: int):
     return frame
 
 
-def make_contact_sheet(cap: cv2.VideoCapture, start: int, end: int, out_path: Path) -> None:
+def make_contact_sheet(cap: cv2.VideoCapture, start: int, end: int, out_path: Path, cell_size: tuple[int, int] = (320, 180)) -> None:
     if out_path.exists():
         return
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -77,7 +77,7 @@ def make_contact_sheet(cap: cv2.VideoCapture, start: int, end: int, out_path: Pa
         frame = frame_at(cap, second)
         if frame is None:
             continue
-        frame = cv2.resize(frame, (320, 180))
+        frame = cv2.resize(frame, cell_size)
         cv2.putText(frame, f"t={second}s", (8, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 2)
         frames.append(frame)
     if not frames:
@@ -109,7 +109,7 @@ def extract(args: argparse.Namespace) -> list[ExtractedHand]:
                 cap = cv2.VideoCapture(stream_url)
                 if not cap.isOpened():
                     raise RuntimeError("Could not open video stream")
-            make_contact_sheet(cap, start, end, sheet)
+            make_contact_sheet(cap, start, end, sheet, (args.cell_width, args.cell_height))
         rows.append(
             ExtractedHand(
                 hand_id=hand_id,
@@ -145,6 +145,8 @@ def main() -> None:
     parser.add_argument("--out", type=Path, default=Path("report/livestream/hcl_ivey_dwan_garrett_extracted_hands.jsonl"))
     parser.add_argument("--frames-dir", type=Path, default=Path("report/livestream/frames"))
     parser.add_argument("--max-height", type=int, default=360)
+    parser.add_argument("--cell-width", type=int, default=320)
+    parser.add_argument("--cell-height", type=int, default=180)
     parser.add_argument("--limit", type=int, default=100)
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()

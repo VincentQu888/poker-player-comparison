@@ -31,6 +31,8 @@ TEXT_FIELDS = {
     "top_position_action",
     "bottom_position_action",
     "pot_amount",
+    "left_player_top",
+    "left_player_bottom",
 }
 CARD_FIELDS = {
     "top_hole_card_1",
@@ -144,6 +146,14 @@ def extract_frame_state(frame, layout, reader, templates, offset_index: int) -> 
     )
 
 
+def extraction_status(cards: list[str]) -> str:
+    if any(card == "unknown" for card in cards):
+        return "low_confidence_cards"
+    if len(cards) != len(set(cards)):
+        return "duplicate_cards"
+    return "complete"
+
+
 def build_hand(candidate, states: list[FrameState], captions: list[str]) -> AutoHand:
     top_cards = [mode_known([s.cards.get("top_hole_card_1", "unknown") for s in states]), mode_known([s.cards.get("top_hole_card_2", "unknown") for s in states])]
     bottom_cards = [mode_known([s.cards.get("bottom_hole_card_1", "unknown") for s in states]), mode_known([s.cards.get("bottom_hole_card_2", "unknown") for s in states])]
@@ -154,7 +164,7 @@ def build_hand(candidate, states: list[FrameState], captions: list[str]) -> Auto
         {"name": latest_text.get("top_name") or "unknown", "stack": parse_amount(latest_text.get("top_stack", "")), "cards": top_cards},
         {"name": latest_text.get("bottom_name") or "unknown", "stack": parse_amount(latest_text.get("bottom_stack", "")), "cards": bottom_cards},
     ]
-    unknown_cards = sum(card == "unknown" for card in [*top_cards, *bottom_cards, *board])
+    all_cards = [*top_cards, *bottom_cards, *board]
     return AutoHand(
         hand_id=str(candidate["candidate_id"]),
         review_url=str(candidate["review_url"]),
@@ -165,8 +175,14 @@ def build_hand(candidate, states: list[FrameState], captions: list[str]) -> Auto
         pot=parse_amount(latest_text.get("pot_amount", "")),
         action_caption_snippets=captions,
         frame_states=states,
-        extraction_status="complete" if unknown_cards == 0 else "low_confidence_cards",
+        extraction_status=extraction_status(all_cards),
     )
+
+
+def self_test() -> None:
+    assert extraction_status(["As", "Kd", "2c"]) == "complete"
+    assert extraction_status(["As", "unknown"]) == "low_confidence_cards"
+    assert extraction_status(["As", "As"]) == "duplicate_cards"
 
 
 def main() -> None:
@@ -178,8 +194,15 @@ def main() -> None:
     parser.add_argument("--templates", type=Path, default=Path("report/livestream/card_templates"))
     parser.add_argument("--out", type=Path, default=Path("report/livestream/hcl_auto_hands.jsonl"))
     parser.add_argument("--limit", type=int, default=100)
+    parser.add_argument("--offset", type=int, default=0)
     parser.add_argument("--no-ocr", action="store_true")
+    parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args()
+
+    if args.self_test:
+        self_test()
+        print("ok")
+        return
 
     reader = None
     if not args.no_ocr:
@@ -193,7 +216,8 @@ def main() -> None:
     layout = load_layout(args.layout)
     templates = load_card_templates(args.templates)
     cues = parse_vtt(args.vtt)
-    candidates = [json.loads(line) for line in args.candidates.read_text(encoding="utf-8").splitlines() if line.strip()][: args.limit]
+    all_candidates = [json.loads(line) for line in args.candidates.read_text(encoding="utf-8").splitlines() if line.strip()]
+    candidates = all_candidates[args.offset : args.offset + args.limit]
     hands: list[AutoHand] = []
     for candidate in candidates:
         sheet_path = args.frames_dir / f"{candidate['candidate_id']}.jpg"

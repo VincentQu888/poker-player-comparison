@@ -1,8 +1,8 @@
 {
-  "cohort": 4188,
-  "resolvably_winning": 371,
-  "resolvably_losing": 625,
-  "indistinguishable_pct": 76.2,
-  "median_CI_halfwidth_bb100": 11.960837190871311,
-  "generalization_spearman": 0.3186821423973559
+  "cohort": 6,
+  "resolvably_winning": 0,
+  "resolvably_losing": 0,
+  "indistinguishable_pct": 100.0,
+  "median_CI_halfwidth_bb100": 20.926316177916547,
+  "generalization_spearman": NaN
 }

@@ -1,240 +1,240 @@
 {
   "cohort_ge_1000": {
-    "players": 18783,
-    "decisions": 115018102,
+    "players": 12,
+    "decisions": 89392,
     "s_core": {
-      "distinct_states": 1794,
+      "distinct_states": 547,
       "supported_decision_frac": {
-        "f3": 0.9751,
-        "f5": 0.9575,
-        "f10": 0.9244
+        "f3": 0.9794,
+        "f5": 0.9642,
+        "f10": 0.933
       },
       "common_state_coverage": {
         "n3_X10": {
-          "states": 301,
-          "dec_coverage": 0.9728
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n3_X20": {
-          "states": 186,
-          "dec_coverage": 0.9424
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n3_X30": {
-          "states": 141,
-          "dec_coverage": 0.9178
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n3_X50": {
-          "states": 64,
-          "dec_coverage": 0.7839
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X10": {
-          "states": 210,
-          "dec_coverage": 0.9539
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X20": {
-          "states": 142,
-          "dec_coverage": 0.9232
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X30": {
-          "states": 90,
-          "dec_coverage": 0.8406
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X50": {
-          "states": 41,
-          "dec_coverage": 0.7459
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X10": {
-          "states": 137,
-          "dec_coverage": 0.9217
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X20": {
-          "states": 82,
-          "dec_coverage": 0.871
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X30": {
-          "states": 48,
-          "dec_coverage": 0.7755
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X50": {
-          "states": 25,
-          "dec_coverage": 0.6985
+          "states": 0,
+          "dec_coverage": 0.0
         }
       }
     },
     "s_fine": {
-      "distinct_states": 16796,
+      "distinct_states": 1206,
       "supported_decision_frac": {
-        "f3": 0.9361,
-        "f5": 0.9047,
-        "f10": 0.8566
+        "f3": 0.9575,
+        "f5": 0.9328,
+        "f10": 0.8891
       },
       "common_state_coverage": {
         "n3_X10": {
-          "states": 404,
-          "dec_coverage": 0.9156
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n3_X20": {
-          "states": 228,
-          "dec_coverage": 0.8687
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n3_X30": {
-          "states": 139,
-          "dec_coverage": 0.7847
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n3_X50": {
-          "states": 68,
-          "dec_coverage": 0.6991
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X10": {
-          "states": 261,
-          "dec_coverage": 0.886
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X20": {
-          "states": 152,
-          "dec_coverage": 0.827
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X30": {
-          "states": 101,
-          "dec_coverage": 0.7565
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X50": {
-          "states": 44,
-          "dec_coverage": 0.6574
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X10": {
-          "states": 156,
-          "dec_coverage": 0.8403
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X20": {
-          "states": 78,
-          "dec_coverage": 0.7487
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X30": {
-          "states": 53,
-          "dec_coverage": 0.6928
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X50": {
-          "states": 27,
-          "dec_coverage": 0.6082
+          "states": 0,
+          "dec_coverage": 0.0
         }
       }
     }
   },
   "cohort_ge_5000": {
-    "players": 4249,
-    "decisions": 68415597,
+    "players": 6,
+    "decisions": 69013,
     "s_core": {
-      "distinct_states": 1766,
+      "distinct_states": 518,
       "supported_decision_frac": {
-        "f3": 0.9896,
-        "f5": 0.9817,
-        "f10": 0.9654
+        "f3": 0.9847,
+        "f5": 0.973,
+        "f10": 0.9485
       },
       "common_state_coverage": {
         "n3_X10": {
-          "states": 413,
-          "dec_coverage": 0.9882
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n3_X20": {
-          "states": 283,
-          "dec_coverage": 0.9714
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n3_X30": {
-          "states": 200,
-          "dec_coverage": 0.9117
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n3_X50": {
-          "states": 123,
-          "dec_coverage": 0.8584
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X10": {
-          "states": 324,
-          "dec_coverage": 0.98
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X20": {
-          "states": 216,
-          "dec_coverage": 0.953
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X30": {
-          "states": 161,
-          "dec_coverage": 0.8988
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X50": {
-          "states": 89,
-          "dec_coverage": 0.8329
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X10": {
-          "states": 224,
-          "dec_coverage": 0.9646
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X20": {
-          "states": 148,
-          "dec_coverage": 0.8953
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X30": {
-          "states": 107,
-          "dec_coverage": 0.8651
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X50": {
-          "states": 57,
-          "dec_coverage": 0.7996
+          "states": 0,
+          "dec_coverage": 0.0
         }
       }
     },
     "s_fine": {
-      "distinct_states": 14954,
+      "distinct_states": 1107,
       "supported_decision_frac": {
-        "f3": 0.9672,
-        "f5": 0.9486,
-        "f10": 0.9176
+        "f3": 0.9658,
+        "f5": 0.9447,
+        "f10": 0.9049
       },
       "common_state_coverage": {
         "n3_X10": {
-          "states": 724,
-          "dec_coverage": 0.9594
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n3_X20": {
-          "states": 433,
-          "dec_coverage": 0.8931
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n3_X30": {
-          "states": 288,
-          "dec_coverage": 0.863
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n3_X50": {
-          "states": 145,
-          "dec_coverage": 0.7961
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X10": {
-          "states": 498,
-          "dec_coverage": 0.9415
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X20": {
-          "states": 282,
-          "dec_coverage": 0.8642
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X30": {
-          "states": 192,
-          "dec_coverage": 0.833
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n5_X50": {
-          "states": 106,
-          "dec_coverage": 0.7681
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X10": {
-          "states": 279,
-          "dec_coverage": 0.9088
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X20": {
-          "states": 168,
-          "dec_coverage": 0.8264
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X30": {
-          "states": 128,
-          "dec_coverage": 0.8048
+          "states": 0,
+          "dec_coverage": 0.0
         },
         "n10_X50": {
-          "states": 61,
-          "dec_coverage": 0.7149
+          "states": 0,
+          "dec_coverage": 0.0
         }
       }
     }

@@ -75,7 +75,12 @@ See [`report/REPORT.md`](report/REPORT.md) for the verdict write-up and
 ```bash
 python -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
-# obtain + place the dataset (see Data), then:
+python src/download_datasets.py all --out-dir data/raw
+# Pluribus is also available in PHH form:
+# git clone --filter=blob:none --sparse https://github.com/uoftcprg/phh-dataset.git data/raw/phh-dataset
+# cd data/raw/phh-dataset && git sparse-checkout set data/pluribus
+python src/parse_pluribus_phh.py   # -> data/hands/part-0000.parquet
+# or, for HandHQ:
 python src/parse_phh.py            # -> research/data/hands/
 python src/run_replay.py --workers 6
 python src/build_states.py         # -> research/data/analysis.duckdb

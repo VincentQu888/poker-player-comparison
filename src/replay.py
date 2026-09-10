@@ -324,9 +324,14 @@ def replay_hand(row):
     rake_dollars = _rake(pot / bb, flop_seen, bb) * bb  # in dollars
     net = [None] * n
     net_source = "unknown"
+    if len(finishing) == n and len(stacks) >= n and abs(sum(finishing) - sum(stacks)) < 1e-6:
+        net = [finishing[i] - stacks[i] for i in range(n)]
+        net_source = "finishing"
     alive = [i for i in range(n) if not folded[i]]
     winners = None
-    if len(alive) == 1:
+    if net_source == "finishing":
+        pass
+    elif len(alive) == 1:
         winners, net_source = [alive[0]], "uncontested"
     else:
         winners, net_source = _resolve_winners(alive, hole, board)
@@ -334,14 +339,15 @@ def replay_hand(row):
             # use winnings only to pick the winner(s), not the amount
             winners = [i for i in range(n) if winnings[i] > 0]
             net_source = "winnings_winner"
-    if winners:
-        share = (pot - rake_dollars) / len(winners)
-        net = [-invested[i] for i in range(n)]
-        for w in winners:
-            net[w] = share - invested[w]
-    else:
-        net = [None] * n
-        net_source = "unknown"
+    if net_source != "finishing":
+        if winners:
+            share = (pot - rake_dollars) / len(winners)
+            net = [-invested[i] for i in range(n)]
+            for w in winners:
+                net[w] = share - invested[w]
+        else:
+            net = [None] * n
+            net_source = "unknown"
 
     hand_players = []
     for i in range(n):

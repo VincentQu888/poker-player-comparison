@@ -12,8 +12,6 @@ from pathlib import Path
 import duckdb
 import eval7
 import numpy as np
-import pyarrow.parquet as pq
-
 RANKS = "23456789TJQKA"
 ACTIONS = ["b1", "b2", "b3", "b4", "c", "f", "r1", "r2", "r3", "r4", "x"]
 SIZE = {"1": 0.25, "2": 0.5, "3": 1.0, "4": 2.0}
@@ -39,23 +37,10 @@ def state(street: int, raises: int, pos: str, faced: str, stack: float, pot: flo
     return f"{street}|{pot_type(raises)}|{pos}|{faced}|{sprb(stack / pot if pot else 99)}|H={hole_class(hole)}"
 
 
-def parse_deals(path: Path, limit: int = 0) -> list[tuple[str, str, list[str]]]:
-    deals = []
-    for batch in pq.ParquetFile(path).iter_batches():
-        cols = batch.to_pydict()
-        for actions in cols["actions"]:
-            holes = [None, None]
-            board = []
-            for tok in actions:
-                if m := DH_RE.match(tok):
-                    holes[int(m.group(1)) - 1] = m.group(2)
-                elif m := DB_RE.match(tok):
-                    board.extend([m.group(1)[i:i + 2] for i in range(0, len(m.group(1)), 2)])
-            if holes[0] and holes[1]:
-                deals.append((holes[0], holes[1], board))
-                if limit and len(deals) >= limit:
-                    return deals
-    return deals
+def random_deal(rng: random.Random) -> tuple[str, str, list[str]]:
+    deck = [str(card) for card in eval7.Deck()]
+    rng.shuffle(deck)
+    return deck[0] + deck[1], deck[2] + deck[3], deck[4:9]
 
 
 def load_policies(db: Path):
@@ -164,9 +149,9 @@ def main() -> None:
     args = ap.parse_args()
     rng = random.Random(args.seed)
     policies, pop, actual = load_policies(Path("data/analysis.duckdb"))
-    deals = parse_deals(Path("data/hands/part-0000.parquet"))
     players = sorted({p for p, _ in policies})
     simulated = {}
+    attempts_by_pair = {}
     print("simulated bb/100 for row player vs column player")
     for p0 in players:
         vals = []
@@ -180,12 +165,13 @@ def main() -> None:
                 attempts += 1
                 try:
                     if kept % 2:
-                        total += run_hand(rng, policies, pop, p0, p1, rng.choice(deals))
+                        total += run_hand(rng, policies, pop, p0, p1, random_deal(rng))
                     else:
-                        total -= run_hand(rng, policies, pop, p1, p0, rng.choice(deals))
+                        total -= run_hand(rng, policies, pop, p1, p0, random_deal(rng))
                 except UnseenState:
                     continue
                 kept += 1
+            attempts_by_pair[(p0, p1)] = attempts
             if kept:
                 simulated[(p0, p1)] = total / kept * 100
                 vals.append(f"{simulated[(p0, p1)]:7.2f}/{kept:04d}")
@@ -198,6 +184,12 @@ def main() -> None:
     pearson = float(np.corrcoef(sim, real)[0, 1])
     spearman = float(np.corrcoef(np.argsort(np.argsort(sim)), np.argsort(np.argsort(real)))[0, 1])
     print(f"pearson_sim_vs_actual={pearson:.3f} spearman_sim_vs_actual={spearman:.3f}")
+    kept_total = sum(args.hands for pair in simulated)
+    attempts_total = sum(attempts_by_pair[pair] for pair in simulated)
+    print(f"accepted_rollouts={kept_total} failed_rollouts={attempts_total - kept_total} attempts={attempts_total} accept_rate={kept_total / attempts_total:.3f}")
+    for pair in sorted(simulated):
+        attempts = attempts_by_pair[pair]
+        print(f"{pair[0]} vs {pair[1]}: accepted={args.hands} failed={attempts - args.hands} attempts={attempts}")
 
 
 if __name__ == "__main__":

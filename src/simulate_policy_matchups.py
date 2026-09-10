@@ -1,0 +1,204 @@
+#!/usr/bin/env python3
+"""Monte Carlo ACPC heads-up matchups from empirical action policies."""
+
+from __future__ import annotations
+
+import argparse
+import random
+import re
+from collections import Counter, defaultdict
+from pathlib import Path
+
+import duckdb
+import eval7
+import numpy as np
+import pyarrow.parquet as pq
+
+RANKS = "23456789TJQKA"
+ACTIONS = ["b1", "b2", "b3", "b4", "c", "f", "r1", "r2", "r3", "r4", "x"]
+SIZE = {"1": 0.25, "2": 0.5, "3": 1.0, "4": 2.0}
+DH_RE = re.compile(r"d dh p(\d+) (....)")
+DB_RE = re.compile(r"d db (.+)")
+
+
+def hole_class(hole: str) -> str:
+    r1, s1, r2, s2 = hole[0], hole[1], hole[2], hole[3]
+    hi, lo = sorted([r1, r2], key=RANKS.index, reverse=True)
+    return hi + lo if hi == lo else hi + lo + ("s" if s1 == s2 else "o")
+
+
+def sprb(spr: float) -> str:
+    return "a" if spr < 0.5 else "b" if spr < 1 else "c" if spr < 2 else "d" if spr < 5 else "e" if spr < 15 else "f"
+
+
+def pot_type(raises: int) -> str:
+    return "limped" if raises == 0 else "SRP" if raises == 1 else "3bet" if raises == 2 else "4bet+"
+
+
+def state(street: int, raises: int, pos: str, faced: str, stack: float, pot: float, hole: str) -> str:
+    return f"{street}|{pot_type(raises)}|{pos}|{faced}|{sprb(stack / pot if pot else 99)}|H={hole_class(hole)}"
+
+
+def parse_deals(path: Path, limit: int = 0) -> list[tuple[str, str, list[str]]]:
+    deals = []
+    for batch in pq.ParquetFile(path).iter_batches():
+        cols = batch.to_pydict()
+        for actions in cols["actions"]:
+            holes = [None, None]
+            board = []
+            for tok in actions:
+                if m := DH_RE.match(tok):
+                    holes[int(m.group(1)) - 1] = m.group(2)
+                elif m := DB_RE.match(tok):
+                    board.extend([m.group(1)[i:i + 2] for i in range(0, len(m.group(1)), 2)])
+            if holes[0] and holes[1]:
+                deals.append((holes[0], holes[1], board))
+                if limit and len(deals) >= limit:
+                    return deals
+    return deals
+
+
+def load_policies(db: Path):
+    con = duckdb.connect(str(db), read_only=True)
+    rows = con.execute("SELECT player, s_hole, a, count(*) n FROM d GROUP BY 1,2,3").fetchall()
+    player = defaultdict(Counter)
+    pop = defaultdict(Counter)
+    for p, s, a, n in rows:
+        player[(p, s)][a] += n
+        pop[s][a] += n
+    actual = {(p, o): bb100 for p, o, bb100 in con.execute("""
+        WITH hp AS (SELECT * FROM 'data/hand_player/*.parquet'), opp AS (
+          SELECT a.player, b.player opponent, a.net_bb
+          FROM hp a JOIN hp b ON a.hand_id=b.hand_id AND a.player<>b.player)
+        SELECT player, opponent, avg(net_bb)*100 bb100 FROM opp GROUP BY 1,2
+    """).fetchall()}
+    return player, pop, actual
+
+
+class UnseenState(Exception):
+    pass
+
+
+def choose(rng: random.Random, counts: Counter, legal: list[str]) -> str:
+    weighted = [(a, counts[a]) for a in legal if counts[a] > 0]
+    if not weighted:
+        raise UnseenState
+    total = sum(w for _, w in weighted)
+    pick = rng.uniform(0, total)
+    upto = 0
+    for action, weight in weighted:
+        upto += weight
+        if upto >= pick:
+            return action
+    return weighted[-1][0]
+
+
+def fill_board(rng: random.Random, h0: str, h1: str, board: list[str]) -> list[str]:
+    used = {h0[:2], h0[2:], h1[:2], h1[2:], *board}
+    deck = [str(c) for c in eval7.Deck() if str(c) not in used]
+    rng.shuffle(deck)
+    return [*board, *deck[: 5 - len(board)]]
+
+
+def settle(h0: str, h1: str, board: list[str], invested: list[float], pot: float) -> float:
+    b = [eval7.Card(c) for c in board]
+    s0 = eval7.evaluate(b + [eval7.Card(h0[:2]), eval7.Card(h0[2:])])
+    s1 = eval7.evaluate(b + [eval7.Card(h1[:2]), eval7.Card(h1[2:])])
+    if s0 == s1:
+        return pot / 2 - invested[0]
+    return pot - invested[0] if s0 > s1 else -invested[0]
+
+
+def run_hand(rng, policies, pop, p0, p1, deal) -> float:
+    holes = [deal[0], deal[1]]
+    stacks = [199.5, 199.0]
+    invested = [0.5, 1.0]
+    street_bet = [0.5, 1.0]
+    pot = 1.5
+    raises = 0
+    board = []
+    full_board = fill_board(rng, holes[0], holes[1], deal[2])
+    players = [p0, p1]
+
+    for street in range(4):
+        if street:
+            board = full_board[: 3 if street == 1 else 4 if street == 2 else 5]
+            street_bet = [0.0, 0.0]
+        current = max(street_bet)
+        acted = [False, False]
+        turn = 0 if street == 0 else 1
+        steps = 0
+        while steps < 24:
+            steps += 1
+            other = 1 - turn
+            to_call = max(0.0, current - street_bet[turn])
+            faced = "no_wager" if to_call == 0 else "bet" if current <= 1 else "raise" if raises <= 2 else "reraise"
+            pos = "SB" if turn == 0 else "BB"
+            s = state(street, raises, pos, faced, stacks[turn], pot, holes[turn])
+            legal = ["x", "b1", "b2", "b3", "b4"] if to_call == 0 else ["f", "c", "r1", "r2", "r3", "r4"]
+            counts = policies.get((players[turn], s), Counter())
+            action = choose(rng, counts, legal)
+            if action == "f":
+                return -invested[0] if turn == 0 else pot - invested[0]
+            if action in ("c", "x"):
+                pay = min(to_call, stacks[turn])
+                stacks[turn] -= pay; invested[turn] += pay; street_bet[turn] += pay; pot += pay
+                acted[turn] = True
+            else:
+                pay = min(stacks[turn], to_call + max(1.0, pot * SIZE[action[1]]))
+                stacks[turn] -= pay; invested[turn] += pay; street_bet[turn] += pay; pot += pay
+                current = street_bet[turn]; acted = [False, False]; acted[turn] = True
+                if street == 0:
+                    raises += 1
+            if all(acted) and abs(street_bet[0] - street_bet[1]) < 1e-9:
+                break
+            turn = other
+    return settle(holes[0], holes[1], full_board, invested, pot)
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--hands", type=int, default=20000)
+    ap.add_argument("--seed", type=int, default=1)
+    ap.add_argument("--max-attempts", type=int, default=200000)
+    args = ap.parse_args()
+    rng = random.Random(args.seed)
+    policies, pop, actual = load_policies(Path("data/analysis.duckdb"))
+    deals = parse_deals(Path("data/hands/part-0000.parquet"))
+    players = sorted({p for p, _ in policies})
+    simulated = {}
+    print("simulated bb/100 for row player vs column player")
+    for p0 in players:
+        vals = []
+        for p1 in players:
+            if p0 == p1:
+                vals.append("   --  ")
+                continue
+            total = 0.0
+            kept = attempts = 0
+            while kept < args.hands and attempts < args.max_attempts:
+                attempts += 1
+                try:
+                    if kept % 2:
+                        total += run_hand(rng, policies, pop, p0, p1, rng.choice(deals))
+                    else:
+                        total -= run_hand(rng, policies, pop, p1, p0, rng.choice(deals))
+                except UnseenState:
+                    continue
+                kept += 1
+            if kept:
+                simulated[(p0, p1)] = total / kept * 100
+                vals.append(f"{simulated[(p0, p1)]:7.2f}/{kept:04d}")
+            else:
+                vals.append(" unseen")
+        print(f"{p0:16s} " + " ".join(vals))
+    pairs = sorted(set(simulated) & set(actual))
+    sim = np.array([simulated[p] for p in pairs])
+    real = np.array([actual[p] for p in pairs])
+    pearson = float(np.corrcoef(sim, real)[0, 1])
+    spearman = float(np.corrcoef(np.argsort(np.argsort(sim)), np.argsort(np.argsort(real)))[0, 1])
+    print(f"pearson_sim_vs_actual={pearson:.3f} spearman_sim_vs_actual={spearman:.3f}")
+
+
+if __name__ == "__main__":
+    main()

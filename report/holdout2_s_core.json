@@ -1,15 +1,15 @@
 {
-  "cohort": 12,
-  "ceiling": -0.24475524475524477,
-  "A_edge": -0.02097902097902098,
-  "B_skill": -0.1888111888111888,
+  "cohort": 4,
+  "ceiling": -0.4,
+  "A_edge": -0.4,
+  "B_skill": 0.4,
   "params": {
     "state": "s_core",
-    "split_day": 1,
-    "nmin": 3,
-    "nmin_sa": 2,
+    "split_day": 33,
+    "nmin": 20,
+    "nmin_sa": 10,
     "min_eligible": 3,
-    "min_train_hands": 100,
-    "min_test_hands": 100
+    "min_train_hands": 1000,
+    "min_test_hands": 1000
   }
 }

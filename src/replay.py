@@ -342,7 +342,7 @@ def replay_hand(row):
     # amount (its handling of uncalled returns differs across sites); it is used
     # only to identify the winner at otherwise-unresolvable showdowns.
     flop_seen = board != ""
-    rake_dollars = _rake(pot / bb, flop_seen, bb) * bb  # in dollars
+    rake_dollars = 0.0 if str(row["site"]).startswith("ACPC") else _rake(pot / bb, flop_seen, bb) * bb
     net = [None] * n
     net_source = "unknown"
     if len(finishing) == n and len(stacks) >= n and abs(sum(finishing) - sum(stacks)) < 1e-6:

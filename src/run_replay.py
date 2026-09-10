@@ -20,6 +20,7 @@ HP = os.path.join(os.path.dirname(__file__), "..", "data", "hand_player")
 DEC_SCHEMA = pa.schema([
     ("site", pa.string()), ("nl_level", pa.int32()), ("hand_id", pa.string()),
     ("player", pa.string()), ("pos_idx", pa.int8()), ("pos_label", pa.string()),
+    ("hero_hole", pa.string()), ("hero_hole_class", pa.string()),
     ("seat_count", pa.int8()), ("n_players", pa.int8()),
     ("street", pa.int8()), ("board", pa.string()),
     ("pot_before_bb", pa.float32()), ("to_call_bb", pa.float32()),

@@ -43,6 +43,7 @@ con.execute(f"""
 CREATE TABLE d AS
 SELECT
   site, player, hand_id, nl_level, seat_count, n_players,
+  hero_hole, hero_hole_class,
   street, pot_type, posg(pos_label) AS pos, action_faced,
   sizeb(prev_wager_frac) AS faced_sz,
   sprb(spr) AS spr_b,
@@ -67,6 +68,10 @@ UPDATE d SET s_core = street||'|'||pot_type||'|'||pos||'|'||action_faced||'|'||s
 con.execute("""
 ALTER TABLE d ADD COLUMN s_fine VARCHAR;
 UPDATE d SET s_fine = s_core||'|'||faced_sz||'|'||nactive;
+""")
+con.execute("""
+ALTER TABLE d ADD COLUMN s_hole VARCHAR;
+UPDATE d SET s_hole = s_core||'|H='||coalesce(hero_hole_class, '??');
 """)
 print("action distribution:")
 for r in con.execute("SELECT a, count(*) c FROM d GROUP BY a ORDER BY c DESC").fetchall():

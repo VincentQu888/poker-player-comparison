@@ -98,6 +98,18 @@ def pos_labels(n):
 
 ACT_RE = re.compile(r"^p(\d+) (f|cc|cbr|sm)(?: (.+))?$")
 DB_RE = re.compile(r"^d db (.+)$")
+DH_RE = re.compile(r"^d dh p(\d+) (.+)$")
+RANKS = "23456789TJQKA"
+
+
+def _hole_class(hole):
+    if not hole or hole == "????" or len(hole) != 4:
+        return None
+    r1, s1, r2, s2 = hole[0], hole[1], hole[2], hole[3]
+    hi, lo = sorted([r1, r2], key=RANKS.index, reverse=True)
+    if hi == lo:
+        return hi + lo
+    return hi + lo + ("s" if s1 == s2 else "o")
 
 
 def _rake(pot_bb, flop_seen, bb):
@@ -175,6 +187,10 @@ def replay_hand(row):
             st += 1
             parsed.append(("board", st, m.group(1)))
             continue
+        m = DH_RE.match(tok)
+        if m:
+            parsed.append(("hole", st, (int(m.group(1)) - 1, m.group(2))))
+            continue
         m = ACT_RE.match(tok)
         if not m:
             parsed.append(("other", st, tok))
@@ -215,6 +231,10 @@ def replay_hand(row):
         if typ == "other":
             continue
         pidx, arg = payload
+        if typ == "hole":
+            if arg and arg != "????":
+                hole[pidx] = arg
+            continue
         if typ == "sm":
             if arg and arg != "????":
                 hole[pidx] = arg
@@ -250,6 +270,7 @@ def replay_hand(row):
             "site": row["site"], "nl_level": nl, "hand_id": row["hand_id"],
             "player": players[pidx], "pos_idx": pidx,
             "pos_label": labels[pidx] if pidx < len(labels) else "?",
+            "hero_hole": hole[pidx] or None, "hero_hole_class": _hole_class(hole[pidx]),
             "seat_count": row["seat_count"], "n_players": n,
             "street": street, "board": board,
             "pot_before_bb": pot_before / bb, "to_call_bb": to_call / bb,

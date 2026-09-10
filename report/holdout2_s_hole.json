@@ -1,0 +1,15 @@
+{
+  "cohort": 12,
+  "ceiling": -0.24475524475524477,
+  "A_edge": 0.055944055944055944,
+  "B_skill": -0.013986013986013986,
+  "params": {
+    "state": "s_hole",
+    "split_day": 1,
+    "nmin": 3,
+    "nmin_sa": 2,
+    "min_eligible": 3,
+    "min_train_hands": 100,
+    "min_test_hands": 100
+  }
+}

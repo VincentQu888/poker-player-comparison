@@ -32,6 +32,7 @@ Outcome attached (forward-looking, in BB):
   net_source       'winnings' | 'finishing' | 'uncontested' | 'unknown'
 """
 import re
+from collections import Counter
 
 try:
     import eval7
@@ -110,6 +111,48 @@ def _hole_class(hole):
     if hi == lo:
         return hi + lo
     return hi + lo + ("s" if s1 == s2 else "o")
+
+
+def _has_straight(ranks):
+    vals = {RANKS.index(r) + 2 for r in ranks}
+    if 14 in vals:
+        vals.add(1)
+    return any(all(v + k in vals for k in range(5)) for v in range(1, 11))
+
+
+def _hand_bucket(hole, board):
+    if not hole or hole == "????" or len(hole) != 4:
+        return "unknown"
+    if not board:
+        return "preflop"
+    cards = _cards(hole + board)
+    ranks = [c[0] for c in cards]
+    suits = [c[1] for c in cards]
+    rank_counts = sorted(Counter(ranks).values(), reverse=True)
+    suit_counts = Counter(suits).values()
+    flush = max(suit_counts) >= 5
+    straight = _has_straight(ranks)
+    if flush and straight:
+        return "straight_flush"
+    if rank_counts[0] == 4:
+        return "quads"
+    if rank_counts[:2] == [3, 2]:
+        return "full_house"
+    if flush:
+        return "flush"
+    if straight:
+        return "straight"
+    if rank_counts[0] == 3:
+        return "trips"
+    if rank_counts[:2] == [2, 2]:
+        return "two_pair"
+    if rank_counts[0] == 2:
+        board_ranks = [c[0] for c in _cards(board)]
+        pair_rank = next(r for r, n in Counter(ranks).items() if n == 2)
+        return "overpair_pair" if pair_rank in hole and pair_rank not in board_ranks else "pair"
+    if max(suit_counts) == 4:
+        return "flush_draw"
+    return "high_card"
 
 
 def _rake(pot_bb, flop_seen, bb):
@@ -271,6 +314,7 @@ def replay_hand(row):
             "player": players[pidx], "pos_idx": pidx,
             "pos_label": labels[pidx] if pidx < len(labels) else "?",
             "hero_hole": hole[pidx] or None, "hero_hole_class": _hole_class(hole[pidx]),
+            "hero_hand_bucket": _hand_bucket(hole[pidx], board),
             "seat_count": row["seat_count"], "n_players": n,
             "street": street, "board": board,
             "pot_before_bb": pot_before / bb, "to_call_bb": to_call / bb,

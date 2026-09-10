@@ -14,7 +14,6 @@ import eval7
 import numpy as np
 RANKS = "23456789TJQKA"
 ACTIONS = ["b1", "b2", "b3", "b4", "c", "f", "r1", "r2", "r3", "r4", "x"]
-SIZE = {"1": 0.25, "2": 0.5, "3": 1.0, "4": 2.0}
 DH_RE = re.compile(r"d dh p(\d+) (....)")
 DB_RE = re.compile(r"d db (.+)")
 
@@ -33,8 +32,47 @@ def pot_type(raises: int) -> str:
     return "limped" if raises == 0 else "SRP" if raises == 1 else "3bet" if raises == 2 else "4bet+"
 
 
-def state(street: int, raises: int, pos: str, faced: str, stack: float, pot: float, hole: str) -> str:
-    return f"{street}|{pot_type(raises)}|{pos}|{faced}|{sprb(stack / pot if pot else 99)}|H={hole_class(hole)}"
+def has_straight(ranks: list[str]) -> bool:
+    vals = {RANKS.index(r) + 2 for r in ranks}
+    if 14 in vals:
+        vals.add(1)
+    return any(all(v + k in vals for k in range(5)) for v in range(1, 11))
+
+
+def hand_bucket(hole: str, board: list[str]) -> str:
+    if not board:
+        return "preflop"
+    cards = [hole[:2], hole[2:], *board]
+    ranks = [c[0] for c in cards]
+    suits = [c[1] for c in cards]
+    rank_counts = sorted(Counter(ranks).values(), reverse=True)
+    flush = max(Counter(suits).values()) >= 5
+    straight = has_straight(ranks)
+    if flush and straight:
+        return "straight_flush"
+    if rank_counts[0] == 4:
+        return "quads"
+    if rank_counts[:2] == [3, 2]:
+        return "full_house"
+    if flush:
+        return "flush"
+    if straight:
+        return "straight"
+    if rank_counts[0] == 3:
+        return "trips"
+    if rank_counts[:2] == [2, 2]:
+        return "two_pair"
+    if rank_counts[0] == 2:
+        board_ranks = [c[0] for c in board]
+        pair_rank = next(r for r, n in Counter(ranks).items() if n == 2)
+        return "overpair_pair" if pair_rank in hole and pair_rank not in board_ranks else "pair"
+    if max(Counter(suits).values()) == 4:
+        return "flush_draw"
+    return "high_card"
+
+
+def state(street: int, raises: int, pos: str, faced: str, stack: float, pot: float, hole: str, board: list[str]) -> str:
+    return f"{street}|{pot_type(raises)}|{pos}|{faced}|{sprb(stack / pot if pot else 99)}|H={hole_class(hole)}|M={hand_bucket(hole, board)}"
 
 
 def random_deal(rng: random.Random) -> tuple[str, str, list[str]]:
@@ -45,19 +83,38 @@ def random_deal(rng: random.Random) -> tuple[str, str, list[str]]:
 
 def load_policies(db: Path):
     con = duckdb.connect(str(db), read_only=True)
-    rows = con.execute("SELECT player, s_hole, a, count(*) n FROM d GROUP BY 1,2,3").fetchall()
+    rows = con.execute("""
+        WITH opp AS (
+          SELECT a.hand_id, a.player, b.player opponent
+          FROM 'data/hand_player/*.parquet' a
+          JOIN 'data/hand_player/*.parquet' b ON a.hand_id=b.hand_id AND a.player<>b.player)
+        SELECT d.player, opp.opponent, d.s_sim, d.a, count(*) n
+        FROM d JOIN opp USING(hand_id, player) GROUP BY 1,2,3,4
+    """).fetchall()
+    size_rows = con.execute("""
+        WITH opp AS (
+          SELECT a.hand_id, a.player, b.player opponent
+          FROM 'data/hand_player/*.parquet' a
+          JOIN 'data/hand_player/*.parquet' b ON a.hand_id=b.hand_id AND a.player<>b.player)
+        SELECT d.player, opp.opponent, d.s_sim, d.a, list(d.act_frac) sizes
+        FROM d JOIN opp USING(hand_id, player)
+        WHERE d.a LIKE 'b%' OR d.a LIKE 'r%' GROUP BY 1,2,3,4
+    """).fetchall()
     player = defaultdict(Counter)
     pop = defaultdict(Counter)
-    for p, s, a, n in rows:
-        player[(p, s)][a] += n
+    sizes = {}
+    for p, opponent, s, a, n in rows:
+        player[(p, opponent, s)][a] += n
         pop[s][a] += n
+    for p, opponent, s, a, vals in size_rows:
+        sizes[(p, opponent, s, a)] = [float(v) for v in vals if v is not None]
     actual = {(p, o): bb100 for p, o, bb100 in con.execute("""
         WITH hp AS (SELECT * FROM 'data/hand_player/*.parquet'), opp AS (
           SELECT a.player, b.player opponent, a.net_bb
           FROM hp a JOIN hp b ON a.hand_id=b.hand_id AND a.player<>b.player)
         SELECT player, opponent, avg(net_bb)*100 bb100 FROM opp GROUP BY 1,2
     """).fetchall()}
-    return player, pop, actual
+    return player, pop, sizes, actual
 
 
 class UnseenState(Exception):
@@ -94,13 +151,13 @@ def settle(h0: str, h1: str, board: list[str], invested: list[float], pot: float
     return pot - invested[0] if s0 > s1 else -invested[0]
 
 
-def run_hand(rng, policies, pop, p0, p1, deal) -> float:
+def run_hand(rng, policies, pop, sizes, p0, p1, deal) -> float:
     holes = [deal[0], deal[1]]
     stacks = [199.5, 199.0]
     invested = [0.5, 1.0]
     street_bet = [0.5, 1.0]
     pot = 1.5
-    raises = 0
+    preflop_raises = 0
     board = []
     full_board = fill_board(rng, holes[0], holes[1], deal[2])
     players = [p0, p1]
@@ -110,6 +167,7 @@ def run_hand(rng, policies, pop, p0, p1, deal) -> float:
             board = full_board[: 3 if street == 1 else 4 if street == 2 else 5]
             street_bet = [0.0, 0.0]
         current = max(street_bet)
+        street_wagers = 1 if street == 0 else 0
         acted = [False, False]
         turn = 0 if street == 0 else 1
         steps = 0
@@ -117,11 +175,11 @@ def run_hand(rng, policies, pop, p0, p1, deal) -> float:
             steps += 1
             other = 1 - turn
             to_call = max(0.0, current - street_bet[turn])
-            faced = "no_wager" if to_call == 0 else "bet" if current <= 1 else "raise" if raises <= 2 else "reraise"
+            faced = "no_wager" if to_call == 0 else "bet" if street_wagers <= 1 else "raise" if street_wagers == 2 else "reraise"
             pos = "SB" if turn == 0 else "BB"
-            s = state(street, raises, pos, faced, stacks[turn], pot, holes[turn])
+            s = state(street, preflop_raises, pos, faced, stacks[turn], pot, holes[turn], board)
             legal = ["x", "b1", "b2", "b3", "b4"] if to_call == 0 else ["f", "c", "r1", "r2", "r3", "r4"]
-            counts = policies.get((players[turn], s), Counter())
+            counts = policies.get((players[turn], players[other], s), Counter())
             action = choose(rng, counts, legal)
             if action == "f":
                 return -invested[0] if turn == 0 else pot - invested[0]
@@ -130,11 +188,15 @@ def run_hand(rng, policies, pop, p0, p1, deal) -> float:
                 stacks[turn] -= pay; invested[turn] += pay; street_bet[turn] += pay; pot += pay
                 acted[turn] = True
             else:
-                pay = min(stacks[turn], to_call + max(1.0, pot * SIZE[action[1]]))
+                observed_sizes = sizes.get((players[turn], players[other], s, action))
+                if not observed_sizes:
+                    raise UnseenState
+                pay = min(stacks[turn], max(to_call, pot * rng.choice(observed_sizes)))
                 stacks[turn] -= pay; invested[turn] += pay; street_bet[turn] += pay; pot += pay
                 current = street_bet[turn]; acted = [False, False]; acted[turn] = True
+                street_wagers += 1
                 if street == 0:
-                    raises += 1
+                    preflop_raises += 1
             if all(acted) and abs(street_bet[0] - street_bet[1]) < 1e-9:
                 break
             turn = other
@@ -148,8 +210,8 @@ def main() -> None:
     ap.add_argument("--max-attempts", type=int, default=200000)
     args = ap.parse_args()
     rng = random.Random(args.seed)
-    policies, pop, actual = load_policies(Path("data/analysis.duckdb"))
-    players = sorted({p for p, _ in policies})
+    policies, pop, sizes, actual = load_policies(Path("data/analysis.duckdb"))
+    players = sorted({p for p, _, _ in policies})
     simulated = {}
     attempts_by_pair = {}
     print("simulated bb/100 for row player vs column player")
@@ -165,9 +227,9 @@ def main() -> None:
                 attempts += 1
                 try:
                     if kept % 2:
-                        total += run_hand(rng, policies, pop, p0, p1, random_deal(rng))
+                        total += run_hand(rng, policies, pop, sizes, p0, p1, random_deal(rng))
                     else:
-                        total -= run_hand(rng, policies, pop, p1, p0, random_deal(rng))
+                        total -= run_hand(rng, policies, pop, sizes, p1, p0, random_deal(rng))
                 except UnseenState:
                     continue
                 kept += 1

@@ -39,6 +39,19 @@ def has_straight(ranks: list[str]) -> bool:
     return any(all(v + k in vals for k in range(5)) for v in range(1, 11))
 
 
+def board_bucket(board: list[str]) -> str:
+    if not board:
+        return "preflop"
+    ranks = [c[0] for c in board]
+    suits = [c[1] for c in board]
+    paired = "paired" if max(Counter(ranks).values()) > 1 else "unpaired"
+    suit_count = max(Counter(suits).values())
+    suited = "mono" if suit_count >= 3 else "two" if suit_count == 2 else "rainbow"
+    vals = sorted({RANKS.index(r) for r in ranks})
+    connected = "conn" if len(vals) >= 3 and vals[-1] - vals[0] <= 4 else "gap"
+    return f"{len(board)}{paired[0]}{suited[0]}{connected[0]}"
+
+
 def hand_bucket(hole: str, board: list[str]) -> str:
     if not board:
         return "preflop"
@@ -71,8 +84,20 @@ def hand_bucket(hole: str, board: list[str]) -> str:
     return "high_card"
 
 
-def state(street: int, raises: int, pos: str, faced: str, stack: float, pot: float, hole: str, board: list[str]) -> str:
-    return f"{street}|{pot_type(raises)}|{pos}|{faced}|{sprb(stack / pot if pot else 99)}|H={hole_class(hole)}|M={hand_bucket(hole, board)}"
+def sizeb(x: float | None) -> str:
+    if x is None:
+        return "na"
+    return "1" if x < 0.4 else "2" if x < 0.75 else "3" if x < 1.25 else "4"
+
+
+def state(mode: str, street: int, raises: int, pos: str, faced: str, stack: float, pot: float, hole: str, board: list[str], last_inc: float, last_pot: float, nactive: int, behind: int) -> str:
+    core = f"{street}|{pot_type(raises)}|{pos}|{faced}|{sprb(stack / pot if pot else 99)}"
+    simple = f"{core}|H={hole_class(hole)}|M={hand_bucket(hole, board)}"
+    if mode == "s_sim":
+        return simple
+    faced_sz = sizeb(last_inc / last_pot) if last_pot > 0 and faced != "no_wager" else "4" if faced != "no_wager" and last_inc > 0 else "na"
+    fine = f"{core}|{faced_sz}|{nactive if nactive < 6 else '6+'}"
+    return f"{fine}|H={hole_class(hole)}|M={hand_bucket(hole, board)}|B={board_bucket(board)}|behind={behind}"
 
 
 def random_deal(rng: random.Random) -> tuple[str, str, list[str]]:
@@ -81,22 +106,22 @@ def random_deal(rng: random.Random) -> tuple[str, str, list[str]]:
     return deck[0] + deck[1], deck[2] + deck[3], deck[4:9]
 
 
-def load_policies(db: Path):
+def load_policies(db: Path, state_col: str):
     con = duckdb.connect(str(db), read_only=True)
-    rows = con.execute("""
+    rows = con.execute(f"""
         WITH opp AS (
           SELECT a.hand_id, a.player, b.player opponent
           FROM 'data/hand_player/*.parquet' a
           JOIN 'data/hand_player/*.parquet' b ON a.hand_id=b.hand_id AND a.player<>b.player)
-        SELECT d.player, opp.opponent, d.s_sim, d.a, count(*) n
+        SELECT d.player, opp.opponent, d."{state_col}", d.a, count(*) n
         FROM d JOIN opp USING(hand_id, player) GROUP BY 1,2,3,4
     """).fetchall()
-    size_rows = con.execute("""
+    size_rows = con.execute(f"""
         WITH opp AS (
           SELECT a.hand_id, a.player, b.player opponent
           FROM 'data/hand_player/*.parquet' a
           JOIN 'data/hand_player/*.parquet' b ON a.hand_id=b.hand_id AND a.player<>b.player)
-        SELECT d.player, opp.opponent, d.s_sim, d.a, list(d.act_frac) sizes
+        SELECT d.player, opp.opponent, d."{state_col}", d.a, list(d.act_frac) sizes
         FROM d JOIN opp USING(hand_id, player)
         WHERE d.a LIKE 'b%' OR d.a LIKE 'r%' GROUP BY 1,2,3,4
     """).fetchall()
@@ -151,7 +176,7 @@ def settle(h0: str, h1: str, board: list[str], invested: list[float], pot: float
     return pot - invested[0] if s0 > s1 else -invested[0]
 
 
-def run_hand(rng, policies, pop, sizes, p0, p1, deal) -> float:
+def run_hand(rng, policies, pop, sizes, mode, p0, p1, deal) -> float:
     holes = [deal[0], deal[1]]
     stacks = [199.5, 199.0]
     invested = [0.5, 1.0]
@@ -159,6 +184,7 @@ def run_hand(rng, policies, pop, sizes, p0, p1, deal) -> float:
     pot = 1.5
     preflop_raises = 0
     board = []
+    active = [True, True]
     full_board = fill_board(rng, holes[0], holes[1], deal[2])
     players = [p0, p1]
 
@@ -168,6 +194,8 @@ def run_hand(rng, policies, pop, sizes, p0, p1, deal) -> float:
             street_bet = [0.0, 0.0]
         current = max(street_bet)
         street_wagers = 1 if street == 0 else 0
+        last_inc = current
+        last_pot = 0.0 if street == 0 else pot
         acted = [False, False]
         turn = 0 if street == 0 else 1
         steps = 0
@@ -177,11 +205,12 @@ def run_hand(rng, policies, pop, sizes, p0, p1, deal) -> float:
             to_call = max(0.0, current - street_bet[turn])
             faced = "no_wager" if to_call == 0 else "bet" if street_wagers <= 1 else "raise" if street_wagers == 2 else "reraise"
             pos = "SB" if turn == 0 else "BB"
-            s = state(street, preflop_raises, pos, faced, stacks[turn], pot, holes[turn], board)
+            s = state(mode, street, preflop_raises, pos, faced, stacks[turn], pot, holes[turn], board, last_inc, last_pot, sum(active), 1 if active[other] else 0)
             legal = ["x", "b1", "b2", "b3", "b4"] if to_call == 0 else ["f", "c", "r1", "r2", "r3", "r4"]
             counts = policies.get((players[turn], players[other], s), Counter())
             action = choose(rng, counts, legal)
             if action == "f":
+                active[turn] = False
                 return -invested[0] if turn == 0 else pot - invested[0]
             if action in ("c", "x"):
                 pay = min(to_call, stacks[turn])
@@ -192,6 +221,8 @@ def run_hand(rng, policies, pop, sizes, p0, p1, deal) -> float:
                 if not observed_sizes:
                     raise UnseenState
                 pay = min(stacks[turn], max(to_call, pot * rng.choice(observed_sizes)))
+                last_pot = pot
+                last_inc = pay
                 stacks[turn] -= pay; invested[turn] += pay; street_bet[turn] += pay; pot += pay
                 current = street_bet[turn]; acted = [False, False]; acted[turn] = True
                 street_wagers += 1
@@ -208,9 +239,10 @@ def main() -> None:
     ap.add_argument("--hands", type=int, default=20000)
     ap.add_argument("--seed", type=int, default=1)
     ap.add_argument("--max-attempts", type=int, default=200000)
+    ap.add_argument("--state", choices=["s_sim", "s_pdf"], default="s_sim")
     args = ap.parse_args()
     rng = random.Random(args.seed)
-    policies, pop, sizes, actual = load_policies(Path("data/analysis.duckdb"))
+    policies, pop, sizes, actual = load_policies(Path("data/analysis.duckdb"), args.state)
     players = sorted({p for p, _, _ in policies})
     simulated = {}
     attempts_by_pair = {}
@@ -227,9 +259,9 @@ def main() -> None:
                 attempts += 1
                 try:
                     if kept % 2:
-                        total += run_hand(rng, policies, pop, sizes, p0, p1, random_deal(rng))
+                        total += run_hand(rng, policies, pop, sizes, args.state, p0, p1, random_deal(rng))
                     else:
-                        total -= run_hand(rng, policies, pop, sizes, p1, p0, random_deal(rng))
+                        total -= run_hand(rng, policies, pop, sizes, args.state, p1, p0, random_deal(rng))
                 except UnseenState:
                     continue
                 kept += 1
@@ -248,7 +280,8 @@ def main() -> None:
     print(f"pearson_sim_vs_actual={pearson:.3f} spearman_sim_vs_actual={spearman:.3f}")
     kept_total = sum(args.hands for pair in simulated)
     attempts_total = sum(attempts_by_pair[pair] for pair in simulated)
-    print(f"accepted_rollouts={kept_total} failed_rollouts={attempts_total - kept_total} attempts={attempts_total} accept_rate={kept_total / attempts_total:.3f}")
+    accept_rate = kept_total / attempts_total if attempts_total else 0.0
+    print(f"accepted_rollouts={kept_total} failed_rollouts={attempts_total - kept_total} attempts={attempts_total} accept_rate={accept_rate:.3f}")
     for pair in sorted(simulated):
         attempts = attempts_by_pair[pair]
         print(f"{pair[0]} vs {pair[1]}: accepted={args.hands} failed={attempts - args.hands} attempts={attempts}")

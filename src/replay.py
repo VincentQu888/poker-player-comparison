@@ -120,6 +120,21 @@ def _has_straight(ranks):
     return any(all(v + k in vals for k in range(5)) for v in range(1, 11))
 
 
+def _board_bucket(board):
+    if not board:
+        return "preflop"
+    cards = _cards(board)
+    ranks = [c[0] for c in cards]
+    suits = [c[1] for c in cards]
+    paired = "paired" if max(Counter(ranks).values()) > 1 else "unpaired"
+    suit_count = max(Counter(suits).values())
+    suited = "mono" if suit_count >= 3 else "two" if suit_count == 2 else "rainbow"
+    vals = sorted({RANKS.index(r) for r in ranks})
+    span = vals[-1] - vals[0] if vals else 0
+    connected = "conn" if len(vals) >= 3 and span <= 4 else "gap"
+    return f"{len(cards)}{paired[0]}{suited[0]}{connected[0]}"
+
+
 def _hand_bucket(hole, board):
     if not hole or hole == "????" or len(hole) != 4:
         return "unknown"
@@ -315,6 +330,7 @@ def replay_hand(row):
             "pos_label": labels[pidx] if pidx < len(labels) else "?",
             "hero_hole": hole[pidx] or None, "hero_hole_class": _hole_class(hole[pidx]),
             "hero_hand_bucket": _hand_bucket(hole[pidx], board),
+            "board_bucket": _board_bucket(board),
             "seat_count": row["seat_count"], "n_players": n,
             "street": street, "board": board,
             "pot_before_bb": pot_before / bb, "to_call_bb": to_call / bb,

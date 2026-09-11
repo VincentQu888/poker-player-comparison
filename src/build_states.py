@@ -43,11 +43,12 @@ con.execute(f"""
 CREATE TABLE d AS
 SELECT
   site, player, hand_id, nl_level, seat_count, n_players,
-  hero_hole, hero_hole_class, hero_hand_bucket,
+  hero_hole, hero_hole_class, hero_hand_bucket, board_bucket,
   street, pot_type, posg(pos_label) AS pos, action_faced,
   sizeb(prev_wager_frac) AS faced_sz,
   sprb(spr) AS spr_b,
   nab(n_active_before) AS nactive,
+  n_to_act_after,
   CASE act
     WHEN 'fold' THEN 'f' WHEN 'check' THEN 'x' WHEN 'call' THEN 'c'
     WHEN 'bet' THEN 'b'||sizeb(act_frac * pot_before_bb / NULLIF(pot_before_bb + to_call_bb, 0))
@@ -77,6 +78,10 @@ UPDATE d SET s_hole = s_core||'|H='||coalesce(hero_hole_class, '??');
 con.execute("""
 ALTER TABLE d ADD COLUMN s_sim VARCHAR;
 UPDATE d SET s_sim = s_hole||'|M='||coalesce(hero_hand_bucket, 'unknown');
+""")
+con.execute("""
+ALTER TABLE d ADD COLUMN s_pdf VARCHAR;
+UPDATE d SET s_pdf = s_fine||'|H='||coalesce(hero_hole_class, '??')||'|M='||coalesce(hero_hand_bucket, 'unknown')||'|B='||coalesce(board_bucket, 'unknown')||'|behind='||n_to_act_after;
 """)
 print("action distribution:")
 for r in con.execute("SELECT a, count(*) c FROM d GROUP BY a ORDER BY c DESC").fetchall():

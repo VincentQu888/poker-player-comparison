@@ -47,21 +47,21 @@ FLUSH_HANDS = 50000    # flush accumulated output every N hands (bounds worker R
 BATCH = 10000          # parquet read batch size (bounds input RAM)
 
 
-def _done_path(idx):
-    return os.path.join(DEC, f"part-{idx:04d}.done")
+def _done_path(out_dir, idx):
+    return os.path.join(out_dir, f"part-{idx:04d}.done")
 
 
 def process_shard(args):
-    idx, path = args
-    os.makedirs(DEC, exist_ok=True)
-    os.makedirs(HP, exist_ok=True)
+    idx, path, dec_dir, hp_dir = args
+    os.makedirs(dec_dir, exist_ok=True)
+    os.makedirs(hp_dir, exist_ok=True)
     # resume: skip if already completed
-    if os.path.exists(_done_path(idx)):
+    if os.path.exists(_done_path(dec_dir, idx)):
         return idx, -1, -1
     # clean any partial chunks from a prior aborted run
-    for p in glob.glob(os.path.join(DEC, f"part-{idx:04d}-*.parquet")):
+    for p in glob.glob(os.path.join(dec_dir, f"part-{idx:04d}-*.parquet")):
         os.remove(p)
-    for p in glob.glob(os.path.join(HP, f"part-{idx:04d}-*.parquet")):
+    for p in glob.glob(os.path.join(hp_dir, f"part-{idx:04d}-*.parquet")):
         os.remove(p)
 
     pf = pq.ParquetFile(path)
@@ -76,10 +76,10 @@ def process_shard(args):
         if not dec_cols["hand_id"] and not hp_cols["hand_id"]:
             return
         pq.write_table(pa.table(dec_cols, schema=DEC_SCHEMA),
-                       os.path.join(DEC, f"part-{idx:04d}-{sub:03d}.parquet"),
+                       os.path.join(dec_dir, f"part-{idx:04d}-{sub:03d}.parquet"),
                        compression="zstd")
         pq.write_table(pa.table(hp_cols, schema=HP_SCHEMA),
-                       os.path.join(HP, f"part-{idx:04d}-{sub:03d}.parquet"),
+                       os.path.join(hp_dir, f"part-{idx:04d}-{sub:03d}.parquet"),
                        compression="zstd")
         tot_d += len(dec_cols["hand_id"]); tot_h += len(hp_cols["hand_id"])
         dec_cols = {f.name: [] for f in DEC_SCHEMA}
@@ -107,7 +107,7 @@ def process_shard(args):
                 flush()
     flush()
     # mark shard complete
-    with open(_done_path(idx), "w") as fh:
+    with open(_done_path(dec_dir, idx), "w") as fh:
         fh.write(f"{tot_d} {tot_h}\n")
     return idx, tot_d, tot_h
 
@@ -116,11 +116,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0, help="process only N shards (0=all)")
     ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--hands-dir", default=HANDS)
+    ap.add_argument("--dec-dir", default=DEC)
+    ap.add_argument("--hand-player-dir", default=HP)
     a = ap.parse_args()
-    shards = sorted(glob.glob(os.path.join(HANDS, "*.parquet")))
+    shards = sorted(glob.glob(os.path.join(a.hands_dir, "*.parquet")))
     if a.limit:
         shards = shards[:a.limit]
-    args = [(i, p) for i, p in enumerate(shards)]
+    args = [(i, p, a.dec_dir, a.hand_player_dir) for i, p in enumerate(shards)]
     tot_d = tot_h = 0
     with ProcessPoolExecutor(max_workers=a.workers) as ex:
         for idx, nd, nh in ex.map(process_shard, args):

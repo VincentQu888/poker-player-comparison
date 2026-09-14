@@ -2,10 +2,15 @@
 """Stage 4a: build an on-disk DuckDB table of decisions enriched with public
 state buckets and a sized action label. Public observables only (hero hole cards
 are unobserved at ~96% of decisions, per feasibility)."""
-import duckdb, os
+import argparse, duckdb, os
 
-DEC = "data/decisions/*.parquet"
-DB = "data/analysis.duckdb"
+parser = argparse.ArgumentParser()
+parser.add_argument("--decisions", default="data/decisions/*.parquet")
+parser.add_argument("--db", default="data/analysis.duckdb")
+args = parser.parse_args()
+
+DEC = args.decisions
+DB = args.db
 if os.path.exists(DB):
     os.remove(DB)
 con = duckdb.connect(DB)

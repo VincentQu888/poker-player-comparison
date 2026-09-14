@@ -1,0 +1,10 @@
+candidate_files=29000
+compressed_bytes=2479427507
+uncompressed_bytes=32168970209
+range_blocks=2
+range_span_bytes=2484939487
+first_candidate data/annual-computer-poker-competition/competitions/2010/logs/acpc_2010_2PLIMIT/2P_LIMIT/GGValuta-PLICAS.1511924388.dealer.phhs 8516639143
+last_candidate data/annual-computer-poker-competition/competitions/2010/logs/acpc_2010_2PLIMIT/2P_LIMIT/ASVP-Rockhopper.389112126.dealer.phhs 11001478212
+blocks:
+8516639143-9258175982 files=8669 bytes=741536840
+9258176140-11001578786 files=20331 bytes=1743402647

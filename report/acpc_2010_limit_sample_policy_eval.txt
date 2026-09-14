@@ -1,0 +1,460 @@
+=== s_core ===
+table=d state=s_core nmin=10 weight=population pairs=88
+         player        opponent sim_bb100 actual_bb100
+        Slumbot        longhorn    98.939      138.933
+        GS6_iro        longhorn    96.977      161.683
+     LittleRock        longhorn    78.274      131.267
+           ASVP         Arnold2    26.845      -57.483
+           ASVP           PULPO    24.971      -63.467
+         Jester      LittleRock    22.766        1.017
+           ASVP         GS6_iro    22.486      -88.133
+           ASVP Hyperborean_tbr    22.228      -43.267
+       GGValuta      LittleRock    20.262       16.333
+        Slumbot      LittleRock    19.298       11.450
+        GS6_iro      LittleRock    18.820       -5.300
+         Sartre      LittleRock    18.529        2.925
+         PLICAS      LittleRock    13.651       -6.300
+       GGValuta         Arnold2     5.812        4.067
+         Jester           PULPO     5.751        3.200
+         Jester      Rockhopper     5.300        3.483
+        Slumbot          PLICAS     4.963       19.267
+        GS6_iro          PLICAS     4.497       25.550
+         Jester          Sartre     4.193       -3.383
+Hyperborean_iro         Arnold2     4.127        0.450
+         Jester Hyperborean_iro     4.081       -0.833
+       GGValuta           PULPO     3.291        1.983
+         Jester Hyperborean_tbr     3.226       -5.983
+        GS6_tbr          PLICAS     3.164       21.267
+       GGValuta      Rockhopper     2.755       -0.767
+         Jester        GGValuta     2.639       -0.800
+       GGValuta         GS6_tbr     2.576        6.450
+        Slumbot           PULPO     2.360       14.300
+Hyperborean_tbr      Rockhopper     2.051        9.683
+         Sartre           PULPO     1.716       -3.217
+Hyperborean_iro           PULPO     1.712      -12.633
+        Slumbot      Rockhopper     1.701        2.683
+        Slumbot         GS6_tbr     1.534        5.867
+        GS6_iro      Rockhopper     1.234        2.433
+Hyperborean_iro         GS6_tbr     1.180        3.058
+       GGValuta         Slumbot     1.106       -3.367
+Hyperborean_iro      Rockhopper     1.049       -5.178
+         Sartre      Rockhopper     1.044       -1.267
+        Slumbot          Sartre     0.766      -14.333
+       GGValuta Hyperborean_tbr     0.729        4.517
+     Rockhopper           PULPO     0.645        2.833
+        Slumbot Hyperborean_iro     0.585       -3.683
+        Arnold2          PLICAS     0.141       28.033
+        GS6_iro          Sartre     0.061       -4.825
+         Sartre         GS6_iro    -0.061        4.825
+         PLICAS         Arnold2    -0.141      -28.033
+Hyperborean_iro         Slumbot    -0.585        3.683
+          PULPO      Rockhopper    -0.645       -2.833
+Hyperborean_tbr        GGValuta    -0.729       -4.517
+         Sartre         Slumbot    -0.766       14.333
+     Rockhopper          Sartre    -1.044        1.267
+     Rockhopper Hyperborean_iro    -1.049        5.178
+        Slumbot        GGValuta    -1.106        3.367
+        GS6_tbr Hyperborean_iro    -1.180       -3.058
+     Rockhopper         GS6_iro    -1.234       -2.433
+        GS6_tbr         Slumbot    -1.534       -5.867
+     Rockhopper         Slumbot    -1.701       -2.683
+          PULPO Hyperborean_iro    -1.712       12.633
+          PULPO          Sartre    -1.716        3.217
+     Rockhopper Hyperborean_tbr    -2.051       -9.683
+          PULPO         Slumbot    -2.360      -14.300
+        GS6_tbr        GGValuta    -2.576       -6.450
+       GGValuta          Jester    -2.639        0.800
+     Rockhopper        GGValuta    -2.755        0.767
+         PLICAS         GS6_tbr    -3.164      -21.267
+Hyperborean_tbr          Jester    -3.226        5.983
+          PULPO        GGValuta    -3.291       -1.983
+Hyperborean_iro          Jester    -4.081        0.833
+        Arnold2 Hyperborean_iro    -4.127       -0.450
+         Sartre          Jester    -4.193        3.383
+         PLICAS         GS6_iro    -4.497      -25.550
+         PLICAS         Slumbot    -4.963      -19.267
+     Rockhopper          Jester    -5.300       -3.483
+          PULPO          Jester    -5.751       -3.200
+        Arnold2        GGValuta    -5.812       -4.067
+     LittleRock          PLICAS   -13.651        6.300
+     LittleRock          Sartre   -18.529       -2.925
+     LittleRock         GS6_iro   -18.820        5.300
+     LittleRock         Slumbot   -19.298      -11.450
+     LittleRock        GGValuta   -20.262      -16.333
+Hyperborean_tbr            ASVP   -22.228       43.267
+        GS6_iro            ASVP   -22.486       88.133
+     LittleRock          Jester   -22.766       -1.017
+          PULPO            ASVP   -24.971       63.467
+        Arnold2            ASVP   -26.845       57.483
+       longhorn      LittleRock   -78.274     -131.267
+       longhorn         GS6_iro   -96.977     -161.683
+       longhorn         Slumbot   -98.939     -138.933
+pearson=0.687 spearman=0.160
+=== s_fine ===
+table=d state=s_fine nmin=10 weight=population pairs=88
+         player        opponent sim_bb100 actual_bb100
+        Slumbot        longhorn    99.086      138.933
+        GS6_iro        longhorn    97.005      161.683
+     LittleRock        longhorn    78.707      131.267
+           ASVP         Arnold2    25.883      -57.483
+           ASVP           PULPO    24.249      -63.467
+         Jester      LittleRock    22.811        1.017
+           ASVP         GS6_iro    21.610      -88.133
+           ASVP Hyperborean_tbr    21.089      -43.267
+       GGValuta      LittleRock    20.464       16.333
+        Slumbot      LittleRock    19.345       11.450
+        GS6_iro      LittleRock    18.530       -5.300
+         Sartre      LittleRock    18.292        2.925
+         PLICAS      LittleRock    13.405       -6.300
+       GGValuta         Arnold2     6.230        4.067
+         Jester           PULPO     6.032        3.200
+        Slumbot          PLICAS     5.244       19.267
+         Jester      Rockhopper     5.115        3.483
+Hyperborean_iro         Arnold2     4.529        0.450
+         Jester          Sartre     4.484       -3.383
+        GS6_iro          PLICAS     4.376       25.550
+         Jester Hyperborean_iro     3.961       -0.833
+       GGValuta           PULPO     3.708        1.983
+        GS6_tbr          PLICAS     3.461       21.267
+         Jester Hyperborean_tbr     3.217       -5.983
+       GGValuta      Rockhopper     2.706       -0.767
+        Slumbot           PULPO     2.654       14.300
+       GGValuta         GS6_tbr     2.639        6.450
+         Jester        GGValuta     2.500       -0.800
+Hyperborean_iro           PULPO     2.161      -12.633
+Hyperborean_tbr      Rockhopper     1.810        9.683
+         Sartre           PULPO     1.706       -3.217
+        Slumbot      Rockhopper     1.505        2.683
+        Slumbot         GS6_tbr     1.457        5.867
+Hyperborean_iro         GS6_tbr     1.281        3.058
+       GGValuta         Slumbot     1.227       -3.367
+     Rockhopper           PULPO     1.111        2.833
+        Slumbot          Sartre     1.097      -14.333
+Hyperborean_iro      Rockhopper     0.988       -5.178
+       GGValuta Hyperborean_tbr     0.937        4.517
+        GS6_iro      Rockhopper     0.765        2.433
+         Sartre      Rockhopper     0.576       -1.267
+        Slumbot Hyperborean_iro     0.400       -3.683
+        Arnold2          PLICAS     0.167       28.033
+        GS6_iro          Sartre     0.092       -4.825
+         Sartre         GS6_iro    -0.092        4.825
+         PLICAS         Arnold2    -0.167      -28.033
+Hyperborean_iro         Slumbot    -0.400        3.683
+     Rockhopper          Sartre    -0.576        1.267
+     Rockhopper         GS6_iro    -0.765       -2.433
+Hyperborean_tbr        GGValuta    -0.937       -4.517
+     Rockhopper Hyperborean_iro    -0.988        5.178
+         Sartre         Slumbot    -1.097       14.333
+          PULPO      Rockhopper    -1.111       -2.833
+        Slumbot        GGValuta    -1.227        3.367
+        GS6_tbr Hyperborean_iro    -1.281       -3.058
+        GS6_tbr         Slumbot    -1.457       -5.867
+     Rockhopper         Slumbot    -1.505       -2.683
+          PULPO          Sartre    -1.706        3.217
+     Rockhopper Hyperborean_tbr    -1.810       -9.683
+          PULPO Hyperborean_iro    -2.161       12.633
+       GGValuta          Jester    -2.500        0.800
+        GS6_tbr        GGValuta    -2.639       -6.450
+          PULPO         Slumbot    -2.654      -14.300
+     Rockhopper        GGValuta    -2.706        0.767
+Hyperborean_tbr          Jester    -3.217        5.983
+         PLICAS         GS6_tbr    -3.461      -21.267
+          PULPO        GGValuta    -3.708       -1.983
+Hyperborean_iro          Jester    -3.961        0.833
+         PLICAS         GS6_iro    -4.376      -25.550
+         Sartre          Jester    -4.484        3.383
+        Arnold2 Hyperborean_iro    -4.529       -0.450
+     Rockhopper          Jester    -5.115       -3.483
+         PLICAS         Slumbot    -5.244      -19.267
+          PULPO          Jester    -6.032       -3.200
+        Arnold2        GGValuta    -6.230       -4.067
+     LittleRock          PLICAS   -13.405        6.300
+     LittleRock          Sartre   -18.292       -2.925
+     LittleRock         GS6_iro   -18.530        5.300
+     LittleRock         Slumbot   -19.345      -11.450
+     LittleRock        GGValuta   -20.464      -16.333
+Hyperborean_tbr            ASVP   -21.089       43.267
+        GS6_iro            ASVP   -21.610       88.133
+     LittleRock          Jester   -22.811       -1.017
+          PULPO            ASVP   -24.249       63.467
+        Arnold2            ASVP   -25.883       57.483
+       longhorn      LittleRock   -78.707     -131.267
+       longhorn         GS6_iro   -97.005     -161.683
+       longhorn         Slumbot   -99.086     -138.933
+pearson=0.694 spearman=0.160
+=== s_hole ===
+table=d state=s_hole nmin=10 weight=population pairs=88
+         player        opponent sim_bb100 actual_bb100
+        GS6_iro        longhorn    65.243      161.683
+        Slumbot        longhorn    63.772      138.933
+     LittleRock        longhorn    56.541      131.267
+         Jester      LittleRock    14.113        1.017
+        GS6_iro      LittleRock    13.636       -5.300
+         Sartre      LittleRock    13.210        2.925
+       GGValuta      LittleRock    13.111       16.333
+          PULPO            ASVP    12.184       63.467
+        Slumbot      LittleRock    12.036       11.450
+        GS6_iro            ASVP    11.396       88.133
+Hyperborean_tbr            ASVP    10.747       43.267
+        Arnold2            ASVP     6.488       57.483
+        Slumbot          PLICAS     5.706       19.267
+        GS6_iro          PLICAS     5.457       25.550
+         Jester           PULPO     4.583        3.200
+         Jester      Rockhopper     4.361        3.483
+         Jester Hyperborean_iro     4.105       -0.833
+        GS6_tbr          PLICAS     3.844       21.267
+        GS6_iro      Rockhopper     3.742        2.433
+         Jester Hyperborean_tbr     3.532       -5.983
+         Sartre           PULPO     3.519       -3.217
+         Jester        GGValuta     3.124       -0.800
+         Sartre      Rockhopper     3.065       -1.267
+       GGValuta           PULPO     2.856        1.983
+        Arnold2          PLICAS     2.848       28.033
+       GGValuta         Arnold2     2.450        4.067
+       GGValuta      Rockhopper     2.329       -0.767
+         PLICAS      LittleRock     2.132       -6.300
+         Sartre         Slumbot     2.078       14.333
+        Slumbot           PULPO     1.954       14.300
+        GS6_tbr Hyperborean_iro     1.844       -3.058
+Hyperborean_iro           PULPO     1.443      -12.633
+        Slumbot      Rockhopper     1.411        2.683
+       GGValuta Hyperborean_tbr     1.295        4.517
+Hyperborean_iro         Arnold2     1.152        0.450
+        GS6_tbr         Slumbot     1.052       -5.867
+         Jester          Sartre     0.826       -3.383
+        GS6_tbr        GGValuta     0.819       -6.450
+        Slumbot Hyperborean_iro     0.770       -3.683
+       GGValuta         Slumbot     0.737       -3.367
+Hyperborean_iro      Rockhopper     0.686       -5.178
+Hyperborean_tbr      Rockhopper     0.682        9.683
+     Rockhopper           PULPO     0.440        2.833
+         Sartre         GS6_iro     0.197        4.825
+        GS6_iro          Sartre    -0.197       -4.825
+          PULPO      Rockhopper    -0.440       -2.833
+     Rockhopper Hyperborean_tbr    -0.682       -9.683
+     Rockhopper Hyperborean_iro    -0.686        5.178
+        Slumbot        GGValuta    -0.737        3.367
+Hyperborean_iro         Slumbot    -0.770        3.683
+       GGValuta         GS6_tbr    -0.819        6.450
+         Sartre          Jester    -0.826        3.383
+        Slumbot         GS6_tbr    -1.052        5.867
+        Arnold2 Hyperborean_iro    -1.152       -0.450
+Hyperborean_tbr        GGValuta    -1.295       -4.517
+     Rockhopper         Slumbot    -1.411       -2.683
+          PULPO Hyperborean_iro    -1.443       12.633
+Hyperborean_iro         GS6_tbr    -1.844        3.058
+          PULPO         Slumbot    -1.954      -14.300
+        Slumbot          Sartre    -2.078      -14.333
+     LittleRock          PLICAS    -2.132        6.300
+     Rockhopper        GGValuta    -2.329        0.767
+        Arnold2        GGValuta    -2.450       -4.067
+         PLICAS         Arnold2    -2.848      -28.033
+          PULPO        GGValuta    -2.856       -1.983
+     Rockhopper          Sartre    -3.065        1.267
+       GGValuta          Jester    -3.124        0.800
+          PULPO          Sartre    -3.519        3.217
+Hyperborean_tbr          Jester    -3.532        5.983
+     Rockhopper         GS6_iro    -3.742       -2.433
+         PLICAS         GS6_tbr    -3.844      -21.267
+Hyperborean_iro          Jester    -4.105        0.833
+     Rockhopper          Jester    -4.361       -3.483
+          PULPO          Jester    -4.583       -3.200
+         PLICAS         GS6_iro    -5.457      -25.550
+         PLICAS         Slumbot    -5.706      -19.267
+           ASVP         Arnold2    -6.488      -57.483
+           ASVP Hyperborean_tbr   -10.747      -43.267
+           ASVP         GS6_iro   -11.396      -88.133
+     LittleRock         Slumbot   -12.036      -11.450
+           ASVP           PULPO   -12.184      -63.467
+     LittleRock        GGValuta   -13.111      -16.333
+     LittleRock          Sartre   -13.210       -2.925
+     LittleRock         GS6_iro   -13.636        5.300
+     LittleRock          Jester   -14.113       -1.017
+       longhorn      LittleRock   -56.541     -131.267
+       longhorn         Slumbot   -63.772     -138.933
+       longhorn         GS6_iro   -65.243     -161.683
+pearson=0.915 spearman=0.578
+=== s_sim ===
+table=d state=s_sim nmin=10 weight=population pairs=88
+         player        opponent sim_bb100 actual_bb100
+        Slumbot        longhorn    37.207      138.933
+        GS6_iro        longhorn    36.450      161.683
+     LittleRock        longhorn    36.278      131.267
+Hyperborean_tbr            ASVP    15.173       43.267
+          PULPO            ASVP    13.779       63.467
+        Arnold2            ASVP    13.610       57.483
+        GS6_iro            ASVP    13.560       88.133
+        Arnold2          PLICAS     7.703       28.033
+        Slumbot          PLICAS     6.519       19.267
+        GS6_iro          PLICAS     5.775       25.550
+     LittleRock          PLICAS     5.751        6.300
+        GS6_tbr          PLICAS     5.311       21.267
+         Sartre      LittleRock     4.779        2.925
+        Slumbot      LittleRock     3.996       11.450
+        GS6_iro      LittleRock     3.555       -5.300
+       GGValuta      LittleRock     3.299       16.333
+         Jester      LittleRock     2.789        1.017
+         Sartre          Jester     2.245        3.383
+         Sartre           PULPO     2.104       -3.217
+         Sartre      Rockhopper     2.037       -1.267
+        Arnold2 Hyperborean_iro     1.331       -0.450
+        GS6_iro      Rockhopper     1.262        2.433
+         Sartre         Slumbot     1.195       14.333
+        Slumbot Hyperborean_iro     1.183       -3.683
+        Arnold2        GGValuta     1.070       -4.067
+        Slumbot      Rockhopper     1.052        2.683
+         Sartre         GS6_iro     0.863        4.825
+         Jester Hyperborean_iro     0.705       -0.833
+        Slumbot           PULPO     0.704       14.300
+Hyperborean_tbr          Jester     0.661        5.983
+       GGValuta           PULPO     0.654        1.983
+         Jester      Rockhopper     0.471        3.483
+Hyperborean_tbr      Rockhopper     0.466        9.683
+        Slumbot        GGValuta     0.463        3.367
+       GGValuta      Rockhopper     0.459       -0.767
+         Jester           PULPO     0.415        3.200
+        GS6_tbr Hyperborean_iro     0.398       -3.058
+        Slumbot         GS6_tbr     0.313        5.867
+         Jester        GGValuta     0.260       -0.800
+Hyperborean_iro           PULPO     0.182      -12.633
+        GS6_tbr        GGValuta     0.156       -6.450
+Hyperborean_iro      Rockhopper     0.116       -5.178
+          PULPO      Rockhopper     0.048       -2.833
+       GGValuta Hyperborean_tbr     0.041        4.517
+Hyperborean_tbr        GGValuta    -0.041       -4.517
+     Rockhopper           PULPO    -0.048        2.833
+     Rockhopper Hyperborean_iro    -0.116        5.178
+       GGValuta         GS6_tbr    -0.156        6.450
+          PULPO Hyperborean_iro    -0.182       12.633
+       GGValuta          Jester    -0.260        0.800
+        GS6_tbr         Slumbot    -0.313       -5.867
+Hyperborean_iro         GS6_tbr    -0.398        3.058
+          PULPO          Jester    -0.415       -3.200
+     Rockhopper        GGValuta    -0.459        0.767
+       GGValuta         Slumbot    -0.463       -3.367
+     Rockhopper Hyperborean_tbr    -0.466       -9.683
+     Rockhopper          Jester    -0.471       -3.483
+          PULPO        GGValuta    -0.654       -1.983
+         Jester Hyperborean_tbr    -0.661       -5.983
+          PULPO         Slumbot    -0.704      -14.300
+Hyperborean_iro          Jester    -0.705        0.833
+        GS6_iro          Sartre    -0.863       -4.825
+     Rockhopper         Slumbot    -1.052       -2.683
+       GGValuta         Arnold2    -1.070        4.067
+Hyperborean_iro         Slumbot    -1.183        3.683
+        Slumbot          Sartre    -1.195      -14.333
+     Rockhopper         GS6_iro    -1.262       -2.433
+Hyperborean_iro         Arnold2    -1.331        0.450
+     Rockhopper          Sartre    -2.037        1.267
+          PULPO          Sartre    -2.104        3.217
+         Jester          Sartre    -2.245       -3.383
+     LittleRock          Jester    -2.789       -1.017
+     LittleRock        GGValuta    -3.299      -16.333
+     LittleRock         GS6_iro    -3.555        5.300
+     LittleRock         Slumbot    -3.996      -11.450
+     LittleRock          Sartre    -4.779       -2.925
+         PLICAS         GS6_tbr    -5.311      -21.267
+         PLICAS      LittleRock    -5.751       -6.300
+         PLICAS         GS6_iro    -5.775      -25.550
+         PLICAS         Slumbot    -6.519      -19.267
+         PLICAS         Arnold2    -7.703      -28.033
+           ASVP         GS6_iro   -13.560      -88.133
+           ASVP         Arnold2   -13.610      -57.483
+           ASVP           PULPO   -13.779      -63.467
+           ASVP Hyperborean_tbr   -15.173      -43.267
+       longhorn      LittleRock   -36.278     -131.267
+       longhorn         GS6_iro   -36.450     -161.683
+       longhorn         Slumbot   -37.207     -138.933
+pearson=0.974 spearman=0.731
+=== s_pdf ===
+table=d state=s_pdf nmin=10 weight=population pairs=88
+         player        opponent sim_bb100 actual_bb100
+        GS6_iro        longhorn     8.243      161.683
+        Slumbot        longhorn     8.109      138.933
+     LittleRock        longhorn     6.775      131.267
+        Arnold2            ASVP     4.791       57.483
+          PULPO            ASVP     4.575       63.467
+Hyperborean_tbr            ASVP     4.163       43.267
+        GS6_iro            ASVP     4.103       88.133
+         PLICAS      LittleRock     2.949       -6.300
+         PLICAS         GS6_iro     1.950      -25.550
+         PLICAS         GS6_tbr     1.932      -21.267
+         PLICAS         Slumbot     1.408      -19.267
+        Slumbot      LittleRock     0.969       11.450
+         Sartre      LittleRock     0.793        2.925
+        Arnold2        GGValuta     0.784       -4.067
+         PLICAS         Arnold2     0.738      -28.033
+        GS6_iro      LittleRock     0.634       -5.300
+         Jester      LittleRock     0.568        1.017
+        Arnold2 Hyperborean_iro     0.536       -0.450
+Hyperborean_iro         GS6_tbr     0.495        3.058
+       GGValuta      LittleRock     0.412       16.333
+        Slumbot         GS6_tbr     0.403        5.867
+     Rockhopper         GS6_iro     0.323       -2.433
+         Sartre         GS6_iro     0.303        4.825
+       GGValuta         GS6_tbr     0.209        6.450
+        Slumbot        GGValuta     0.199        3.367
+     Rockhopper          Jester     0.192       -3.483
+     Rockhopper        GGValuta     0.177        0.767
+Hyperborean_iro           PULPO     0.170      -12.633
+          PULPO        GGValuta     0.164       -1.983
+     Rockhopper           PULPO     0.158        2.833
+         Sartre           PULPO     0.142       -3.217
+Hyperborean_iro          Jester     0.126        0.833
+        Slumbot          Sartre     0.079      -14.333
+         Jester        GGValuta     0.074       -0.800
+         Jester           PULPO     0.073        3.200
+Hyperborean_tbr        GGValuta     0.072       -4.517
+         Sartre          Jester     0.060        3.383
+         Jester Hyperborean_tbr     0.050       -5.983
+        Slumbot Hyperborean_iro     0.044       -3.683
+     Rockhopper          Sartre     0.043        1.267
+     Rockhopper         Slumbot     0.042       -2.683
+        Slumbot           PULPO     0.022       14.300
+     Rockhopper Hyperborean_iro     0.019        5.178
+Hyperborean_tbr      Rockhopper     0.003        9.683
+     Rockhopper Hyperborean_tbr    -0.003       -9.683
+Hyperborean_iro      Rockhopper    -0.019       -5.178
+          PULPO         Slumbot    -0.022      -14.300
+        Slumbot      Rockhopper    -0.042        2.683
+         Sartre      Rockhopper    -0.043       -1.267
+Hyperborean_iro         Slumbot    -0.044        3.683
+Hyperborean_tbr          Jester    -0.050        5.983
+         Jester          Sartre    -0.060       -3.383
+       GGValuta Hyperborean_tbr    -0.072        4.517
+          PULPO          Jester    -0.073       -3.200
+       GGValuta          Jester    -0.074        0.800
+         Sartre         Slumbot    -0.079       14.333
+         Jester Hyperborean_iro    -0.126       -0.833
+          PULPO          Sartre    -0.142        3.217
+          PULPO      Rockhopper    -0.158       -2.833
+       GGValuta           PULPO    -0.164        1.983
+          PULPO Hyperborean_iro    -0.170       12.633
+       GGValuta      Rockhopper    -0.177       -0.767
+         Jester      Rockhopper    -0.192        3.483
+       GGValuta         Slumbot    -0.199       -3.367
+        GS6_tbr        GGValuta    -0.209       -6.450
+        GS6_iro          Sartre    -0.303       -4.825
+        GS6_iro      Rockhopper    -0.323        2.433
+        GS6_tbr         Slumbot    -0.403       -5.867
+     LittleRock        GGValuta    -0.412      -16.333
+        GS6_tbr Hyperborean_iro    -0.495       -3.058
+Hyperborean_iro         Arnold2    -0.536        0.450
+     LittleRock          Jester    -0.568       -1.017
+     LittleRock         GS6_iro    -0.634        5.300
+        Arnold2          PLICAS    -0.738       28.033
+       GGValuta         Arnold2    -0.784        4.067
+     LittleRock          Sartre    -0.793       -2.925
+     LittleRock         Slumbot    -0.969      -11.450
+        Slumbot          PLICAS    -1.408       19.267
+        GS6_tbr          PLICAS    -1.932       21.267
+        GS6_iro          PLICAS    -1.950       25.550
+     LittleRock          PLICAS    -2.949        6.300
+           ASVP         GS6_iro    -4.103      -88.133
+           ASVP Hyperborean_tbr    -4.163      -43.267
+           ASVP           PULPO    -4.575      -63.467
+           ASVP         Arnold2    -4.791      -57.483
+       longhorn      LittleRock    -6.775     -131.267
+       longhorn         Slumbot    -8.109     -138.933
+       longhorn         GS6_iro    -8.243     -161.683
+pearson=0.892 spearman=0.264

@@ -5,3 +5,5 @@ figs/
 __pycache__/
 *.pyc
 .DS_Store
+
+.memory/branches/*/log.md

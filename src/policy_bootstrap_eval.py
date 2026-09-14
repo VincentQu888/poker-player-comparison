@@ -29,16 +29,17 @@ def main() -> None:
     ap.add_argument("--state", default="s_sim")
     ap.add_argument("--nmin", type=int, default=10)
     ap.add_argument("--weight", choices=["population", "uniform"], default="population")
+    ap.add_argument("--hand-player-glob", default="data/hand_player/*.parquet")
     args = ap.parse_args()
 
     con = duckdb.connect(str(args.db), read_only=True)
     players = [r[0] for r in con.execute("SELECT DISTINCT player FROM d ORDER BY player").fetchall()]
     actual = {(p, o): bb100 for p, o, bb100 in con.execute("""
-        WITH hp AS (SELECT * FROM 'data/hand_player/*.parquet'), opp AS (
+        WITH hp AS (SELECT * FROM read_parquet(?)), opp AS (
           SELECT a.player, b.player opponent, a.net_bb
           FROM hp a JOIN hp b ON a.hand_id=b.hand_id AND a.player<>b.player)
         SELECT player, opponent, avg(net_bb)*100 bb100 FROM opp GROUP BY 1,2
-    """).fetchall()}
+    """, [args.hand_player_glob]).fetchall()}
 
     con.execute(f"""
         CREATE TEMP TABLE q AS
@@ -69,7 +70,7 @@ def main() -> None:
     rows = []
     for a in players:
         for b in players:
-            if a == b:
+            if a == b or (a, b) not in actual:
                 continue
             df = con.execute("""
                 WITH common AS (

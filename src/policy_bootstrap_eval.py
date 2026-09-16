@@ -9,6 +9,7 @@ using Q_pop(S,a)=historical continuation reward for that state/action.
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 
 import duckdb
@@ -22,6 +23,22 @@ def rank_corr(x, y) -> float:
     return float(pd.Series(x).rank().corr(pd.Series(y).rank()))
 
 
+def state_expr(state: str) -> str:
+    core = "street||'|'||pot_type||'|'||pos||'|'||action_faced||'|'||spr_b"
+    states = {
+        "s_core": core,
+        "s_fine": f"{core}||'|'||faced_sz||'|'||nactive",
+        "s_hole": f"{core}||'|H='||coalesce(hero_hole_class, '??')",
+        "s_sim": f"{core}||'|H='||coalesce(hero_hole_class, '??')||'|M='||coalesce(hero_hand_bucket, 'unknown')",
+        "s_pdf": f"{core}||'|'||faced_sz||'|'||nactive||'|H='||coalesce(hero_hole_class, '??')||'|M='||coalesce(hero_hand_bucket, 'unknown')||'|B='||coalesce(board_bucket, 'unknown')||'|behind='||n_to_act_after",
+    }
+    if state in states:
+        return states[state]
+    if not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", state):
+        raise ValueError(f"unsafe state column: {state}")
+    return f'"{state}"'
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--db", type=Path, default=Path("data/analysis.duckdb"))
@@ -33,6 +50,7 @@ def main() -> None:
     args = ap.parse_args()
 
     con = duckdb.connect(str(args.db), read_only=True)
+    state = state_expr(args.state)
     players = [r[0] for r in con.execute("SELECT DISTINCT player FROM d ORDER BY player").fetchall()]
     actual = {(p, o): bb100 for p, o, bb100 in con.execute("""
         WITH hp AS (SELECT * FROM read_parquet(?)), opp AS (
@@ -43,17 +61,17 @@ def main() -> None:
 
     con.execute(f"""
         CREATE TEMP TABLE q AS
-        SELECT "{args.state}" s, a, avg(reward_bb) q, count(*) n
+        SELECT {state} s, a, avg(reward_bb) q, count(*) n
         FROM "{args.table}" WHERE reward_bb IS NOT NULL GROUP BY 1,2
     """)
     con.execute(f"""
         CREATE TEMP TABLE ps AS
-        SELECT player, "{args.state}" s, count(*) n
+        SELECT player, {state} s, count(*) n
         FROM "{args.table}" GROUP BY 1,2 HAVING count(*) >= {args.nmin}
     """)
     con.execute(f"""
         CREATE TEMP TABLE psa AS
-        SELECT player, "{args.state}" s, a, count(*) n
+        SELECT player, {state} s, a, count(*) n
         FROM "{args.table}" GROUP BY 1,2,3
     """)
     con.execute("""
@@ -64,7 +82,7 @@ def main() -> None:
     weight_expr = "count(*) * 1.0" if args.weight == "population" else "1.0"
     con.execute(f"""
         CREATE TEMP TABLE sw AS
-        SELECT "{args.state}" s, {weight_expr} w FROM "{args.table}" GROUP BY 1
+        SELECT {state} s, {weight_expr} w FROM "{args.table}" GROUP BY 1
     """)
 
     rows = []

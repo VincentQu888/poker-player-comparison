@@ -1,2 +1,3292 @@
 [START] 2026-09-14T15:46:43-04:00 ACPC 2010 full pipeline
 [PARSE] 2026-09-14T15:46:43-04:00
+parsed 500/29000 files, 1500000 hands
+parsed 1000/29000 files, 3000000 hands
+parsed 1500/29000 files, 4500000 hands
+parsed 2000/29000 files, 6000000 hands
+parsed 2500/29000 files, 7500000 hands
+parsed 3000/29000 files, 9000000 hands
+parsed 3500/29000 files, 10500000 hands
+parsed 4000/29000 files, 12000000 hands
+parsed 4500/29000 files, 13500000 hands
+parsed 5000/29000 files, 15000000 hands
+parsed 5500/29000 files, 16500000 hands
+parsed 6000/29000 files, 18000000 hands
+parsed 6500/29000 files, 19500000 hands
+parsed 7000/29000 files, 21000000 hands
+parsed 7500/29000 files, 22500000 hands
+parsed 8000/29000 files, 24000000 hands
+parsed 8500/29000 files, 25500000 hands
+parsed 9000/29000 files, 27000000 hands
+parsed 9500/29000 files, 28500000 hands
+parsed 10000/29000 files, 30000000 hands
+parsed 10500/29000 files, 31500000 hands
+parsed 11000/29000 files, 33000000 hands
+parsed 11500/29000 files, 34500000 hands
+parsed 12000/29000 files, 36000000 hands
+parsed 12500/29000 files, 37500000 hands
+parsed 13000/29000 files, 39000000 hands
+parsed 13500/29000 files, 40500000 hands
+parsed 14000/29000 files, 42000000 hands
+parsed 14500/29000 files, 43500000 hands
+parsed 15000/29000 files, 45000000 hands
+parsed 15500/29000 files, 46500000 hands
+parsed 16000/29000 files, 48000000 hands
+parsed 16500/29000 files, 49500000 hands
+parsed 17000/29000 files, 51000000 hands
+parsed 17500/29000 files, 52500000 hands
+parsed 18000/29000 files, 54000000 hands
+parsed 18500/29000 files, 55500000 hands
+parsed 19000/29000 files, 57000000 hands
+parsed 19500/29000 files, 58500000 hands
+parsed 20000/29000 files, 60000000 hands
+parsed 20500/29000 files, 61500000 hands
+parsed 21000/29000 files, 63000000 hands
+parsed 21500/29000 files, 64500000 hands
+parsed 22000/29000 files, 66000000 hands
+parsed 22500/29000 files, 67500000 hands
+parsed 23000/29000 files, 69000000 hands
+parsed 23500/29000 files, 70500000 hands
+parsed 24000/29000 files, 72000000 hands
+parsed 24500/29000 files, 73500000 hands
+parsed 25000/29000 files, 75000000 hands
+parsed 25500/29000 files, 76500000 hands
+parsed 26000/29000 files, 78000000 hands
+parsed 26500/29000 files, 79500000 hands
+parsed 27000/29000 files, 81000000 hands
+parsed 27500/29000 files, 82500000 hands
+parsed 28000/29000 files, 84000000 hands
+parsed 28500/29000 files, 85500000 hands
+parsed 29000/29000 files, 87000000 hands
+wrote 87000000 ACPC 2010 limit hands to data\acpc2010_limit_full\hands
+[REPLAY] 2026-09-14T17:50:54-04:00
+  shard 0: 872722 decisions, 200000 hand-players
+  shard 1: 872433 decisions, 200000 hand-players
+  shard 2: 872891 decisions, 200000 hand-players
+  shard 3: 698411 decisions, 200000 hand-players
+  shard 4: 698294 decisions, 200000 hand-players
+  shard 5: 698229 decisions, 200000 hand-players
+  shard 6: 697652 decisions, 200000 hand-players
+  shard 7: 697648 decisions, 200000 hand-players
+  shard 8: 699006 decisions, 200000 hand-players
+  shard 9: 697940 decisions, 200000 hand-players
+  shard 10: 697757 decisions, 200000 hand-players
+  shard 11: 703593 decisions, 200000 hand-players
+  shard 12: 696046 decisions, 200000 hand-players
+  shard 13: 696039 decisions, 200000 hand-players
+  shard 14: 694964 decisions, 200000 hand-players
+  shard 15: 695107 decisions, 200000 hand-players
+  shard 16: 694347 decisions, 200000 hand-players
+  shard 17: 694570 decisions, 200000 hand-players
+  shard 18: 691099 decisions, 200000 hand-players
+  shard 19: 690323 decisions, 200000 hand-players
+  shard 20: 691356 decisions, 200000 hand-players
+  shard 21: 696479 decisions, 200000 hand-players
+  shard 22: 695613 decisions, 200000 hand-players
+  shard 23: 695539 decisions, 200000 hand-players
+  shard 24: 551145 decisions, 200000 hand-players
+  shard 25: 549866 decisions, 200000 hand-players
+  shard 26: 553862 decisions, 200000 hand-players
+  shard 27: 510050 decisions, 200000 hand-players
+  shard 28: 509869 decisions, 200000 hand-players
+  shard 29: 504246 decisions, 200000 hand-players
+  shard 30: 694339 decisions, 200000 hand-players
+  shard 31: 694153 decisions, 200000 hand-players
+  shard 32: 694053 decisions, 200000 hand-players
+  shard 33: 696375 decisions, 200000 hand-players
+  shard 34: 696100 decisions, 200000 hand-players
+  shard 35: 695356 decisions, 200000 hand-players
+  shard 36: 689093 decisions, 200000 hand-players
+  shard 37: 689242 decisions, 200000 hand-players
+  shard 38: 689151 decisions, 200000 hand-players
+  shard 39: 692938 decisions, 200000 hand-players
+  shard 40: 692785 decisions, 200000 hand-players
+  shard 41: 692515 decisions, 200000 hand-players
+  shard 42: 874739 decisions, 200000 hand-players
+  shard 43: 873324 decisions, 200000 hand-players
+  shard 44: 873089 decisions, 200000 hand-players
+  shard 45: 878738 decisions, 200000 hand-players
+  shard 46: 877114 decisions, 200000 hand-players
+  shard 47: 877036 decisions, 200000 hand-players
+  shard 48: 875974 decisions, 200000 hand-players
+  shard 49: 874102 decisions, 200000 hand-players
+  shard 50: 876053 decisions, 200000 hand-players
+  shard 51: 991401 decisions, 200000 hand-players
+  shard 52: 992035 decisions, 200000 hand-players
+  shard 53: 992922 decisions, 200000 hand-players
+  shard 54: 878553 decisions, 200000 hand-players
+  shard 55: 876662 decisions, 200000 hand-players
+  shard 56: 876442 decisions, 200000 hand-players
+  shard 57: 877043 decisions, 200000 hand-players
+  shard 58: 875606 decisions, 200000 hand-players
+  shard 59: 875117 decisions, 200000 hand-players
+  shard 60: 884033 decisions, 200000 hand-players
+  shard 61: 881663 decisions, 200000 hand-players
+  shard 62: 883337 decisions, 200000 hand-players
+  shard 63: 835088 decisions, 200000 hand-players
+  shard 64: 833244 decisions, 200000 hand-players
+  shard 65: 834398 decisions, 200000 hand-players
+  shard 66: 579819 decisions, 200000 hand-players
+  shard 67: 587021 decisions, 200000 hand-players
+  shard 68: 583342 decisions, 200000 hand-players
+  shard 69: 670496 decisions, 200000 hand-players
+  shard 70: 668703 decisions, 200000 hand-players
+  shard 71: 670373 decisions, 200000 hand-players
+  shard 72: 873868 decisions, 200000 hand-players
+  shard 73: 872431 decisions, 200000 hand-players
+  shard 74: 872233 decisions, 200000 hand-players
+  shard 75: 876740 decisions, 200000 hand-players
+  shard 76: 875165 decisions, 200000 hand-players
+  shard 77: 873947 decisions, 200000 hand-players
+  shard 78: 872733 decisions, 200000 hand-players
+  shard 79: 871164 decisions, 200000 hand-players
+  shard 80: 871247 decisions, 200000 hand-players
+  shard 81: 875355 decisions, 200000 hand-players
+  shard 82: 872992 decisions, 200000 hand-players
+  shard 83: 873031 decisions, 200000 hand-players
+  shard 84: 697841 decisions, 200000 hand-players
+  shard 85: 697630 decisions, 200000 hand-players
+  shard 86: 697286 decisions, 200000 hand-players
+  shard 87: 876922 decisions, 200000 hand-players
+  shard 88: 876350 decisions, 200000 hand-players
+  shard 89: 876492 decisions, 200000 hand-players
+  shard 90: 691358 decisions, 200000 hand-players
+  shard 91: 690314 decisions, 200000 hand-players
+  shard 92: 691563 decisions, 200000 hand-players
+  shard 93: 691358 decisions, 200000 hand-players
+  shard 94: 690314 decisions, 200000 hand-players
+  shard 95: 691563 decisions, 200000 hand-players
+  shard 96: 687949 decisions, 200000 hand-players
+  shard 97: 687411 decisions, 200000 hand-players
+  shard 98: 686836 decisions, 200000 hand-players
+  shard 99: 687152 decisions, 200000 hand-players
+  shard 100: 686896 decisions, 200000 hand-players
+  shard 101: 685704 decisions, 200000 hand-players
+  shard 102: 681672 decisions, 200000 hand-players
+  shard 103: 680761 decisions, 200000 hand-players
+  shard 104: 682078 decisions, 200000 hand-players
+  shard 105: 701183 decisions, 200000 hand-players
+  shard 106: 700458 decisions, 200000 hand-players
+  shard 107: 700827 decisions, 200000 hand-players
+  shard 108: 557240 decisions, 200000 hand-players
+  shard 109: 546081 decisions, 200000 hand-players
+  shard 110: 550833 decisions, 200000 hand-players
+  shard 111: 497871 decisions, 200000 hand-players
+  shard 112: 493815 decisions, 200000 hand-players
+  shard 113: 499993 decisions, 200000 hand-players
+  shard 114: 685226 decisions, 200000 hand-players
+  shard 115: 684680 decisions, 200000 hand-players
+  shard 116: 684481 decisions, 200000 hand-players
+  shard 117: 687581 decisions, 200000 hand-players
+  shard 118: 686352 decisions, 200000 hand-players
+  shard 119: 685745 decisions, 200000 hand-players
+  shard 120: 680358 decisions, 200000 hand-players
+  shard 121: 679574 decisions, 200000 hand-players
+  shard 122: 679500 decisions, 200000 hand-players
+  shard 123: 684261 decisions, 200000 hand-players
+  shard 124: 683756 decisions, 200000 hand-players
+  shard 125: 683121 decisions, 200000 hand-players
+  shard 126: 699488 decisions, 200000 hand-players
+  shard 127: 698333 decisions, 200000 hand-players
+  shard 128: 697160 decisions, 200000 hand-players
+  shard 129: 874627 decisions, 200000 hand-players
+  shard 130: 874443 decisions, 200000 hand-players
+  shard 131: 874459 decisions, 200000 hand-players
+  shard 132: 693640 decisions, 200000 hand-players
+  shard 133: 691799 decisions, 200000 hand-players
+  shard 134: 690579 decisions, 200000 hand-players
+  shard 135: 690967 decisions, 200000 hand-players
+  shard 136: 689739 decisions, 200000 hand-players
+  shard 137: 688670 decisions, 200000 hand-players
+  shard 138: 690835 decisions, 200000 hand-players
+  shard 139: 688512 decisions, 200000 hand-players
+  shard 140: 687310 decisions, 200000 hand-players
+  shard 141: 686036 decisions, 200000 hand-players
+  shard 142: 683252 decisions, 200000 hand-players
+  shard 143: 683184 decisions, 200000 hand-players
+  shard 144: 698520 decisions, 200000 hand-players
+  shard 145: 698050 decisions, 200000 hand-players
+  shard 146: 697097 decisions, 200000 hand-players
+  shard 147: 587513 decisions, 200000 hand-players
+  shard 148: 571756 decisions, 200000 hand-players
+  shard 149: 571930 decisions, 200000 hand-players
+  shard 150: 513914 decisions, 200000 hand-players
+  shard 151: 501867 decisions, 200000 hand-players
+  shard 152: 504812 decisions, 200000 hand-players
+  shard 153: 674116 decisions, 200000 hand-players
+  shard 154: 687357 decisions, 200000 hand-players
+  shard 155: 686007 decisions, 200000 hand-players
+  shard 156: 690709 decisions, 200000 hand-players
+  shard 157: 689048 decisions, 200000 hand-players
+  shard 158: 688359 decisions, 200000 hand-players
+  shard 159: 684635 decisions, 200000 hand-players
+  shard 160: 682132 decisions, 200000 hand-players
+  shard 161: 680871 decisions, 200000 hand-players
+  shard 162: 687495 decisions, 200000 hand-players
+  shard 163: 686703 decisions, 200000 hand-players
+  shard 164: 685043 decisions, 200000 hand-players
+  shard 165: 701006 decisions, 200000 hand-players
+  shard 166: 697783 decisions, 200000 hand-players
+  shard 167: 697558 decisions, 200000 hand-players
+  shard 168: 967367 decisions, 200000 hand-players
+  shard 169: 997172 decisions, 200000 hand-players
+  shard 170: 986837 decisions, 200000 hand-players
+  shard 171: 721294 decisions, 200000 hand-players
+  shard 172: 691767 decisions, 200000 hand-players
+  shard 173: 690287 decisions, 200000 hand-players
+  shard 174: 693034 decisions, 200000 hand-players
+  shard 175: 689953 decisions, 200000 hand-players
+  shard 176: 688084 decisions, 200000 hand-players
+  shard 177: 687444 decisions, 200000 hand-players
+  shard 178: 684964 decisions, 200000 hand-players
+  shard 179: 682897 decisions, 200000 hand-players
+  shard 180: 695866 decisions, 200000 hand-players
+  shard 181: 699351 decisions, 200000 hand-players
+  shard 182: 697538 decisions, 200000 hand-players
+  shard 183: 623426 decisions, 200000 hand-players
+  shard 184: 576468 decisions, 200000 hand-players
+  shard 185: 570961 decisions, 200000 hand-players
+  shard 186: 538448 decisions, 200000 hand-players
+  shard 187: 507548 decisions, 200000 hand-players
+  shard 188: 508937 decisions, 200000 hand-players
+  shard 189: 612081 decisions, 200000 hand-players
+  shard 190: 688895 decisions, 200000 hand-players
+  shard 191: 686592 decisions, 200000 hand-players
+  shard 192: 689753 decisions, 200000 hand-players
+  shard 193: 690226 decisions, 200000 hand-players
+  shard 194: 689163 decisions, 200000 hand-players
+  shard 195: 686944 decisions, 200000 hand-players
+  shard 196: 684001 decisions, 200000 hand-players
+  shard 197: 681397 decisions, 200000 hand-players
+  shard 198: 686453 decisions, 200000 hand-players
+  shard 199: 687803 decisions, 200000 hand-players
+  shard 200: 685895 decisions, 200000 hand-players
+  shard 201: 692521 decisions, 200000 hand-players
+  shard 202: 696188 decisions, 200000 hand-players
+  shard 203: 694584 decisions, 200000 hand-players
+  shard 204: 799281 decisions, 200000 hand-players
+  shard 205: 876685 decisions, 200000 hand-players
+  shard 206: 876449 decisions, 200000 hand-players
+  shard 207: 766946 decisions, 200000 hand-players
+  shard 208: 688053 decisions, 200000 hand-players
+  shard 209: 686388 decisions, 200000 hand-players
+  shard 210: 687779 decisions, 200000 hand-players
+  shard 211: 689635 decisions, 200000 hand-players
+  shard 212: 688773 decisions, 200000 hand-players
+  shard 213: 688124 decisions, 200000 hand-players
+  shard 214: 684597 decisions, 200000 hand-players
+  shard 215: 684446 decisions, 200000 hand-players
+  shard 216: 681401 decisions, 200000 hand-players
+  shard 217: 680689 decisions, 200000 hand-players
+  shard 218: 678913 decisions, 200000 hand-players
+  shard 219: 687304 decisions, 200000 hand-players
+  shard 220: 698663 decisions, 200000 hand-players
+  shard 221: 697636 decisions, 200000 hand-players
+  shard 222: 638514 decisions, 200000 hand-players
+  shard 223: 550792 decisions, 200000 hand-players
+  shard 224: 553429 decisions, 200000 hand-players
+  shard 225: 534240 decisions, 200000 hand-players
+  shard 226: 495067 decisions, 200000 hand-players
+  shard 227: 492539 decisions, 200000 hand-players
+  shard 228: 575747 decisions, 200000 hand-players
+  shard 229: 683266 decisions, 200000 hand-players
+  shard 230: 682761 decisions, 200000 hand-players
+  shard 231: 683733 decisions, 200000 hand-players
+  shard 232: 684810 decisions, 200000 hand-players
+  shard 233: 684589 decisions, 200000 hand-players
+  shard 234: 681497 decisions, 200000 hand-players
+  shard 235: 678152 decisions, 200000 hand-players
+  shard 236: 677689 decisions, 200000 hand-players
+  shard 237: 679536 decisions, 200000 hand-players
+  shard 238: 682527 decisions, 200000 hand-players
+  shard 239: 681779 decisions, 200000 hand-players
+  shard 240: 687146 decisions, 200000 hand-players
+  shard 241: 694877 decisions, 200000 hand-players
+  shard 242: 694648 decisions, 200000 hand-players
+  shard 243: 765008 decisions, 200000 hand-players
+  shard 244: 875101 decisions, 200000 hand-players
+  shard 245: 875251 decisions, 200000 hand-players
+  shard 246: 798892 decisions, 200000 hand-players
+  shard 247: 686899 decisions, 200000 hand-players
+  shard 248: 685515 decisions, 200000 hand-players
+  shard 249: 685931 decisions, 200000 hand-players
+  shard 250: 688792 decisions, 200000 hand-players
+  shard 251: 688057 decisions, 200000 hand-players
+  shard 252: 688016 decisions, 200000 hand-players
+  shard 253: 688792 decisions, 200000 hand-players
+  shard 254: 688057 decisions, 200000 hand-players
+  shard 255: 687005 decisions, 200000 hand-players
+  shard 256: 685102 decisions, 200000 hand-players
+  shard 257: 684208 decisions, 200000 hand-players
+  shard 258: 681319 decisions, 200000 hand-players
+  shard 259: 678843 decisions, 200000 hand-players
+  shard 260: 677576 decisions, 200000 hand-players
+  shard 261: 685973 decisions, 200000 hand-players
+  shard 262: 698591 decisions, 200000 hand-players
+  shard 263: 697526 decisions, 200000 hand-players
+  shard 264: 637800 decisions, 200000 hand-players
+  shard 265: 546328 decisions, 200000 hand-players
+  shard 266: 558623 decisions, 200000 hand-players
+  shard 267: 531162 decisions, 200000 hand-players
+  shard 268: 496699 decisions, 200000 hand-players
+  shard 269: 494193 decisions, 200000 hand-players
+  shard 270: 575881 decisions, 200000 hand-players
+  shard 271: 682298 decisions, 200000 hand-players
+  shard 272: 681689 decisions, 200000 hand-players
+  shard 273: 682288 decisions, 200000 hand-players
+  shard 274: 683195 decisions, 200000 hand-players
+  shard 275: 683986 decisions, 200000 hand-players
+  shard 276: 680233 decisions, 200000 hand-players
+  shard 277: 677150 decisions, 200000 hand-players
+  shard 278: 676578 decisions, 200000 hand-players
+  shard 279: 678598 decisions, 200000 hand-players
+  shard 280: 681027 decisions, 200000 hand-players
+  shard 281: 681275 decisions, 200000 hand-players
+  shard 282: 684428 decisions, 200000 hand-players
+  shard 283: 691515 decisions, 200000 hand-players
+  shard 284: 689845 decisions, 200000 hand-players
+  shard 285: 766487 decisions, 200000 hand-players
+  shard 286: 882454 decisions, 200000 hand-players
+  shard 287: 881460 decisions, 200000 hand-players
+  shard 288: 802708 decisions, 200000 hand-players
+  shard 289: 683022 decisions, 200000 hand-players
+  shard 290: 680916 decisions, 200000 hand-players
+  shard 291: 682349 decisions, 200000 hand-players
+  shard 292: 683822 decisions, 200000 hand-players
+  shard 293: 682864 decisions, 200000 hand-players
+  shard 294: 683586 decisions, 200000 hand-players
+  shard 295: 683782 decisions, 200000 hand-players
+  shard 296: 682994 decisions, 200000 hand-players
+  shard 297: 684557 decisions, 200000 hand-players
+  shard 298: 680321 decisions, 200000 hand-players
+  shard 299: 678347 decisions, 200000 hand-players
+  shard 300: 679209 decisions, 200000 hand-players
+  shard 301: 678183 decisions, 200000 hand-players
+  shard 302: 677490 decisions, 200000 hand-players
+  shard 303: 684213 decisions, 200000 hand-players
+  shard 304: 693533 decisions, 200000 hand-players
+  shard 305: 692339 decisions, 200000 hand-players
+  shard 306: 635050 decisions, 200000 hand-players
+  shard 307: 546942 decisions, 200000 hand-players
+  shard 308: 553222 decisions, 200000 hand-players
+  shard 309: 533958 decisions, 200000 hand-players
+  shard 310: 494743 decisions, 200000 hand-players
+  shard 311: 494065 decisions, 200000 hand-players
+  shard 312: 570785 decisions, 200000 hand-players
+  shard 313: 677220 decisions, 200000 hand-players
+  shard 314: 675760 decisions, 200000 hand-players
+  shard 315: 677645 decisions, 200000 hand-players
+  shard 316: 679102 decisions, 200000 hand-players
+  shard 317: 677962 decisions, 200000 hand-players
+  shard 318: 676291 decisions, 200000 hand-players
+  shard 319: 672287 decisions, 200000 hand-players
+  shard 320: 670865 decisions, 200000 hand-players
+  shard 321: 673803 decisions, 200000 hand-players
+  shard 322: 677194 decisions, 200000 hand-players
+  shard 323: 675499 decisions, 200000 hand-players
+  shard 324: 684607 decisions, 200000 hand-players
+  shard 325: 694798 decisions, 200000 hand-players
+  shard 326: 695674 decisions, 200000 hand-players
+  shard 327: 750707 decisions, 200000 hand-players
+  shard 328: 834874 decisions, 200000 hand-players
+  shard 329: 832640 decisions, 200000 hand-players
+  shard 330: 781533 decisions, 200000 hand-players
+  shard 331: 701720 decisions, 200000 hand-players
+  shard 332: 701594 decisions, 200000 hand-players
+  shard 333: 700434 decisions, 200000 hand-players
+  shard 334: 698657 decisions, 200000 hand-players
+  shard 335: 697662 decisions, 200000 hand-players
+  shard 336: 698901 decisions, 200000 hand-players
+  shard 337: 698667 decisions, 200000 hand-players
+  shard 338: 699055 decisions, 200000 hand-players
+  shard 339: 702222 decisions, 200000 hand-players
+  shard 340: 698620 decisions, 200000 hand-players
+  shard 341: 698344 decisions, 200000 hand-players
+  shard 342: 698040 decisions, 200000 hand-players
+  shard 343: 698999 decisions, 200000 hand-players
+  shard 344: 697977 decisions, 200000 hand-players
+  shard 345: 695909 decisions, 200000 hand-players
+  shard 346: 693188 decisions, 200000 hand-players
+  shard 347: 691998 decisions, 200000 hand-players
+  shard 348: 644423 decisions, 200000 hand-players
+  shard 349: 570549 decisions, 200000 hand-players
+  shard 350: 569613 decisions, 200000 hand-players
+  shard 351: 547361 decisions, 200000 hand-players
+  shard 352: 511704 decisions, 200000 hand-players
+  shard 353: 513498 decisions, 200000 hand-players
+  shard 354: 585483 decisions, 200000 hand-players
+  shard 355: 693771 decisions, 200000 hand-players
+  shard 356: 692611 decisions, 200000 hand-players
+  shard 357: 695990 decisions, 200000 hand-players
+  shard 358: 699092 decisions, 200000 hand-players
+  shard 359: 698430 decisions, 200000 hand-players
+  shard 360: 695145 decisions, 200000 hand-players
+  shard 361: 690019 decisions, 200000 hand-players
+  shard 362: 689473 decisions, 200000 hand-players
+  shard 363: 692676 decisions, 200000 hand-players
+  shard 364: 696108 decisions, 200000 hand-players
+  shard 365: 695187 decisions, 200000 hand-players
+  shard 366: 638022 decisions, 200000 hand-players
+  shard 367: 543404 decisions, 200000 hand-players
+  shard 368: 541671 decisions, 200000 hand-players
+  shard 369: 559714 decisions, 200000 hand-players
+  shard 370: 590216 decisions, 200000 hand-players
+  shard 371: 596623 decisions, 200000 hand-players
+  shard 372: 573466 decisions, 200000 hand-players
+  shard 373: 540359 decisions, 200000 hand-players
+  shard 374: 546908 decisions, 200000 hand-players
+  shard 375: 553925 decisions, 200000 hand-players
+  shard 376: 556956 decisions, 200000 hand-players
+  shard 377: 561082 decisions, 200000 hand-players
+  shard 378: 556665 decisions, 200000 hand-players
+  shard 379: 550615 decisions, 200000 hand-players
+  shard 380: 557966 decisions, 200000 hand-players
+  shard 381: 544882 decisions, 200000 hand-players
+  shard 382: 536696 decisions, 200000 hand-players
+  shard 383: 540912 decisions, 200000 hand-players
+  shard 384: 547573 decisions, 200000 hand-players
+  shard 385: 537518 decisions, 200000 hand-players
+  shard 386: 543525 decisions, 200000 hand-players
+  shard 387: 540988 decisions, 200000 hand-players
+  shard 388: 539247 decisions, 200000 hand-players
+  shard 389: 536919 decisions, 200000 hand-players
+  shard 390: 551623 decisions, 200000 hand-players
+  shard 391: 561649 decisions, 200000 hand-players
+  shard 392: 563535 decisions, 200000 hand-players
+  shard 393: 533549 decisions, 200000 hand-players
+  shard 394: 487232 decisions, 200000 hand-players
+  shard 395: 476510 decisions, 200000 hand-players
+  shard 396: 506923 decisions, 200000 hand-players
+  shard 397: 545889 decisions, 200000 hand-players
+  shard 398: 549188 decisions, 200000 hand-players
+  shard 399: 541187 decisions, 200000 hand-players
+  shard 400: 533275 decisions, 200000 hand-players
+  shard 401: 536522 decisions, 200000 hand-players
+  shard 402: 545229 decisions, 200000 hand-players
+  shard 403: 544949 decisions, 200000 hand-players
+  shard 404: 547336 decisions, 200000 hand-players
+  shard 405: 546108 decisions, 200000 hand-players
+  shard 406: 544980 decisions, 200000 hand-players
+  shard 407: 541079 decisions, 200000 hand-players
+  shard 408: 532660 decisions, 200000 hand-players
+  shard 409: 511845 decisions, 200000 hand-players
+  shard 410: 510002 decisions, 200000 hand-players
+  shard 411: 572588 decisions, 200000 hand-players
+  shard 412: 668682 decisions, 200000 hand-players
+  shard 413: 668414 decisions, 200000 hand-players
+  shard 414: 597566 decisions, 200000 hand-players
+  shard 415: 493183 decisions, 200000 hand-players
+  shard 416: 492398 decisions, 200000 hand-players
+  shard 417: 502983 decisions, 200000 hand-players
+  shard 418: 505574 decisions, 200000 hand-players
+  shard 419: 502251 decisions, 200000 hand-players
+  shard 420: 508212 decisions, 200000 hand-players
+  shard 421: 516597 decisions, 200000 hand-players
+  shard 422: 507508 decisions, 200000 hand-players
+  shard 423: 507515 decisions, 200000 hand-players
+  shard 424: 494008 decisions, 200000 hand-players
+  shard 425: 492232 decisions, 200000 hand-players
+  shard 426: 497132 decisions, 200000 hand-players
+  shard 427: 492693 decisions, 200000 hand-players
+  shard 428: 491976 decisions, 200000 hand-players
+  shard 429: 499255 decisions, 200000 hand-players
+  shard 430: 495671 decisions, 200000 hand-players
+  shard 431: 491412 decisions, 200000 hand-players
+  shard 432: 502708 decisions, 200000 hand-players
+  shard 433: 512549 decisions, 200000 hand-players
+  shard 434: 507957 decisions, 200000 hand-players
+  shard 435: 506378 decisions, 200000 hand-players
+  shard 436: 491942 decisions, 200000 hand-players
+  shard 437: 488212 decisions, 200000 hand-players
+  shard 438: 488802 decisions, 200000 hand-players
+  shard 439: 488374 decisions, 200000 hand-players
+  shard 440: 485270 decisions, 200000 hand-players
+  shard 441: 492320 decisions, 200000 hand-players
+  shard 442: 494621 decisions, 200000 hand-players
+  shard 443: 493009 decisions, 200000 hand-players
+  shard 444: 498273 decisions, 200000 hand-players
+  shard 445: 491943 decisions, 200000 hand-players
+  shard 446: 489635 decisions, 200000 hand-players
+  shard 447: 500007 decisions, 200000 hand-players
+  shard 448: 499117 decisions, 200000 hand-players
+  shard 449: 499396 decisions, 200000 hand-players
+  shard 450: 578804 decisions, 200000 hand-players
+  shard 451: 687882 decisions, 200000 hand-players
+  shard 452: 688004 decisions, 200000 hand-players
+  shard 453: 687722 decisions, 200000 hand-players
+  shard 454: 686617 decisions, 200000 hand-players
+  shard 455: 689486 decisions, 200000 hand-players
+  shard 456: 687524 decisions, 200000 hand-players
+  shard 457: 687906 decisions, 200000 hand-players
+  shard 458: 688104 decisions, 200000 hand-players
+  shard 459: 687706 decisions, 200000 hand-players
+  shard 460: 686204 decisions, 200000 hand-players
+  shard 461: 686438 decisions, 200000 hand-players
+  shard 462: 688216 decisions, 200000 hand-players
+  shard 463: 685617 decisions, 200000 hand-players
+  shard 464: 684929 decisions, 200000 hand-players
+  shard 465: 686794 decisions, 200000 hand-players
+  shard 466: 683885 decisions, 200000 hand-players
+  shard 467: 687100 decisions, 200000 hand-players
+  shard 468: 685123 decisions, 200000 hand-players
+  shard 469: 685646 decisions, 200000 hand-players
+  shard 470: 685644 decisions, 200000 hand-players
+  shard 471: 684885 decisions, 200000 hand-players
+  shard 472: 684712 decisions, 200000 hand-players
+  shard 473: 684963 decisions, 200000 hand-players
+  shard 474: 687676 decisions, 200000 hand-players
+  shard 475: 686676 decisions, 200000 hand-players
+  shard 476: 687421 decisions, 200000 hand-players
+  shard 477: 687197 decisions, 200000 hand-players
+  shard 478: 685053 decisions, 200000 hand-players
+  shard 479: 688312 decisions, 200000 hand-players
+  shard 480: 686236 decisions, 200000 hand-players
+  shard 481: 687874 decisions, 200000 hand-players
+  shard 482: 687672 decisions, 200000 hand-players
+  shard 483: 686349 decisions, 200000 hand-players
+  shard 484: 685880 decisions, 200000 hand-players
+  shard 485: 686423 decisions, 200000 hand-players
+  shard 486: 687720 decisions, 200000 hand-players
+  shard 487: 685117 decisions, 200000 hand-players
+  shard 488: 684061 decisions, 200000 hand-players
+  shard 489: 684877 decisions, 200000 hand-players
+  shard 490: 683356 decisions, 200000 hand-players
+  shard 491: 685753 decisions, 200000 hand-players
+  shard 492: 684211 decisions, 200000 hand-players
+  shard 493: 684823 decisions, 200000 hand-players
+  shard 494: 685347 decisions, 200000 hand-players
+  shard 495: 683921 decisions, 200000 hand-players
+  shard 496: 683265 decisions, 200000 hand-players
+  shard 497: 684787 decisions, 200000 hand-players
+  shard 498: 689291 decisions, 200000 hand-players
+  shard 499: 694099 decisions, 200000 hand-players
+  shard 500: 695224 decisions, 200000 hand-players
+  shard 501: 694420 decisions, 200000 hand-players
+  shard 502: 694809 decisions, 200000 hand-players
+  shard 503: 693501 decisions, 200000 hand-players
+  shard 504: 693853 decisions, 200000 hand-players
+  shard 505: 690428 decisions, 200000 hand-players
+  shard 506: 688700 decisions, 200000 hand-players
+  shard 507: 691021 decisions, 200000 hand-players
+  shard 508: 689032 decisions, 200000 hand-players
+  shard 509: 687638 decisions, 200000 hand-players
+  shard 510: 686161 decisions, 200000 hand-players
+  shard 511: 687830 decisions, 200000 hand-players
+  shard 512: 688875 decisions, 200000 hand-players
+  shard 513: 688043 decisions, 200000 hand-players
+  shard 514: 688899 decisions, 200000 hand-players
+  shard 515: 688875 decisions, 200000 hand-players
+  shard 516: 687322 decisions, 200000 hand-players
+  shard 517: 687568 decisions, 200000 hand-players
+  shard 518: 688425 decisions, 200000 hand-players
+  shard 519: 688570 decisions, 200000 hand-players
+  shard 520: 688898 decisions, 200000 hand-players
+  shard 521: 692013 decisions, 200000 hand-players
+  shard 522: 684145 decisions, 200000 hand-players
+  shard 523: 684593 decisions, 200000 hand-players
+  shard 524: 683907 decisions, 200000 hand-players
+  shard 525: 681693 decisions, 200000 hand-players
+  shard 526: 684975 decisions, 200000 hand-players
+  shard 527: 684953 decisions, 200000 hand-players
+  shard 528: 682870 decisions, 200000 hand-players
+  shard 529: 682806 decisions, 200000 hand-players
+  shard 530: 685215 decisions, 200000 hand-players
+  shard 531: 681112 decisions, 200000 hand-players
+  shard 532: 683658 decisions, 200000 hand-players
+  shard 533: 683911 decisions, 200000 hand-players
+  shard 534: 684888 decisions, 200000 hand-players
+  shard 535: 686384 decisions, 200000 hand-players
+  shard 536: 684945 decisions, 200000 hand-players
+  shard 537: 682667 decisions, 200000 hand-players
+  shard 538: 684433 decisions, 200000 hand-players
+  shard 539: 686507 decisions, 200000 hand-players
+  shard 540: 684467 decisions, 200000 hand-players
+  shard 541: 684794 decisions, 200000 hand-players
+  shard 542: 686408 decisions, 200000 hand-players
+  shard 543: 681726 decisions, 200000 hand-players
+  shard 544: 684777 decisions, 200000 hand-players
+  shard 545: 684511 decisions, 200000 hand-players
+  shard 546: 682939 decisions, 200000 hand-players
+  shard 547: 683481 decisions, 200000 hand-players
+  shard 548: 682298 decisions, 200000 hand-players
+  shard 549: 680312 decisions, 200000 hand-players
+  shard 550: 681584 decisions, 200000 hand-players
+  shard 551: 684356 decisions, 200000 hand-players
+  shard 552: 682590 decisions, 200000 hand-players
+  shard 553: 681752 decisions, 200000 hand-players
+  shard 554: 684071 decisions, 200000 hand-players
+  shard 555: 679609 decisions, 200000 hand-players
+  shard 556: 682231 decisions, 200000 hand-players
+  shard 557: 682368 decisions, 200000 hand-players
+  shard 558: 686502 decisions, 200000 hand-players
+  shard 559: 685850 decisions, 200000 hand-players
+  shard 560: 685263 decisions, 200000 hand-players
+  shard 561: 683272 decisions, 200000 hand-players
+  shard 562: 685739 decisions, 200000 hand-players
+  shard 563: 687632 decisions, 200000 hand-players
+  shard 564: 685485 decisions, 200000 hand-players
+  shard 565: 685539 decisions, 200000 hand-players
+  shard 566: 686892 decisions, 200000 hand-players
+  shard 567: 682561 decisions, 200000 hand-players
+  shard 568: 684487 decisions, 200000 hand-players
+  shard 569: 685178 decisions, 200000 hand-players
+  shard 570: 684133 decisions, 200000 hand-players
+  shard 571: 684785 decisions, 200000 hand-players
+  shard 572: 683741 decisions, 200000 hand-players
+  shard 573: 681327 decisions, 200000 hand-players
+  shard 574: 684355 decisions, 200000 hand-players
+  shard 575: 685337 decisions, 200000 hand-players
+  shard 576: 683591 decisions, 200000 hand-players
+  shard 577: 684040 decisions, 200000 hand-players
+  shard 578: 684731 decisions, 200000 hand-players
+  shard 579: 680465 decisions, 200000 hand-players
+  shard 580: 683635 decisions, 200000 hand-players
+  shard 581: 683885 decisions, 200000 hand-players
+  shard 582: 682399 decisions, 200000 hand-players
+  shard 583: 683801 decisions, 200000 hand-players
+  shard 584: 682607 decisions, 200000 hand-players
+  shard 585: 679497 decisions, 200000 hand-players
+  shard 586: 682590 decisions, 200000 hand-players
+  shard 587: 683516 decisions, 200000 hand-players
+  shard 588: 682236 decisions, 200000 hand-players
+  shard 589: 682132 decisions, 200000 hand-players
+  shard 590: 683181 decisions, 200000 hand-players
+  shard 591: 678724 decisions, 200000 hand-players
+  shard 592: 681248 decisions, 200000 hand-players
+  shard 593: 682422 decisions, 200000 hand-players
+  shard 594: 680574 decisions, 200000 hand-players
+  shard 595: 681641 decisions, 200000 hand-players
+  shard 596: 679770 decisions, 200000 hand-players
+  shard 597: 678310 decisions, 200000 hand-players
+  shard 598: 680220 decisions, 200000 hand-players
+  shard 599: 682353 decisions, 200000 hand-players
+  shard 600: 680131 decisions, 200000 hand-players
+  shard 601: 680338 decisions, 200000 hand-players
+  shard 602: 681765 decisions, 200000 hand-players
+  shard 603: 677299 decisions, 200000 hand-players
+  shard 604: 680483 decisions, 200000 hand-players
+  shard 605: 680745 decisions, 200000 hand-players
+  shard 606: 687580 decisions, 200000 hand-players
+  shard 607: 688420 decisions, 200000 hand-players
+  shard 608: 687133 decisions, 200000 hand-players
+  shard 609: 684547 decisions, 200000 hand-players
+  shard 610: 687209 decisions, 200000 hand-players
+  shard 611: 688931 decisions, 200000 hand-players
+  shard 612: 686456 decisions, 200000 hand-players
+  shard 613: 686814 decisions, 200000 hand-players
+  shard 614: 688254 decisions, 200000 hand-players
+  shard 615: 684227 decisions, 200000 hand-players
+  shard 616: 686773 decisions, 200000 hand-players
+  shard 617: 687468 decisions, 200000 hand-players
+  shard 618: 684924 decisions, 200000 hand-players
+  shard 619: 685496 decisions, 200000 hand-players
+  shard 620: 685248 decisions, 200000 hand-players
+  shard 621: 681934 decisions, 200000 hand-players
+  shard 622: 685044 decisions, 200000 hand-players
+  shard 623: 686840 decisions, 200000 hand-players
+  shard 624: 684830 decisions, 200000 hand-players
+  shard 625: 684526 decisions, 200000 hand-players
+  shard 626: 686523 decisions, 200000 hand-players
+  shard 627: 682240 decisions, 200000 hand-players
+  shard 628: 683975 decisions, 200000 hand-players
+  shard 629: 685213 decisions, 200000 hand-players
+  shard 630: 682842 decisions, 200000 hand-players
+  shard 631: 682823 decisions, 200000 hand-players
+  shard 632: 682984 decisions, 200000 hand-players
+  shard 633: 680038 decisions, 200000 hand-players
+  shard 634: 683018 decisions, 200000 hand-players
+  shard 635: 683859 decisions, 200000 hand-players
+  shard 636: 681678 decisions, 200000 hand-players
+  shard 637: 681329 decisions, 200000 hand-players
+  shard 638: 684131 decisions, 200000 hand-players
+  shard 639: 679643 decisions, 200000 hand-players
+  shard 640: 681853 decisions, 200000 hand-players
+  shard 641: 682728 decisions, 200000 hand-players
+  shard 642: 681757 decisions, 200000 hand-players
+  shard 643: 682589 decisions, 200000 hand-players
+  shard 644: 681791 decisions, 200000 hand-players
+  shard 645: 679026 decisions, 200000 hand-players
+  shard 646: 681312 decisions, 200000 hand-players
+  shard 647: 683406 decisions, 200000 hand-players
+  shard 648: 681711 decisions, 200000 hand-players
+  shard 649: 681049 decisions, 200000 hand-players
+  shard 650: 682989 decisions, 200000 hand-players
+  shard 651: 679042 decisions, 200000 hand-players
+  shard 652: 681507 decisions, 200000 hand-players
+  shard 653: 681649 decisions, 200000 hand-players
+  shard 654: 684529 decisions, 200000 hand-players
+  shard 655: 685668 decisions, 200000 hand-players
+  shard 656: 684700 decisions, 200000 hand-players
+  shard 657: 682748 decisions, 200000 hand-players
+  shard 658: 684702 decisions, 200000 hand-players
+  shard 659: 686714 decisions, 200000 hand-players
+  shard 660: 684213 decisions, 200000 hand-players
+  shard 661: 684288 decisions, 200000 hand-players
+  shard 662: 686312 decisions, 200000 hand-players
+  shard 663: 682099 decisions, 200000 hand-players
+  shard 664: 684557 decisions, 200000 hand-players
+  shard 665: 684949 decisions, 200000 hand-players
+  shard 666: 682332 decisions, 200000 hand-players
+  shard 667: 683277 decisions, 200000 hand-players
+  shard 668: 682846 decisions, 200000 hand-players
+  shard 669: 678864 decisions, 200000 hand-players
+  shard 670: 681616 decisions, 200000 hand-players
+  shard 671: 684679 decisions, 200000 hand-players
+  shard 672: 682285 decisions, 200000 hand-players
+  shard 673: 682190 decisions, 200000 hand-players
+  shard 674: 682904 decisions, 200000 hand-players
+  shard 675: 680190 decisions, 200000 hand-players
+  shard 676: 682488 decisions, 200000 hand-players
+  shard 677: 682228 decisions, 200000 hand-players
+  shard 678: 680234 decisions, 200000 hand-players
+  shard 679: 680822 decisions, 200000 hand-players
+  shard 680: 681132 decisions, 200000 hand-players
+  shard 681: 677974 decisions, 200000 hand-players
+  shard 682: 680879 decisions, 200000 hand-players
+  shard 683: 682476 decisions, 200000 hand-players
+  shard 684: 679872 decisions, 200000 hand-players
+  shard 685: 679629 decisions, 200000 hand-players
+  shard 686: 681941 decisions, 200000 hand-players
+  shard 687: 677955 decisions, 200000 hand-players
+  shard 688: 680116 decisions, 200000 hand-players
+  shard 689: 680603 decisions, 200000 hand-players
+  shard 690: 680709 decisions, 200000 hand-players
+  shard 691: 682815 decisions, 200000 hand-players
+  shard 692: 682481 decisions, 200000 hand-players
+  shard 693: 678842 decisions, 200000 hand-players
+  shard 694: 680854 decisions, 200000 hand-players
+  shard 695: 683396 decisions, 200000 hand-players
+  shard 696: 680494 decisions, 200000 hand-players
+  shard 697: 681166 decisions, 200000 hand-players
+  shard 698: 682455 decisions, 200000 hand-players
+  shard 699: 678236 decisions, 200000 hand-players
+  shard 700: 680742 decisions, 200000 hand-players
+  shard 701: 681499 decisions, 200000 hand-players
+  shard 702: 694370 decisions, 200000 hand-players
+  shard 703: 693610 decisions, 200000 hand-players
+  shard 704: 693255 decisions, 200000 hand-players
+  shard 705: 872475 decisions, 200000 hand-players
+  shard 706: 871276 decisions, 200000 hand-players
+  shard 707: 871094 decisions, 200000 hand-players
+  shard 708: 686760 decisions, 200000 hand-players
+  shard 709: 684920 decisions, 200000 hand-players
+  shard 710: 684637 decisions, 200000 hand-players
+  shard 711: 688027 decisions, 200000 hand-players
+  shard 712: 686041 decisions, 200000 hand-players
+  shard 713: 687139 decisions, 200000 hand-players
+  shard 714: 688027 decisions, 200000 hand-players
+  shard 715: 686041 decisions, 200000 hand-players
+  shard 716: 688955 decisions, 200000 hand-players
+  shard 717: 684836 decisions, 200000 hand-players
+  shard 718: 683147 decisions, 200000 hand-players
+  shard 719: 682491 decisions, 200000 hand-players
+  shard 720: 683222 decisions, 200000 hand-players
+  shard 721: 682252 decisions, 200000 hand-players
+  shard 722: 681527 decisions, 200000 hand-players
+  shard 723: 677305 decisions, 200000 hand-players
+  shard 724: 675707 decisions, 200000 hand-players
+  shard 725: 676522 decisions, 200000 hand-players
+  shard 726: 693759 decisions, 200000 hand-players
+  shard 727: 692650 decisions, 200000 hand-players
+  shard 728: 691738 decisions, 200000 hand-players
+  shard 729: 565636 decisions, 200000 hand-players
+  shard 730: 562407 decisions, 200000 hand-players
+  shard 731: 564885 decisions, 200000 hand-players
+  shard 732: 486848 decisions, 200000 hand-players
+  shard 733: 484652 decisions, 200000 hand-players
+  shard 734: 483691 decisions, 200000 hand-players
+  shard 735: 683003 decisions, 200000 hand-players
+  shard 736: 682061 decisions, 200000 hand-players
+  shard 737: 681437 decisions, 200000 hand-players
+  shard 738: 676826 decisions, 200000 hand-players
+  shard 739: 675628 decisions, 200000 hand-players
+  shard 740: 674798 decisions, 200000 hand-players
+  shard 741: 681679 decisions, 200000 hand-players
+  shard 742: 680484 decisions, 200000 hand-players
+  shard 743: 679479 decisions, 200000 hand-players
+  shard 744: 695461 decisions, 200000 hand-players
+  shard 745: 695577 decisions, 200000 hand-players
+  shard 746: 695504 decisions, 200000 hand-players
+  shard 747: 873631 decisions, 200000 hand-players
+  shard 748: 873910 decisions, 200000 hand-players
+  shard 749: 874060 decisions, 200000 hand-players
+  shard 750: 687688 decisions, 200000 hand-players
+  shard 751: 685975 decisions, 200000 hand-players
+  shard 752: 685938 decisions, 200000 hand-players
+  shard 753: 688622 decisions, 200000 hand-players
+  shard 754: 687430 decisions, 200000 hand-players
+  shard 755: 689424 decisions, 200000 hand-players
+  shard 756: 688622 decisions, 200000 hand-players
+  shard 757: 687429 decisions, 200000 hand-players
+  shard 758: 691566 decisions, 200000 hand-players
+  shard 759: 685077 decisions, 200000 hand-players
+  shard 760: 684577 decisions, 200000 hand-players
+  shard 761: 684057 decisions, 200000 hand-players
+  shard 762: 683437 decisions, 200000 hand-players
+  shard 763: 682454 decisions, 200000 hand-players
+  shard 764: 682681 decisions, 200000 hand-players
+  shard 765: 678224 decisions, 200000 hand-players
+  shard 766: 677771 decisions, 200000 hand-players
+  shard 767: 678675 decisions, 200000 hand-players
+  shard 768: 698053 decisions, 200000 hand-players
+  shard 769: 697693 decisions, 200000 hand-players
+  shard 770: 697496 decisions, 200000 hand-players
+  shard 771: 542207 decisions, 200000 hand-players
+  shard 772: 548165 decisions, 200000 hand-players
+  shard 773: 547133 decisions, 200000 hand-players
+  shard 774: 498639 decisions, 200000 hand-players
+  shard 775: 494966 decisions, 200000 hand-players
+  shard 776: 502328 decisions, 200000 hand-players
+[RESUME] 2026-09-15T11:16:02-04:00 after restart
+[REPLAY_RESUME] 2026-09-15T11:16:02-04:00
+  shard 0: already done (skipped)
+  shard 1: already done (skipped)
+  shard 2: already done (skipped)
+  shard 3: already done (skipped)
+  shard 4: already done (skipped)
+  shard 5: already done (skipped)
+  shard 6: already done (skipped)
+  shard 7: already done (skipped)
+  shard 8: already done (skipped)
+  shard 9: already done (skipped)
+  shard 10: already done (skipped)
+  shard 11: already done (skipped)
+  shard 12: already done (skipped)
+  shard 13: already done (skipped)
+  shard 14: already done (skipped)
+  shard 15: already done (skipped)
+  shard 16: already done (skipped)
+  shard 17: already done (skipped)
+  shard 18: already done (skipped)
+  shard 19: already done (skipped)
+  shard 20: already done (skipped)
+  shard 21: already done (skipped)
+  shard 22: already done (skipped)
+  shard 23: already done (skipped)
+  shard 24: already done (skipped)
+  shard 25: already done (skipped)
+  shard 26: already done (skipped)
+  shard 27: already done (skipped)
+  shard 28: already done (skipped)
+  shard 29: already done (skipped)
+  shard 30: already done (skipped)
+  shard 31: already done (skipped)
+  shard 32: already done (skipped)
+  shard 33: already done (skipped)
+  shard 34: already done (skipped)
+  shard 35: already done (skipped)
+  shard 36: already done (skipped)
+  shard 37: already done (skipped)
+  shard 38: already done (skipped)
+  shard 39: already done (skipped)
+  shard 40: already done (skipped)
+  shard 41: already done (skipped)
+  shard 42: already done (skipped)
+  shard 43: already done (skipped)
+  shard 44: already done (skipped)
+  shard 45: already done (skipped)
+  shard 46: already done (skipped)
+  shard 47: already done (skipped)
+  shard 48: already done (skipped)
+  shard 49: already done (skipped)
+  shard 50: already done (skipped)
+  shard 51: already done (skipped)
+  shard 52: already done (skipped)
+  shard 53: already done (skipped)
+  shard 54: already done (skipped)
+  shard 55: already done (skipped)
+  shard 56: already done (skipped)
+  shard 57: already done (skipped)
+  shard 58: already done (skipped)
+  shard 59: already done (skipped)
+  shard 60: already done (skipped)
+  shard 61: already done (skipped)
+  shard 62: already done (skipped)
+  shard 63: already done (skipped)
+  shard 64: already done (skipped)
+  shard 65: already done (skipped)
+  shard 66: already done (skipped)
+  shard 67: already done (skipped)
+  shard 68: already done (skipped)
+  shard 69: already done (skipped)
+  shard 70: already done (skipped)
+  shard 71: already done (skipped)
+  shard 72: already done (skipped)
+  shard 73: already done (skipped)
+  shard 74: already done (skipped)
+  shard 75: already done (skipped)
+  shard 76: already done (skipped)
+  shard 77: already done (skipped)
+  shard 78: already done (skipped)
+  shard 79: already done (skipped)
+  shard 80: already done (skipped)
+  shard 81: already done (skipped)
+  shard 82: already done (skipped)
+  shard 83: already done (skipped)
+  shard 84: already done (skipped)
+  shard 85: already done (skipped)
+  shard 86: already done (skipped)
+  shard 87: already done (skipped)
+  shard 88: already done (skipped)
+  shard 89: already done (skipped)
+  shard 90: already done (skipped)
+  shard 91: already done (skipped)
+  shard 92: already done (skipped)
+  shard 93: already done (skipped)
+  shard 94: already done (skipped)
+  shard 95: already done (skipped)
+  shard 96: already done (skipped)
+  shard 97: already done (skipped)
+  shard 98: already done (skipped)
+  shard 99: already done (skipped)
+  shard 100: already done (skipped)
+  shard 101: already done (skipped)
+  shard 102: already done (skipped)
+  shard 103: already done (skipped)
+  shard 104: already done (skipped)
+  shard 105: already done (skipped)
+  shard 106: already done (skipped)
+  shard 107: already done (skipped)
+  shard 108: already done (skipped)
+  shard 109: already done (skipped)
+  shard 110: already done (skipped)
+  shard 111: already done (skipped)
+  shard 112: already done (skipped)
+  shard 113: already done (skipped)
+  shard 114: already done (skipped)
+  shard 115: already done (skipped)
+  shard 116: already done (skipped)
+  shard 117: already done (skipped)
+  shard 118: already done (skipped)
+  shard 119: already done (skipped)
+  shard 120: already done (skipped)
+  shard 121: already done (skipped)
+  shard 122: already done (skipped)
+  shard 123: already done (skipped)
+  shard 124: already done (skipped)
+  shard 125: already done (skipped)
+  shard 126: already done (skipped)
+  shard 127: already done (skipped)
+  shard 128: already done (skipped)
+  shard 129: already done (skipped)
+  shard 130: already done (skipped)
+  shard 131: already done (skipped)
+  shard 132: already done (skipped)
+  shard 133: already done (skipped)
+  shard 134: already done (skipped)
+  shard 135: already done (skipped)
+  shard 136: already done (skipped)
+  shard 137: already done (skipped)
+  shard 138: already done (skipped)
+  shard 139: already done (skipped)
+  shard 140: already done (skipped)
+  shard 141: already done (skipped)
+  shard 142: already done (skipped)
+  shard 143: already done (skipped)
+  shard 144: already done (skipped)
+  shard 145: already done (skipped)
+  shard 146: already done (skipped)
+  shard 147: already done (skipped)
+  shard 148: already done (skipped)
+  shard 149: already done (skipped)
+  shard 150: already done (skipped)
+  shard 151: already done (skipped)
+  shard 152: already done (skipped)
+  shard 153: already done (skipped)
+  shard 154: already done (skipped)
+  shard 155: already done (skipped)
+  shard 156: already done (skipped)
+  shard 157: already done (skipped)
+  shard 158: already done (skipped)
+  shard 159: already done (skipped)
+  shard 160: already done (skipped)
+  shard 161: already done (skipped)
+  shard 162: already done (skipped)
+  shard 163: already done (skipped)
+  shard 164: already done (skipped)
+  shard 165: already done (skipped)
+  shard 166: already done (skipped)
+  shard 167: already done (skipped)
+  shard 168: already done (skipped)
+  shard 169: already done (skipped)
+  shard 170: already done (skipped)
+  shard 171: already done (skipped)
+  shard 172: already done (skipped)
+  shard 173: already done (skipped)
+  shard 174: already done (skipped)
+  shard 175: already done (skipped)
+  shard 176: already done (skipped)
+  shard 177: already done (skipped)
+  shard 178: already done (skipped)
+  shard 179: already done (skipped)
+  shard 180: already done (skipped)
+  shard 181: already done (skipped)
+  shard 182: already done (skipped)
+  shard 183: already done (skipped)
+  shard 184: already done (skipped)
+  shard 185: already done (skipped)
+  shard 186: already done (skipped)
+  shard 187: already done (skipped)
+  shard 188: already done (skipped)
+  shard 189: already done (skipped)
+  shard 190: already done (skipped)
+  shard 191: already done (skipped)
+  shard 192: already done (skipped)
+  shard 193: already done (skipped)
+  shard 194: already done (skipped)
+  shard 195: already done (skipped)
+  shard 196: already done (skipped)
+  shard 197: already done (skipped)
+  shard 198: already done (skipped)
+  shard 199: already done (skipped)
+  shard 200: already done (skipped)
+  shard 201: already done (skipped)
+  shard 202: already done (skipped)
+  shard 203: already done (skipped)
+  shard 204: already done (skipped)
+  shard 205: already done (skipped)
+  shard 206: already done (skipped)
+  shard 207: already done (skipped)
+  shard 208: already done (skipped)
+  shard 209: already done (skipped)
+  shard 210: already done (skipped)
+  shard 211: already done (skipped)
+  shard 212: already done (skipped)
+  shard 213: already done (skipped)
+  shard 214: already done (skipped)
+  shard 215: already done (skipped)
+  shard 216: already done (skipped)
+  shard 217: already done (skipped)
+  shard 218: already done (skipped)
+  shard 219: already done (skipped)
+  shard 220: already done (skipped)
+  shard 221: already done (skipped)
+  shard 222: already done (skipped)
+  shard 223: already done (skipped)
+  shard 224: already done (skipped)
+  shard 225: already done (skipped)
+  shard 226: already done (skipped)
+  shard 227: already done (skipped)
+  shard 228: already done (skipped)
+  shard 229: already done (skipped)
+  shard 230: already done (skipped)
+  shard 231: already done (skipped)
+  shard 232: already done (skipped)
+  shard 233: already done (skipped)
+  shard 234: already done (skipped)
+  shard 235: already done (skipped)
+  shard 236: already done (skipped)
+  shard 237: already done (skipped)
+  shard 238: already done (skipped)
+  shard 239: already done (skipped)
+  shard 240: already done (skipped)
+  shard 241: already done (skipped)
+  shard 242: already done (skipped)
+  shard 243: already done (skipped)
+  shard 244: already done (skipped)
+  shard 245: already done (skipped)
+  shard 246: already done (skipped)
+  shard 247: already done (skipped)
+  shard 248: already done (skipped)
+  shard 249: already done (skipped)
+  shard 250: already done (skipped)
+  shard 251: already done (skipped)
+  shard 252: already done (skipped)
+  shard 253: already done (skipped)
+  shard 254: already done (skipped)
+  shard 255: already done (skipped)
+  shard 256: already done (skipped)
+  shard 257: already done (skipped)
+  shard 258: already done (skipped)
+  shard 259: already done (skipped)
+  shard 260: already done (skipped)
+  shard 261: already done (skipped)
+  shard 262: already done (skipped)
+  shard 263: already done (skipped)
+  shard 264: already done (skipped)
+  shard 265: already done (skipped)
+  shard 266: already done (skipped)
+  shard 267: already done (skipped)
+  shard 268: already done (skipped)
+  shard 269: already done (skipped)
+  shard 270: already done (skipped)
+  shard 271: already done (skipped)
+  shard 272: already done (skipped)
+  shard 273: already done (skipped)
+  shard 274: already done (skipped)
+  shard 275: already done (skipped)
+  shard 276: already done (skipped)
+  shard 277: already done (skipped)
+  shard 278: already done (skipped)
+  shard 279: already done (skipped)
+  shard 280: already done (skipped)
+  shard 281: already done (skipped)
+  shard 282: already done (skipped)
+  shard 283: already done (skipped)
+  shard 284: already done (skipped)
+  shard 285: already done (skipped)
+  shard 286: already done (skipped)
+  shard 287: already done (skipped)
+  shard 288: already done (skipped)
+  shard 289: already done (skipped)
+  shard 290: already done (skipped)
+  shard 291: already done (skipped)
+  shard 292: already done (skipped)
+  shard 293: already done (skipped)
+  shard 294: already done (skipped)
+  shard 295: already done (skipped)
+  shard 296: already done (skipped)
+  shard 297: already done (skipped)
+  shard 298: already done (skipped)
+  shard 299: already done (skipped)
+  shard 300: already done (skipped)
+  shard 301: already done (skipped)
+  shard 302: already done (skipped)
+  shard 303: already done (skipped)
+  shard 304: already done (skipped)
+  shard 305: already done (skipped)
+  shard 306: already done (skipped)
+  shard 307: already done (skipped)
+  shard 308: already done (skipped)
+  shard 309: already done (skipped)
+  shard 310: already done (skipped)
+  shard 311: already done (skipped)
+  shard 312: already done (skipped)
+  shard 313: already done (skipped)
+  shard 314: already done (skipped)
+  shard 315: already done (skipped)
+  shard 316: already done (skipped)
+  shard 317: already done (skipped)
+  shard 318: already done (skipped)
+  shard 319: already done (skipped)
+  shard 320: already done (skipped)
+  shard 321: already done (skipped)
+  shard 322: already done (skipped)
+  shard 323: already done (skipped)
+  shard 324: already done (skipped)
+  shard 325: already done (skipped)
+  shard 326: already done (skipped)
+  shard 327: already done (skipped)
+  shard 328: already done (skipped)
+  shard 329: already done (skipped)
+  shard 330: already done (skipped)
+  shard 331: already done (skipped)
+  shard 332: already done (skipped)
+  shard 333: already done (skipped)
+  shard 334: already done (skipped)
+  shard 335: already done (skipped)
+  shard 336: already done (skipped)
+  shard 337: already done (skipped)
+  shard 338: already done (skipped)
+  shard 339: already done (skipped)
+  shard 340: already done (skipped)
+  shard 341: already done (skipped)
+  shard 342: already done (skipped)
+  shard 343: already done (skipped)
+  shard 344: already done (skipped)
+  shard 345: already done (skipped)
+  shard 346: already done (skipped)
+  shard 347: already done (skipped)
+  shard 348: already done (skipped)
+  shard 349: already done (skipped)
+  shard 350: already done (skipped)
+  shard 351: already done (skipped)
+  shard 352: already done (skipped)
+  shard 353: already done (skipped)
+  shard 354: already done (skipped)
+  shard 355: already done (skipped)
+  shard 356: already done (skipped)
+  shard 357: already done (skipped)
+  shard 358: already done (skipped)
+  shard 359: already done (skipped)
+  shard 360: already done (skipped)
+  shard 361: already done (skipped)
+  shard 362: already done (skipped)
+  shard 363: already done (skipped)
+  shard 364: already done (skipped)
+  shard 365: already done (skipped)
+  shard 366: already done (skipped)
+  shard 367: already done (skipped)
+  shard 368: already done (skipped)
+  shard 369: already done (skipped)
+  shard 370: already done (skipped)
+  shard 371: already done (skipped)
+  shard 372: already done (skipped)
+  shard 373: already done (skipped)
+  shard 374: already done (skipped)
+  shard 375: already done (skipped)
+  shard 376: already done (skipped)
+  shard 377: already done (skipped)
+  shard 378: already done (skipped)
+  shard 379: already done (skipped)
+  shard 380: already done (skipped)
+  shard 381: already done (skipped)
+  shard 382: already done (skipped)
+  shard 383: already done (skipped)
+  shard 384: already done (skipped)
+  shard 385: already done (skipped)
+  shard 386: already done (skipped)
+  shard 387: already done (skipped)
+  shard 388: already done (skipped)
+  shard 389: already done (skipped)
+  shard 390: already done (skipped)
+  shard 391: already done (skipped)
+  shard 392: already done (skipped)
+  shard 393: already done (skipped)
+  shard 394: already done (skipped)
+  shard 395: already done (skipped)
+  shard 396: already done (skipped)
+  shard 397: already done (skipped)
+  shard 398: already done (skipped)
+  shard 399: already done (skipped)
+  shard 400: already done (skipped)
+  shard 401: already done (skipped)
+  shard 402: already done (skipped)
+  shard 403: already done (skipped)
+  shard 404: already done (skipped)
+  shard 405: already done (skipped)
+  shard 406: already done (skipped)
+  shard 407: already done (skipped)
+  shard 408: already done (skipped)
+  shard 409: already done (skipped)
+  shard 410: already done (skipped)
+  shard 411: already done (skipped)
+  shard 412: already done (skipped)
+  shard 413: already done (skipped)
+  shard 414: already done (skipped)
+  shard 415: already done (skipped)
+  shard 416: already done (skipped)
+  shard 417: already done (skipped)
+  shard 418: already done (skipped)
+  shard 419: already done (skipped)
+  shard 420: already done (skipped)
+  shard 421: already done (skipped)
+  shard 422: already done (skipped)
+  shard 423: already done (skipped)
+  shard 424: already done (skipped)
+  shard 425: already done (skipped)
+  shard 426: already done (skipped)
+  shard 427: already done (skipped)
+  shard 428: already done (skipped)
+  shard 429: already done (skipped)
+  shard 430: already done (skipped)
+  shard 431: already done (skipped)
+  shard 432: already done (skipped)
+  shard 433: already done (skipped)
+  shard 434: already done (skipped)
+  shard 435: already done (skipped)
+  shard 436: already done (skipped)
+  shard 437: already done (skipped)
+  shard 438: already done (skipped)
+  shard 439: already done (skipped)
+  shard 440: already done (skipped)
+  shard 441: already done (skipped)
+  shard 442: already done (skipped)
+  shard 443: already done (skipped)
+  shard 444: already done (skipped)
+  shard 445: already done (skipped)
+  shard 446: already done (skipped)
+  shard 447: already done (skipped)
+  shard 448: already done (skipped)
+  shard 449: already done (skipped)
+  shard 450: already done (skipped)
+  shard 451: already done (skipped)
+  shard 452: already done (skipped)
+  shard 453: already done (skipped)
+  shard 454: already done (skipped)
+  shard 455: already done (skipped)
+  shard 456: already done (skipped)
+  shard 457: already done (skipped)
+  shard 458: already done (skipped)
+  shard 459: already done (skipped)
+  shard 460: already done (skipped)
+  shard 461: already done (skipped)
+  shard 462: already done (skipped)
+  shard 463: already done (skipped)
+  shard 464: already done (skipped)
+  shard 465: already done (skipped)
+  shard 466: already done (skipped)
+  shard 467: already done (skipped)
+  shard 468: already done (skipped)
+  shard 469: already done (skipped)
+  shard 470: already done (skipped)
+  shard 471: already done (skipped)
+  shard 472: already done (skipped)
+  shard 473: already done (skipped)
+  shard 474: already done (skipped)
+  shard 475: already done (skipped)
+  shard 476: already done (skipped)
+  shard 477: already done (skipped)
+  shard 478: already done (skipped)
+  shard 479: already done (skipped)
+  shard 480: already done (skipped)
+  shard 481: already done (skipped)
+  shard 482: already done (skipped)
+  shard 483: already done (skipped)
+  shard 484: already done (skipped)
+  shard 485: already done (skipped)
+  shard 486: already done (skipped)
+  shard 487: already done (skipped)
+  shard 488: already done (skipped)
+  shard 489: already done (skipped)
+  shard 490: already done (skipped)
+  shard 491: already done (skipped)
+  shard 492: already done (skipped)
+  shard 493: already done (skipped)
+  shard 494: already done (skipped)
+  shard 495: already done (skipped)
+  shard 496: already done (skipped)
+  shard 497: already done (skipped)
+  shard 498: already done (skipped)
+  shard 499: already done (skipped)
+  shard 500: already done (skipped)
+  shard 501: already done (skipped)
+  shard 502: already done (skipped)
+  shard 503: already done (skipped)
+  shard 504: already done (skipped)
+  shard 505: already done (skipped)
+  shard 506: already done (skipped)
+  shard 507: already done (skipped)
+  shard 508: already done (skipped)
+  shard 509: already done (skipped)
+  shard 510: already done (skipped)
+  shard 511: already done (skipped)
+  shard 512: already done (skipped)
+  shard 513: already done (skipped)
+  shard 514: already done (skipped)
+  shard 515: already done (skipped)
+  shard 516: already done (skipped)
+  shard 517: already done (skipped)
+  shard 518: already done (skipped)
+  shard 519: already done (skipped)
+  shard 520: already done (skipped)
+  shard 521: already done (skipped)
+  shard 522: already done (skipped)
+  shard 523: already done (skipped)
+  shard 524: already done (skipped)
+  shard 525: already done (skipped)
+  shard 526: already done (skipped)
+  shard 527: already done (skipped)
+  shard 528: already done (skipped)
+  shard 529: already done (skipped)
+  shard 530: already done (skipped)
+  shard 531: already done (skipped)
+  shard 532: already done (skipped)
+  shard 533: already done (skipped)
+  shard 534: already done (skipped)
+  shard 535: already done (skipped)
+  shard 536: already done (skipped)
+  shard 537: already done (skipped)
+  shard 538: already done (skipped)
+  shard 539: already done (skipped)
+  shard 540: already done (skipped)
+  shard 541: already done (skipped)
+  shard 542: already done (skipped)
+  shard 543: already done (skipped)
+  shard 544: already done (skipped)
+  shard 545: already done (skipped)
+  shard 546: already done (skipped)
+  shard 547: already done (skipped)
+  shard 548: already done (skipped)
+  shard 549: already done (skipped)
+  shard 550: already done (skipped)
+  shard 551: already done (skipped)
+  shard 552: already done (skipped)
+  shard 553: already done (skipped)
+  shard 554: already done (skipped)
+  shard 555: already done (skipped)
+  shard 556: already done (skipped)
+  shard 557: already done (skipped)
+  shard 558: already done (skipped)
+  shard 559: already done (skipped)
+  shard 560: already done (skipped)
+  shard 561: already done (skipped)
+  shard 562: already done (skipped)
+  shard 563: already done (skipped)
+  shard 564: already done (skipped)
+  shard 565: already done (skipped)
+  shard 566: already done (skipped)
+  shard 567: already done (skipped)
+  shard 568: already done (skipped)
+  shard 569: already done (skipped)
+  shard 570: already done (skipped)
+  shard 571: already done (skipped)
+  shard 572: already done (skipped)
+  shard 573: already done (skipped)
+  shard 574: already done (skipped)
+  shard 575: already done (skipped)
+  shard 576: already done (skipped)
+  shard 577: already done (skipped)
+  shard 578: already done (skipped)
+  shard 579: already done (skipped)
+  shard 580: already done (skipped)
+  shard 581: already done (skipped)
+  shard 582: already done (skipped)
+  shard 583: already done (skipped)
+  shard 584: already done (skipped)
+  shard 585: already done (skipped)
+  shard 586: already done (skipped)
+  shard 587: already done (skipped)
+  shard 588: already done (skipped)
+  shard 589: already done (skipped)
+  shard 590: already done (skipped)
+  shard 591: already done (skipped)
+  shard 592: already done (skipped)
+  shard 593: already done (skipped)
+  shard 594: already done (skipped)
+  shard 595: already done (skipped)
+  shard 596: already done (skipped)
+  shard 597: already done (skipped)
+  shard 598: already done (skipped)
+  shard 599: already done (skipped)
+  shard 600: already done (skipped)
+  shard 601: already done (skipped)
+  shard 602: already done (skipped)
+  shard 603: already done (skipped)
+  shard 604: already done (skipped)
+  shard 605: already done (skipped)
+  shard 606: already done (skipped)
+  shard 607: already done (skipped)
+  shard 608: already done (skipped)
+  shard 609: already done (skipped)
+  shard 610: already done (skipped)
+  shard 611: already done (skipped)
+  shard 612: already done (skipped)
+  shard 613: already done (skipped)
+  shard 614: already done (skipped)
+  shard 615: already done (skipped)
+  shard 616: already done (skipped)
+  shard 617: already done (skipped)
+  shard 618: already done (skipped)
+  shard 619: already done (skipped)
+  shard 620: already done (skipped)
+  shard 621: already done (skipped)
+  shard 622: already done (skipped)
+  shard 623: already done (skipped)
+  shard 624: already done (skipped)
+  shard 625: already done (skipped)
+  shard 626: already done (skipped)
+  shard 627: already done (skipped)
+  shard 628: already done (skipped)
+  shard 629: already done (skipped)
+  shard 630: already done (skipped)
+  shard 631: already done (skipped)
+  shard 632: already done (skipped)
+  shard 633: already done (skipped)
+  shard 634: already done (skipped)
+  shard 635: already done (skipped)
+  shard 636: already done (skipped)
+  shard 637: already done (skipped)
+  shard 638: already done (skipped)
+  shard 639: already done (skipped)
+  shard 640: already done (skipped)
+  shard 641: already done (skipped)
+  shard 642: already done (skipped)
+  shard 643: already done (skipped)
+  shard 644: already done (skipped)
+  shard 645: already done (skipped)
+  shard 646: already done (skipped)
+  shard 647: already done (skipped)
+  shard 648: already done (skipped)
+  shard 649: already done (skipped)
+  shard 650: already done (skipped)
+  shard 651: already done (skipped)
+  shard 652: already done (skipped)
+  shard 653: already done (skipped)
+  shard 654: already done (skipped)
+  shard 655: already done (skipped)
+  shard 656: already done (skipped)
+  shard 657: already done (skipped)
+  shard 658: already done (skipped)
+  shard 659: already done (skipped)
+  shard 660: already done (skipped)
+  shard 661: already done (skipped)
+  shard 662: already done (skipped)
+  shard 663: already done (skipped)
+  shard 664: already done (skipped)
+  shard 665: already done (skipped)
+  shard 666: already done (skipped)
+  shard 667: already done (skipped)
+  shard 668: already done (skipped)
+  shard 669: already done (skipped)
+  shard 670: already done (skipped)
+  shard 671: already done (skipped)
+  shard 672: already done (skipped)
+  shard 673: already done (skipped)
+  shard 674: already done (skipped)
+  shard 675: already done (skipped)
+  shard 676: already done (skipped)
+  shard 677: already done (skipped)
+  shard 678: already done (skipped)
+  shard 679: already done (skipped)
+  shard 680: already done (skipped)
+  shard 681: already done (skipped)
+  shard 682: already done (skipped)
+  shard 683: already done (skipped)
+  shard 684: already done (skipped)
+  shard 685: already done (skipped)
+  shard 686: already done (skipped)
+  shard 687: already done (skipped)
+  shard 688: already done (skipped)
+  shard 689: already done (skipped)
+  shard 690: already done (skipped)
+  shard 691: already done (skipped)
+  shard 692: already done (skipped)
+  shard 693: already done (skipped)
+  shard 694: already done (skipped)
+  shard 695: already done (skipped)
+  shard 696: already done (skipped)
+  shard 697: already done (skipped)
+  shard 698: already done (skipped)
+  shard 699: already done (skipped)
+  shard 700: already done (skipped)
+  shard 701: already done (skipped)
+  shard 702: already done (skipped)
+  shard 703: already done (skipped)
+  shard 704: already done (skipped)
+  shard 705: already done (skipped)
+  shard 706: already done (skipped)
+  shard 707: already done (skipped)
+  shard 708: already done (skipped)
+  shard 709: already done (skipped)
+  shard 710: already done (skipped)
+  shard 711: already done (skipped)
+  shard 712: already done (skipped)
+  shard 713: already done (skipped)
+  shard 714: already done (skipped)
+  shard 715: already done (skipped)
+  shard 716: already done (skipped)
+  shard 717: already done (skipped)
+  shard 718: already done (skipped)
+  shard 719: already done (skipped)
+  shard 720: already done (skipped)
+  shard 721: already done (skipped)
+  shard 722: already done (skipped)
+  shard 723: already done (skipped)
+  shard 724: already done (skipped)
+  shard 725: already done (skipped)
+  shard 726: already done (skipped)
+  shard 727: already done (skipped)
+  shard 728: already done (skipped)
+  shard 729: already done (skipped)
+  shard 730: already done (skipped)
+  shard 731: already done (skipped)
+  shard 732: already done (skipped)
+  shard 733: already done (skipped)
+  shard 734: already done (skipped)
+  shard 735: already done (skipped)
+  shard 736: already done (skipped)
+  shard 737: already done (skipped)
+  shard 738: already done (skipped)
+  shard 739: already done (skipped)
+  shard 740: already done (skipped)
+  shard 741: already done (skipped)
+  shard 742: already done (skipped)
+  shard 743: already done (skipped)
+  shard 744: already done (skipped)
+  shard 745: already done (skipped)
+  shard 746: already done (skipped)
+  shard 747: already done (skipped)
+  shard 748: already done (skipped)
+  shard 749: already done (skipped)
+  shard 750: already done (skipped)
+  shard 751: already done (skipped)
+  shard 752: already done (skipped)
+  shard 753: already done (skipped)
+  shard 754: already done (skipped)
+  shard 755: already done (skipped)
+  shard 756: already done (skipped)
+  shard 757: already done (skipped)
+  shard 758: already done (skipped)
+  shard 759: already done (skipped)
+  shard 760: already done (skipped)
+  shard 761: already done (skipped)
+  shard 762: already done (skipped)
+  shard 763: already done (skipped)
+  shard 764: already done (skipped)
+  shard 765: already done (skipped)
+  shard 766: already done (skipped)
+  shard 767: already done (skipped)
+  shard 768: already done (skipped)
+  shard 769: already done (skipped)
+  shard 770: already done (skipped)
+  shard 771: already done (skipped)
+  shard 772: already done (skipped)
+  shard 773: already done (skipped)
+  shard 774: already done (skipped)
+  shard 775: already done (skipped)
+  shard 776: already done (skipped)
+  shard 777: 681925 decisions, 200000 hand-players
+  shard 778: 681531 decisions, 200000 hand-players
+  shard 779: 681131 decisions, 200000 hand-players
+  shard 780: 677020 decisions, 200000 hand-players
+  shard 781: 676758 decisions, 200000 hand-players
+  shard 782: 676580 decisions, 200000 hand-players
+  shard 783: 681866 decisions, 200000 hand-players
+  shard 784: 681124 decisions, 200000 hand-players
+  shard 785: 681249 decisions, 200000 hand-players
+  shard 786: 689483 decisions, 200000 hand-players
+  shard 787: 688887 decisions, 200000 hand-players
+  shard 788: 689029 decisions, 200000 hand-players
+hard 15: already done (skipped)
+  shard 16: already done (skipped)
+  shard 17: already done (skipped)
+  shard 18: already done (skipped)
+  shard 19: already done (skipped)
+  shard 20: already done (skipped)
+  shard 21: already done (skipped)
+  shard 22: already done (skipped)
+  shard 23: already done (skipped)
+  shard 24: already done (skipped)
+  shard 25: already done (skipped)
+  shard 26: already done (skipped)
+  shard 27: already done (skipped)
+  shard 28: already done (skipped)
+  shard 29: already done (skipped)
+  shard 30: already done (skipped)
+  shard 31: already done (skipped)
+  shard 32: already done (skipped)
+  shard 33: already done (skipped)
+  shard 34: already done (skipped)
+  shard 35: already done (skipped)
+  shard 36: already done (skipped)
+  shard 37: already done (skipped)
+  shard 38: already done (skipped)
+  shard 39: already done (skipped)
+  shard 40: already done (skipped)
+  shard 41: already done (skipped)
+  shard 42: already done (skipped)
+  shard 43: already done (skipped)
+  shard 44: already done (skipped)
+  shard 45: already done (skipped)
+  shard 46: already done (skipped)
+  shard 47: already done (skipped)
+  shard 48: already done (skipped)
+  shard 49: already done (skipped)
+  shard 50: already done (skipped)
+  shard 51: already done (skipped)
+  shard 52: already done (skipped)
+  shard 53: already done (skipped)
+  shard 54: already done (skipped)
+  shard 55: already done (skipped)
+  shard 56: already done (skipped)
+  shard 57: already done (skipped)
+  shard 58: already done (skipped)
+  shard 59: already done (skipped)
+  shard 60: already done (skipped)
+  shard 61: already done (skipped)
+  shard 62: already done (skipped)
+  shard 63: already done (skipped)
+  shard 64: already done (skipped)
+  shard 65: already done (skipped)
+  shard 66: already done (skipped)
+  shard 67: already done (skipped)
+  shard 68: already done (skipped)
+  shard 69: already done (skipped)
+  shard 70: already done (skipped)
+  shard 71: already done (skipped)
+  shard 72: already done (skipped)
+  shard 73: already done (skipped)
+  shard 74: already done (skipped)
+  shard 75: already done (skipped)
+  shard 76: already done (skipped)
+  shard 77: already done (skipped)
+  shard 78: already done (skipped)
+  shard 79: already done (skipped)
+  shard 80: already done (skipped)
+  shard 81: already done (skipped)
+  shard 82: already done (skipped)
+  shard 83: already done (skipped)
+  shard 84: already done (skipped)
+  shard 85: already done (skipped)
+  shard 86: already done (skipped)
+  shard 87: already done (skipped)
+  shard 88: already done (skipped)
+  shard 89: already done (skipped)
+  shard 90: already done (skipped)
+  shard 91: already done (skipped)
+  shard 92: already done (skipped)
+  shard 93: already done (skipped)
+  shard 94: already done (skipped)
+  shard 95: already done (skipped)
+  shard 96: already done (skipped)
+  shard 97: already done (skipped)
+  shard 98: already done (skipped)
+  shard 99: already done (skipped)
+  shard 100: already done (skipped)
+  shard 101: already done (skipped)
+  shard 102: already done (skipped)
+  shard 103: already done (skipped)
+  shard 104: already done (skipped)
+  shard 105: already done (skipped)
+  shard 106: already done (skipped)
+  shard 107: already done (skipped)
+  shard 108: already done (skipped)
+  shard 109: already done (skipped)
+  shard 110: already done (skipped)
+  shard 111: already done (skipped)
+  shard 112: already done (skipped)
+  shard 113: already done (skipped)
+  shard 114: already done (skipped)
+  shard 115: already done (skipped)
+  shard 116: already done (skipped)
+  shard 117: already done (skipped)
+  shard 118: already done (skipped)
+  shard 119: already done (skipped)
+  shard 120: already done (skipped)
+  shard 121: already done (skipped)
+  shard 122: already done (skipped)
+  shard 123: already done (skipped)
+  shard 124: already done (skipped)
+  shard 125: already done (skipped)
+  shard 126: already done (skipped)
+  shard 127: already done (skipped)
+  shard 128: already done (skipped)
+  shard 129: already done (skipped)
+  shard 130: already done (skipped)
+  shard 131: already done (skipped)
+  shard 132: already done (skipped)
+  shard 133: already done (skipped)
+  shard 134: already done (skipped)
+  shard 135: already done (skipped)
+  shard 136: already done (skipped)
+  shard 137: already done (skipped)
+  shard 138: already done (skipped)
+  shard 139: already done (skipped)
+  shard 140: already done (skipped)
+  shard 141: already done (skipped)
+  shard 142: already done (skipped)
+  shard 143: already done (skipped)
+  shard 144: already done (skipped)
+  shard 145: already done (skipped)
+  shard 146: already done (skipped)
+  shard 147: already done (skipped)
+  shard 148: already done (skipped)
+  shard 149: already done (skipped)
+  shard 150: already done (skipped)
+  shard 151: already done (skipped)
+  shard 152: already done (skipped)
+  shard 153: already done (skipped)
+  shard 154: already done (skipped)
+  shard 155: already done (skipped)
+  shard 156: already done (skipped)
+  shard 157: already done (skipped)
+  shard 158: already done (skipped)
+  shard 159: already done (skipped)
+  shard 160: already done (skipped)
+  shard 161: already done (skipped)
+  shard 162: already done (skipped)
+  shard 163: already done (skipped)
+  shard 164: already done (skipped)
+  shard 165: already done (skipped)
+  shard 166: already done (skipped)
+  shard 167: already done (skipped)
+  shard 168: already done (skipped)
+  shard 169: already done (skipped)
+  shard 170: already done (skipped)
+  shard 171: already done (skipped)
+  shard 172: already done (skipped)
+  shard 173: already done (skipped)
+  shard 174: already done (skipped)
+  shard 175: already done (skipped)
+  shard 176: already done (skipped)
+  shard 177: already done (skipped)
+  shard 178: already done (skipped)
+  shard 179: already done (skipped)
+  shard 180: already done (skipped)
+  shard 181: already done (skipped)
+  shard 182: already done (skipped)
+  shard 183: already done (skipped)
+  shard 184: already done (skipped)
+  shard 185: already done (skipped)
+  shard 186: already done (skipped)
+  shard 187: already done (skipped)
+  shard 188: already done (skipped)
+  shard 189: already done (skipped)
+  shard 190: already done (skipped)
+  shard 191: already done (skipped)
+  shard 192: already done (skipped)
+  shard 193: already done (skipped)
+  shard 194: already done (skipped)
+  shard 195: already done (skipped)
+  shard 196: already done (skipped)
+  shard 197: already done (skipped)
+  shard 198: already done (skipped)
+  shard 199: already done (skipped)
+  shard 200: already done (skipped)
+  shard 201: already done (skipped)
+  shard 202: already done (skipped)
+  shard 203: already done (skipped)
+  shard 204: already done (skipped)
+  shard 205: already done (skipped)
+  shard 206: already done (skipped)
+  shard 207: already done (skipped)
+  shard 208: already done (skipped)
+  shard 209: already done (skipped)
+  shard 210: already done (skipped)
+  shard 211: already done (skipped)
+  shard 212: already done (skipped)
+  shard 213: already done (skipped)
+  shard 214: already done (skipped)
+  shard 215: already done (skipped)
+  shard 216: already done (skipped)
+  shard 217: already done (skipped)
+  shard 218: already done (skipped)
+  shard 219: already done (skipped)
+  shard 220: already done (skipped)
+  shard 221: already done (skipped)
+  shard 222: already done (skipped)
+  shard 223: already done (skipped)
+  shard 224: already done (skipped)
+  shard 225: already done (skipped)
+  shard 226: already done (skipped)
+  shard 227: already done (skipped)
+  shard 228: already done (skipped)
+  shard 229: already done (skipped)
+  shard 230: already done (skipped)
+  shard 231: already done (skipped)
+  shard 232: already done (skipped)
+  shard 233: already done (skipped)
+  shard 234: already done (skipped)
+  shard 235: already done (skipped)
+  shard 236: already done (skipped)
+  shard 237: already done (skipped)
+  shard 238: already done (skipped)
+  shard 239: already done (skipped)
+  shard 240: already done (skipped)
+  shard 241: already done (skipped)
+  shard 242: already done (skipped)
+  shard 243: already done (skipped)
+  shard 244: already done (skipped)
+  shard 245: already done (skipped)
+  shard 246: already done (skipped)
+  shard 247: already done (skipped)
+  shard 248: already done (skipped)
+  shard 249: already done (skipped)
+  shard 250: already done (skipped)
+  shard 251: already done (skipped)
+  shard 252: already done (skipped)
+  shard 253: already done (skipped)
+  shard 254: already done (skipped)
+  shard 255: already done (skipped)
+  shard 256: already done (skipped)
+  shard 257: already done (skipped)
+  shard 258: already done (skipped)
+  shard 259: already done (skipped)
+  shard 260: already done (skipped)
+  shard 261: already done (skipped)
+  shard 262: already done (skipped)
+  shard 263: already done (skipped)
+  shard 264: already done (skipped)
+  shard 265: already done (skipped)
+  shard 266: already done (skipped)
+  shard 267: already done (skipped)
+  shard 268: already done (skipped)
+  shard 269: already done (skipped)
+  shard 270: already done (skipped)
+  shard 271: already done (skipped)
+  shard 272: already done (skipped)
+  shard 273: already done (skipped)
+  shard 274: already done (skipped)
+  shard 275: already done (skipped)
+  shard 276: already done (skipped)
+  shard 277: already done (skipped)
+  shard 278: already done (skipped)
+  shard 279: already done (skipped)
+  shard 280: already done (skipped)
+  shard 281: already done (skipped)
+  shard 282: already done (skipped)
+  shard 283: already done (skipped)
+  shard 284: already done (skipped)
+  shard 285: already done (skipped)
+  shard 286: already done (skipped)
+  shard 287: already done (skipped)
+  shard 288: already done (skipped)
+  shard 289: already done (skipped)
+  shard 290: already done (skipped)
+  shard 291: already done (skipped)
+  shard 292: already done (skipped)
+  shard 293: already done (skipped)
+  shard 294: already done (skipped)
+  shard 295: already done (skipped)
+  shard 296: already done (skipped)
+  shard 297: already done (skipped)
+  shard 298: already done (skipped)
+  shard 299: already done (skipped)
+  shard 300: already done (skipped)
+  shard 301: already done (skipped)
+  shard 302: already done (skipped)
+  shard 303: already done (skipped)
+  shard 304: already done (skipped)
+  shard 305: already done (skipped)
+  shard 306: already done (skipped)
+  shard 307: already done (skipped)
+  shard 308: already done (skipped)
+  shard 309: already done (skipped)
+  shard 310: already done (skipped)
+  shard 311: already done (skipped)
+  shard 312: already done (skipped)
+  shard 313: already done (skipped)
+  shard 314: already done (skipped)
+  shard 315: already done (skipped)
+  shard 316: already done (skipped)
+  shard 317: already done (skipped)
+  shard 318: already done (skipped)
+  shard 319: already done (skipped)
+  shard 320: already done (skipped)
+  shard 321: already done (skipped)
+  shard 322: already done (skipped)
+  shard 323: already done (skipped)
+  shard 324: already done (skipped)
+  shard 325: already done (skipped)
+  shard 326: already done (skipped)
+  shard 327: already done (skipped)
+  shard 328: already done (skipped)
+  shard 329: already done (skipped)
+  shard 330: already done (skipped)
+  shard 331: already done (skipped)
+  shard 332: already done (skipped)
+  shard 333: already done (skipped)
+  shard 334: already done (skipped)
+  shard 335: already done (skipped)
+  shard 336: already done (skipped)
+  shard 337: already done (skipped)
+  shard 338: already done (skipped)
+  shard 339: already done (skipped)
+  shard 340: already done (skipped)
+  shard 341: already done (skipped)
+  shard 342: already done (skipped)
+  shard 343: already done (skipped)
+  shard 344: already done (skipped)
+  shard 345: already done (skipped)
+  shard 346: already done (skipped)
+  shard 347: already done (skipped)
+  shard 348: already done (skipped)
+  shard 349: already done (skipped)
+  shard 350: already done (skipped)
+  shard 351: already done (skipped)
+  shard 352: already done (skipped)
+  shard 353: already done (skipped)
+  shard 354: already done (skipped)
+  shard 355: already done (skipped)
+  shard 356: already done (skipped)
+  shard 357: already done (skipped)
+  shard 358: already done (skipped)
+  shard 359: already done (skipped)
+  shard 360: already done (skipped)
+  shard 361: already done (skipped)
+  shard 362: already done (skipped)
+  shard 363: already done (skipped)
+  shard 364: already done (skipped)
+  shard 365: already done (skipped)
+  shard 366: already done (skipped)
+  shard 367: already done (skipped)
+  shard 368: already done (skipped)
+  shard 369: already done (skipped)
+  shard 370: already done (skipped)
+  shard 371: already done (skipped)
+  shard 372: already done (skipped)
+  shard 373: already done (skipped)
+  shard 374: already done (skipped)
+  shard 375: already done (skipped)
+  shard 376: already done (skipped)
+  shard 377: already done (skipped)
+  shard 378: already done (skipped)
+  shard 379: already done (skipped)
+  shard 380: already done (skipped)
+  shard 381: already done (skipped)
+  shard 382: already done (skipped)
+  shard 383: already done (skipped)
+  shard 384: already done (skipped)
+  shard 385: already done (skipped)
+  shard 386: already done (skipped)
+  shard 387: already done (skipped)
+  shard 388: already done (skipped)
+  shard 389: already done (skipped)
+  shard 390: already done (skipped)
+  shard 391: already done (skipped)
+  shard 392: already done (skipped)
+  shard 393: already done (skipped)
+  shard 394: already done (skipped)
+  shard 395: already done (skipped)
+  shard 396: already done (skipped)
+  shard 397: already done (skipped)
+  shard 398: already done (skipped)
+  shard 399: already done (skipped)
+  shard 400: already done (skipped)
+  shard 401: already done (skipped)
+  shard 402: already done (skipped)
+  shard 403: already done (skipped)
+  shard 404: already done (skipped)
+  shard 405: already done (skipped)
+  shard 406: already done (skipped)
+  shard 407: already done (skipped)
+  shard 408: already done (skipped)
+  shard 409: already done (skipped)
+  shard 410: already done (skipped)
+  shard 411: already done (skipped)
+  shard 412: already done (skipped)
+  shard 413: already done (skipped)
+  shard 414: already done (skipped)
+  shard 415: already done (skipped)
+  shard 416: already done (skipped)
+  shard 417: already done (skipped)
+  shard 418: already done (skipped)
+  shard 419: already done (skipped)
+  shard 420: already done (skipped)
+  shard 421: already done (skipped)
+  shard 422: already done (skipped)
+  shard 423: already done (skipped)
+  shard 424: already done (skipped)
+  shard 425: already done (skipped)
+  shard 426: already done (skipped)
+  shard 427: already done (skipped)
+  shard 428: already done (skipped)
+  shard 429: already done (skipped)
+  shard 430: already done (skipped)
+  shard 431: already done (skipped)
+  shard 432: already done (skipped)
+  shard 433: already done (skipped)
+  shard 434: already done (skipped)
+  shard 435: already done (skipped)
+  shard 436: already done (skipped)
+  shard 437: already done (skipped)
+  shard 438: already done (skipped)
+  shard 439: already done (skipped)
+  shard 440: already done (skipped)
+  shard 441: already done (skipped)
+  shard 442: already done (skipped)
+  shard 443: already done (skipped)
+  shard 444: already done (skipped)
+  shard 445: already done (skipped)
+  shard 446: already done (skipped)
+  shard 447: already done (skipped)
+  shard 448: already done (skipped)
+  shard 449: already done (skipped)
+  shard 450: already done (skipped)
+  shard 451: already done (skipped)
+  shard 452: already done (skipped)
+  shard 453: already done (skipped)
+  shard 454: already done (skipped)
+  shard 455: already done (skipped)
+  shard 456: already done (skipped)
+  shard 457: already done (skipped)
+  shard 458: already done (skipped)
+  shard 459: already done (skipped)
+  shard 460: already done (skipped)
+  shard 461: already done (skipped)
+  shard 462: already done (skipped)
+  shard 463: already done (skipped)
+  shard 464: already done (skipped)
+  shard 465: already done (skipped)
+  shard 466: already done (skipped)
+  shard 467: already done (skipped)
+  shard 468: already done (skipped)
+  shard 469: already done (skipped)
+  shard 470: already done (skipped)
+  shard 471: already done (skipped)
+  shard 472: already done (skipped)
+  shard 473: already done (skipped)
+  shard 474: already done (skipped)
+  shard 475: already done (skipped)
+  shard 476: already done (skipped)
+  shard 477: already done (skipped)
+  shard 478: already done (skipped)
+  shard 479: already done (skipped)
+  shard 480: already done (skipped)
+  shard 481: already done (skipped)
+  shard 482: already done (skipped)
+  shard 483: already done (skipped)
+  shard 484: already done (skipped)
+  shard 485: already done (skipped)
+  shard 486: already done (skipped)
+  shard 487: already done (skipped)
+  shard 488: already done (skipped)
+  shard 489: already done (skipped)
+  shard 490: already done (skipped)
+  shard 491: already done (skipped)
+  shard 492: already done (skipped)
+  shard 493: already done (skipped)
+  shard 494: already done (skipped)
+  shard 495: already done (skipped)
+  shard 496: already done (skipped)
+  shard 497: already done (skipped)
+  shard 498: already done (skipped)
+  shard 499: already done (skipped)
+  shard 500: already done (skipped)
+  shard 501: already done (skipped)
+  shard 502: already done (skipped)
+  shard 503: already done (skipped)
+  shard 504: already done (skipped)
+  shard 505: already done (skipped)
+  shard 506: already done (skipped)
+  shard 507: already done (skipped)
+  shard 508: already done (skipped)
+  shard 509: already done (skipped)
+  shard 510: already done (skipped)
+  shard 511: already done (skipped)
+  shard 512: already done (skipped)
+  shard 513: already done (skipped)
+  shard 514: already done (skipped)
+  shard 515: already done (skipped)
+  shard 516: already done (skipped)
+  shard 517: already done (skipped)
+  shard 518: already done (skipped)
+  shard 519: already done (skipped)
+  shard 520: already done (skipped)
+  shard 521: already done (skipped)
+  shard 522: already done (skipped)
+  shard 523: already done (skipped)
+  shard 524: already done (skipped)
+  shard 525: already done (skipped)
+  shard 526: already done (skipped)
+  shard 527: already done (skipped)
+  shard 528: already done (skipped)
+  shard 529: already done (skipped)
+  shard 530: already done (skipped)
+  shard 531: already done (skipped)
+  shard 532: already done (skipped)
+  shard 533: already done (skipped)
+  shard 534: already done (skipped)
+  shard 535: already done (skipped)
+  shard 536: already done (skipped)
+  shard 537: already done (skipped)
+  shard 538: already done (skipped)
+  shard 539: already done (skipped)
+  shard 540: already done (skipped)
+  shard 541: already done (skipped)
+  shard 542: already done (skipped)
+  shard 543: already done (skipped)
+  shard 544: already done (skipped)
+  shard 545: already done (skipped)
+  shard 546: already done (skipped)
+  shard 547: already done (skipped)
+  shard 548: already done (skipped)
+  shard 549: already done (skipped)
+  shard 550: already done (skipped)
+  shard 551: already done (skipped)
+  shard 552: already done (skipped)
+  shard 553: already done (skipped)
+  shard 554: already done (skipped)
+  shard 555: already done (skipped)
+  shard 556: already done (skipped)
+  shard 557: already done (skipped)
+  shard 558: already done (skipped)
+  shard 559: already done (skipped)
+  shard 560: already done (skipped)
+  shard 561: already done (skipped)
+  shard 562: already done (skipped)
+  shard 563: already done (skipped)
+  shard 564: already done (skipped)
+  shard 565: already done (skipped)
+  shard 566: already done (skipped)
+  shard 567: already done (skipped)
+  shard 568: already done (skipped)
+  shard 569: already done (skipped)
+  shard 570: already done (skipped)
+  shard 571: already done (skipped)
+  shard 572: already done (skipped)
+  shard 573: already done (skipped)
+  shard 574: already done (skipped)
+  shard 575: already done (skipped)
+  shard 576: already done (skipped)
+  shard 577: already done (skipped)
+  shard 578: already done (skipped)
+  shard 579: already done (skipped)
+  shard 580: already done (skipped)
+  shard 581: already done (skipped)
+  shard 582: already done (skipped)
+  shard 583: already done (skipped)
+  shard 584: already done (skipped)
+  shard 585: already done (skipped)
+  shard 586: already done (skipped)
+  shard 587: already done (skipped)
+  shard 588: already done (skipped)
+  shard 589: already done (skipped)
+  shard 590: already done (skipped)
+  shard 591: already done (skipped)
+  shard 592: already done (skipped)
+  shard 593: already done (skipped)
+  shard 594: already done (skipped)
+  shard 595: already done (skipped)
+  shard 596: already done (skipped)
+  shard 597: already done (skipped)
+  shard 598: already done (skipped)
+  shard 599: already done (skipped)
+  shard 600: already done (skipped)
+  shard 601: already done (skipped)
+  shard 602: already done (skipped)
+  shard 603: already done (skipped)
+  shard 604: already done (skipped)
+  shard 605: already done (skipped)
+  shard 606: already done (skipped)
+  shard 607: already done (skipped)
+  shard 608: already done (skipped)
+  shard 609: already done (skipped)
+  shard 610: already done (skipped)
+  shard 611: already done (skipped)
+  shard 612: already done (skipped)
+  shard 613: already done (skipped)
+  shard 614: already done (skipped)
+  shard 615: already done (skipped)
+  shard 616: already done (skipped)
+  shard 617: already done (skipped)
+  shard 618: already done (skipped)
+  shard 619: already done (skipped)
+  shard 620: already done (skipped)
+  shard 621: already done (skipped)
+  shard 622: already done (skipped)
+  shard 623: already done (skipped)
+  shard 624: already done (skipped)
+  shard 625: already done (skipped)
+  shard 626: already done (skipped)
+  shard 627: already done (skipped)
+  shard 628: already done (skipped)
+  shard 629: already done (skipped)
+  shard 630: already done (skipped)
+  shard 631: already done (skipped)
+  shard 632: already done (skipped)
+  shard 633: already done (skipped)
+  shard 634: already done (skipped)
+  shard 635: already done (skipped)
+  shard 636: already done (skipped)
+  shard 637: already done (skipped)
+  shard 638: already done (skipped)
+  shard 639: already done (skipped)
+  shard 640: already done (skipped)
+  shard 641: already done (skipped)
+  shard 642: already done (skipped)
+  shard 643: already done (skipped)
+  shard 644: already done (skipped)
+  shard 645: already done (skipped)
+  shard 646: already done (skipped)
+  shard 647: already done (skipped)
+  shard 648: already done (skipped)
+  shard 649: already done (skipped)
+  shard 650: already done (skipped)
+  shard 651: already done (skipped)
+  shard 652: already done (skipped)
+  shard 653: already done (skipped)
+  shard 654: already done (skipped)
+  shard 655: already done (skipped)
+  shard 656: already done (skipped)
+  shard 657: already done (skipped)
+  shard 658: already done (skipped)
+  shard 659: already done (skipped)
+  shard 660: already done (skipped)
+  shard 661: already done (skipped)
+  shard 662: already done (skipped)
+  shard 663: already done (skipped)
+  shard 664: already done (skipped)
+  shard 665: already done (skipped)
+  shard 666: already done (skipped)
+  shard 667: already done (skipped)
+  shard 668: already done (skipped)
+  shard 669: already done (skipped)
+  shard 670: already done (skipped)
+  shard 671: already done (skipped)
+  shard 672: already done (skipped)
+  shard 673: already done (skipped)
+  shard 674: already done (skipped)
+  shard 675: already done (skipped)
+  shard 676: already done (skipped)
+  shard 677: already done (skipped)
+  shard 678: already done (skipped)
+  shard 679: already done (skipped)
+  shard 680: already done (skipped)
+  shard 681: already done (skipped)
+  shard 682: already done (skipped)
+  shard 683: already done (skipped)
+  shard 684: already done (skipped)
+  shard 685: already done (skipped)
+  shard 686: already done (skipped)
+  shard 687: already done (skipped)
+  shard 688: already done (skipped)
+  shard 689: already done (skipped)
+  shard 690: already done (skipped)
+  shard 691: already done (skipped)
+  shard 692: already done (skipped)
+  shard 693: already done (skipped)
+  shard 694: already done (skipped)
+  shard 695: already done (skipped)
+  shard 696: already done (skipped)
+  shard 697: already done (skipped)
+  shard 698: already done (skipped)
+  shard 699: already done (skipped)
+  shard 700: already done (skipped)
+  shard 701: already done (skipped)
+  shard 702: already done (skipped)
+  shard 703: already done (skipped)
+  shard 704: already done (skipped)
+  shard 705: already done (skipped)
+  shard 706: already done (skipped)
+  shard 707: already done (skipped)
+  shard 708: already done (skipped)
+  shard 709: already done (skipped)
+  shard 710: already done (skipped)
+  shard 711: already done (skipped)
+  shard 712: already done (skipped)
+  shard 713: already done (skipped)
+  shard 714: already done (skipped)
+  shard 715: already done (skipped)
+  shard 716: already done (skipped)
+  shard 717: already done (skipped)
+  shard 718: already done (skipped)
+  shard 719: already done (skipped)
+  shard 720: already done (skipped)
+  shard 721: already done (skipped)
+  shard 722: already done (skipped)
+  shard 723: already done (skipped)
+  shard 724: already done (skipped)
+  shard 725: already done (skipped)
+  shard 726: already done (skipped)
+  shard 727: already done (skipped)
+  shard 728: already done (skipped)
+  shard 729: already done (skipped)
+  shard 730: already done (skipped)
+  shard 731: already done (skipped)
+  shard 732: already done (skipped)
+  shard 733: already done (skipped)
+  shard 734: already done (skipped)
+  shard 735: already done (skipped)
+  shard 736: already done (skipped)
+  shard 737: already done (skipped)
+  shard 738: already done (skipped)
+  shard 739: already done (skipped)
+  shard 740: already done (skipped)
+  shard 741: already done (skipped)
+  shard 742: already done (skipped)
+  shard 743: already done (skipped)
+  shard 744: already done (skipped)
+  shard 745: already done (skipped)
+  shard 746: already done (skipped)
+  shard 747: already done (skipped)
+  shard 748: already done (skipped)
+  shard 749: already done (skipped)
+  shard 750: already done (skipped)
+  shard 751: already done (skipped)
+  shard 752: already done (skipped)
+  shard 753: already done (skipped)
+  shard 754: already done (skipped)
+  shard 755: already done (skipped)
+  shard 756: already done (skipped)
+  shard 757: already done (skipped)
+  shard 758: already done (skipped)
+  shard 759: already done (skipped)
+  shard 760: already done (skipped)
+  shard 761: already done (skipped)
+  shard 762: already done (skipped)
+  shard 763: already done (skipped)
+  shard 764: already done (skipped)
+  shard 765: already done (skipped)
+  shard 766: already done (skipped)
+  shard 767: already done (skipped)
+  shard 768: already done (skipped)
+  shard 769: already done (skipped)
+  shard 770: already done (skipped)
+  shard 771: already done (skipped)
+  shard 772: already done (skipped)
+  shard 773: already done (skipped)
+  shard 774: already done (skipped)
+  shard 775: already done (skipped)
+  shard 776: already done (skipped)
+  shard 777: 681925 decisions, 200000 hand-players
+  shard 778: 681531 decisions, 200000 hand-players
+  shard 779: 681131 decisions, 200000 hand-players
+  shard 780: 677020 decisions, 200000 hand-players
+  shard 781: 676758 decisions, 200000 hand-players
+  shard 782: 676580 decisions, 200000 hand-players
+  shard 783: 681866 decisions, 200000 hand-players
+  shard 784: 681124 decisions, 200000 hand-players
+  shard 785: 681249 decisions, 200000 hand-players
+  shard 786: 689483 decisions, 200000 hand-players
+  shard 787: 688887 decisions, 200000 hand-players
+  shard 788: 689029 decisions, 200000 hand-players
+[RESUME] 2026-09-15T11:18:02-04:00 single runner after duplicate-stop
+[REPLAY_RESUME] 2026-09-15T11:18:02-04:00
+  shard 0: already done (skipped)
+  shard 1: already done (skipped)
+  shard 2: already done (skipped)
+  shard 3: already done (skipped)
+  shard 4: already done (skipped)
+  shard 5: already done (skipped)
+  shard 6: already done (skipped)
+  shard 7: already done (skipped)
+  shard 8: already done (skipped)
+  shard 9: already done (skipped)
+  shard 10: already done (skipped)
+  shard 11: already done (skipped)
+  shard 12: already done (skipped)
+  shard 13: already done (skipped)
+  shard 14: already done (skipped)
+  shard 15: already done (skipped)
+  shard 16: already done (skipped)
+  shard 17: already done (skipped)
+  shard 18: already done (skipped)
+  shard 19: already done (skipped)
+  shard 20: already done (skipped)
+  shard 21: already done (skipped)
+  shard 22: already done (skipped)
+  shard 23: already done (skipped)
+  shard 24: already done (skipped)
+  shard 25: already done (skipped)
+  shard 26: already done (skipped)
+  shard 27: already done (skipped)
+  shard 28: already done (skipped)
+  shard 29: already done (skipped)
+  shard 30: already done (skipped)
+  shard 31: already done (skipped)
+  shard 32: already done (skipped)
+  shard 33: already done (skipped)
+  shard 34: already done (skipped)
+  shard 35: already done (skipped)
+  shard 36: already done (skipped)
+  shard 37: already done (skipped)
+  shard 38: already done (skipped)
+  shard 39: already done (skipped)
+  shard 40: already done (skipped)
+  shard 41: already done (skipped)
+  shard 42: already done (skipped)
+  shard 43: already done (skipped)
+  shard 44: already done (skipped)
+  shard 45: already done (skipped)
+  shard 46: already done (skipped)
+  shard 47: already done (skipped)
+  shard 48: already done (skipped)
+  shard 49: already done (skipped)
+  shard 50: already done (skipped)
+  shard 51: already done (skipped)
+  shard 52: already done (skipped)
+  shard 53: already done (skipped)
+  shard 54: already done (skipped)
+  shard 55: already done (skipped)
+  shard 56: already done (skipped)
+  shard 57: already done (skipped)
+  shard 58: already done (skipped)
+  shard 59: already done (skipped)
+  shard 60: already done (skipped)
+  shard 61: already done (skipped)
+  shard 62: already done (skipped)
+  shard 63: already done (skipped)
+  shard 64: already done (skipped)
+  shard 65: already done (skipped)
+  shard 66: already done (skipped)
+  shard 67: already done (skipped)
+  shard 68: already done (skipped)
+  shard 69: already done (skipped)
+  shard 70: already done (skipped)
+  shard 71: already done (skipped)
+  shard 72: already done (skipped)
+  shard 73: already done (skipped)
+  shard 74: already done (skipped)
+  shard 75: already done (skipped)
+  shard 76: already done (skipped)
+  shard 77: already done (skipped)
+  shard 78: already done (skipped)
+  shard 79: already done (skipped)
+  shard 80: already done (skipped)
+  shard 81: already done (skipped)
+  shard 82: already done (skipped)
+  shard 83: already done (skipped)
+  shard 84: already done (skipped)
+  shard 85: already done (skipped)
+  shard 86: already done (skipped)
+  shard 87: already done (skipped)
+  shard 88: already done (skipped)
+  shard 89: already done (skipped)
+  shard 90: already done (skipped)
+  shard 91: already done (skipped)
+  shard 92: already done (skipped)
+  shard 93: already done (skipped)
+  shard 94: already done (skipped)
+  shard 95: already done (skipped)
+  shard 96: already done (skipped)
+  shard 97: already done (skipped)
+  shard 98: already done (skipped)
+  shard 99: already done (skipped)
+  shard 100: already done (skipped)
+  shard 101: already done (skipped)
+  shard 102: already done (skipped)
+  shard 103: already done (skipped)
+  shard 104: already done (skipped)
+  shard 105: already done (skipped)
+  shard 106: already done (skipped)
+  shard 107: already done (skipped)
+  shard 108: already done (skipped)
+  shard 109: already done (skipped)
+  shard 110: already done (skipped)
+  shard 111: already done (skipped)
+  shard 112: already done (skipped)
+  shard 113: already done (skipped)
+  shard 114: already done (skipped)
+  shard 115: already done (skipped)
+  shard 116: already done (skipped)
+  shard 117: already done (skipped)
+  shard 118: already done (skipped)
+  shard 119: already done (skipped)
+  shard 120: already done (skipped)
+  shard 121: already done (skipped)
+  shard 122: already done (skipped)
+  shard 123: already done (skipped)
+  shard 124: already done (skipped)
+  shard 125: already done (skipped)
+  shard 126: already done (skipped)
+  shard 127: already done (skipped)
+  shard 128: already done (skipped)
+  shard 129: already done (skipped)
+  shard 130: already done (skipped)
+  shard 131: already done (skipped)
+  shard 132: already done (skipped)
+  shard 133: already done (skipped)
+  shard 134: already done (skipped)
+  shard 135: already done (skipped)
+  shard 136: already done (skipped)
+  shard 137: already done (skipped)
+  shard 138: already done (skipped)
+  shard 139: already done (skipped)
+  shard 140: already done (skipped)
+  shard 141: already done (skipped)
+  shard 142: already done (skipped)
+  shard 143: already done (skipped)
+  shard 144: already done (skipped)
+  shard 145: already done (skipped)
+  shard 146: already done (skipped)
+  shard 147: already done (skipped)
+  shard 148: already done (skipped)
+  shard 149: already done (skipped)
+  shard 150: already done (skipped)
+  shard 151: already done (skipped)
+  shard 152: already done (skipped)
+  shard 153: already done (skipped)
+  shard 154: already done (skipped)
+  shard 155: already done (skipped)
+  shard 156: already done (skipped)
+  shard 157: already done (skipped)
+  shard 158: already done (skipped)
+  shard 159: already done (skipped)
+  shard 160: already done (skipped)
+  shard 161: already done (skipped)
+  shard 162: already done (skipped)
+  shard 163: already done (skipped)
+  shard 164: already done (skipped)
+  shard 165: already done (skipped)
+  shard 166: already done (skipped)
+  shard 167: already done (skipped)
+  shard 168: already done (skipped)
+  shard 169: already done (skipped)
+  shard 170: already done (skipped)
+  shard 171: already done (skipped)
+  shard 172: already done (skipped)
+  shard 173: already done (skipped)
+  shard 174: already done (skipped)
+  shard 175: already done (skipped)
+  shard 176: already done (skipped)
+  shard 177: already done (skipped)
+  shard 178: already done (skipped)
+  shard 179: already done (skipped)
+  shard 180: already done (skipped)
+  shard 181: already done (skipped)
+  shard 182: already done (skipped)
+  shard 183: already done (skipped)
+  shard 184: already done (skipped)
+  shard 185: already done (skipped)
+  shard 186: already done (skipped)
+  shard 187: already done (skipped)
+  shard 188: already done (skipped)
+  shard 189: already done (skipped)
+  shard 190: already done (skipped)
+  shard 191: already done (skipped)
+  shard 192: already done (skipped)
+  shard 193: already done (skipped)
+  shard 194: already done (skipped)
+  shard 195: already done (skipped)
+  shard 196: already done (skipped)
+  shard 197: already done (skipped)
+  shard 198: already done (skipped)
+  shard 199: already done (skipped)
+  shard 200: already done (skipped)
+  shard 201: already done (skipped)
+  shard 202: already done (skipped)
+  shard 203: already done (skipped)
+  shard 204: already done (skipped)
+  shard 205: already done (skipped)
+  shard 206: already done (skipped)
+  shard 207: already done (skipped)
+  shard 208: already done (skipped)
+  shard 209: already done (skipped)
+  shard 210: already done (skipped)
+  shard 211: already done (skipped)
+  shard 212: already done (skipped)
+  shard 213: already done (skipped)
+  shard 214: already done (skipped)
+  shard 215: already done (skipped)
+  shard 216: already done (skipped)
+  shard 217: already done (skipped)
+  shard 218: already done (skipped)
+  shard 219: already done (skipped)
+  shard 220: already done (skipped)
+  shard 221: already done (skipped)
+  shard 222: already done (skipped)
+  shard 223: already done (skipped)
+  shard 224: already done (skipped)
+  shard 225: already done (skipped)
+  shard 226: already done (skipped)
+  shard 227: already done (skipped)
+  shard 228: already done (skipped)
+  shard 229: already done (skipped)
+  shard 230: already done (skipped)
+  shard 231: already done (skipped)
+  shard 232: already done (skipped)
+  shard 233: already done (skipped)
+  shard 234: already done (skipped)
+  shard 235: already done (skipped)
+  shard 236: already done (skipped)
+  shard 237: already done (skipped)
+  shard 238: already done (skipped)
+  shard 239: already done (skipped)
+  shard 240: already done (skipped)
+  shard 241: already done (skipped)
+  shard 242: already done (skipped)
+  shard 243: already done (skipped)
+  shard 244: already done (skipped)
+  shard 245: already done (skipped)
+  shard 246: already done (skipped)
+  shard 247: already done (skipped)
+  shard 248: already done (skipped)
+  shard 249: already done (skipped)
+  shard 250: already done (skipped)
+  shard 251: already done (skipped)
+  shard 252: already done (skipped)
+  shard 253: already done (skipped)
+  shard 254: already done (skipped)
+  shard 255: already done (skipped)
+  shard 256: already done (skipped)
+  shard 257: already done (skipped)
+  shard 258: already done (skipped)
+  shard 259: already done (skipped)
+  shard 260: already done (skipped)
+  shard 261: already done (skipped)
+  shard 262: already done (skipped)
+  shard 263: already done (skipped)
+  shard 264: already done (skipped)
+  shard 265: already done (skipped)
+  shard 266: already done (skipped)
+  shard 267: already done (skipped)
+  shard 268: already done (skipped)
+  shard 269: already done (skipped)
+  shard 270: already done (skipped)
+  shard 271: already done (skipped)
+  shard 272: already done (skipped)
+  shard 273: already done (skipped)
+  shard 274: already done (skipped)
+  shard 275: already done (skipped)
+  shard 276: already done (skipped)
+  shard 277: already done (skipped)
+  shard 278: already done (skipped)
+  shard 279: already done (skipped)
+  shard 280: already done (skipped)
+  shard 281: already done (skipped)
+  shard 282: already done (skipped)
+  shard 283: already done (skipped)
+  shard 284: already done (skipped)
+  shard 285: already done (skipped)
+  shard 286: already done (skipped)
+  shard 287: already done (skipped)
+  shard 288: already done (skipped)
+  shard 289: already done (skipped)
+  shard 290: already done (skipped)
+  shard 291: already done (skipped)
+  shard 292: already done (skipped)
+  shard 293: already done (skipped)
+  shard 294: already done (skipped)
+  shard 295: already done (skipped)
+  shard 296: already done (skipped)
+  shard 297: already done (skipped)
+  shard 298: already done (skipped)
+  shard 299: already done (skipped)
+  shard 300: already done (skipped)
+  shard 301: already done (skipped)
+  shard 302: already done (skipped)
+  shard 303: already done (skipped)
+  shard 304: already done (skipped)
+  shard 305: already done (skipped)
+  shard 306: already done (skipped)
+  shard 307: already done (skipped)
+  shard 308: already done (skipped)
+  shard 309: already done (skipped)
+  shard 310: already done (skipped)
+  shard 311: already done (skipped)
+  shard 312: already done (skipped)
+  shard 313: already done (skipped)
+  shard 314: already done (skipped)
+  shard 315: already done (skipped)
+  shard 316: already done (skipped)
+  shard 317: already done (skipped)
+  shard 318: already done (skipped)
+  shard 319: already done (skipped)
+  shard 320: already done (skipped)
+  shard 321: already done (skipped)
+  shard 322: already done (skipped)
+  shard 323: already done (skipped)
+  shard 324: already done (skipped)
+  shard 325: already done (skipped)
+  shard 326: already done (skipped)
+  shard 327: already done (skipped)
+  shard 328: already done (skipped)
+  shard 329: already done (skipped)
+  shard 330: already done (skipped)
+  shard 331: already done (skipped)
+  shard 332: already done (skipped)
+  shard 333: already done (skipped)
+  shard 334: already done (skipped)
+  shard 335: already done (skipped)
+  shard 336: already done (skipped)
+  shard 337: already done (skipped)
+  shard 338: already done (skipped)
+  shard 339: already done (skipped)
+  shard 340: already done (skipped)
+  shard 341: already done (skipped)
+  shard 342: already done (skipped)
+  shard 343: already done (skipped)
+  shard 344: already done (skipped)
+  shard 345: already done (skipped)
+  shard 346: already done (skipped)
+  shard 347: already done (skipped)
+  shard 348: already done (skipped)
+  shard 349: already done (skipped)
+  shard 350: already done (skipped)
+  shard 351: already done (skipped)
+  shard 352: already done (skipped)
+  shard 353: already done (skipped)
+  shard 354: already done (skipped)
+  shard 355: already done (skipped)
+  shard 356: already done (skipped)
+  shard 357: already done (skipped)
+  shard 358: already done (skipped)
+  shard 359: already done (skipped)
+  shard 360: already done (skipped)
+  shard 361: already done (skipped)
+  shard 362: already done (skipped)
+  shard 363: already done (skipped)
+  shard 364: already done (skipped)
+  shard 365: already done (skipped)
+  shard 366: already done (skipped)
+  shard 367: already done (skipped)
+  shard 368: already done (skipped)
+  shard 369: already done (skipped)
+  shard 370: already done (skipped)
+  shard 371: already done (skipped)
+  shard 372: already done (skipped)
+  shard 373: already done (skipped)
+  shard 374: already done (skipped)
+  shard 375: already done (skipped)
+  shard 376: already done (skipped)
+  shard 377: already done (skipped)
+  shard 378: already done (skipped)
+  shard 379: already done (skipped)
+  shard 380: already done (skipped)
+  shard 381: already done (skipped)
+  shard 382: already done (skipped)
+  shard 383: already done (skipped)
+  shard 384: already done (skipped)
+  shard 385: already done (skipped)
+  shard 386: already done (skipped)
+  shard 387: already done (skipped)
+  shard 388: already done (skipped)
+  shard 389: already done (skipped)
+  shard 390: already done (skipped)
+  shard 391: already done (skipped)
+  shard 392: already done (skipped)
+  shard 393: already done (skipped)
+  shard 394: already done (skipped)
+  shard 395: already done (skipped)
+  shard 396: already done (skipped)
+  shard 397: already done (skipped)
+  shard 398: already done (skipped)
+  shard 399: already done (skipped)
+  shard 400: already done (skipped)
+  shard 401: already done (skipped)
+  shard 402: already done (skipped)
+  shard 403: already done (skipped)
+  shard 404: already done (skipped)
+  shard 405: already done (skipped)
+  shard 406: already done (skipped)
+  shard 407: already done (skipped)
+  shard 408: already done (skipped)
+  shard 409: already done (skipped)
+  shard 410: already done (skipped)
+  shard 411: already done (skipped)
+  shard 412: already done (skipped)
+  shard 413: already done (skipped)
+  shard 414: already done (skipped)
+  shard 415: already done (skipped)
+  shard 416: already done (skipped)
+  shard 417: already done (skipped)
+  shard 418: already done (skipped)
+  shard 419: already done (skipped)
+  shard 420: already done (skipped)
+  shard 421: already done (skipped)
+  shard 422: already done (skipped)
+  shard 423: already done (skipped)
+  shard 424: already done (skipped)
+  shard 425: already done (skipped)
+  shard 426: already done (skipped)
+  shard 427: already done (skipped)
+  shard 428: already done (skipped)
+  shard 429: already done (skipped)
+  shard 430: already done (skipped)
+  shard 431: already done (skipped)
+  shard 432: already done (skipped)
+  shard 433: already done (skipped)
+  shard 434: already done (skipped)
+  shard 435: already done (skipped)
+  shard 436: already done (skipped)
+  shard 437: already done (skipped)
+  shard 438: already done (skipped)
+  shard 439: already done (skipped)
+  shard 440: already done (skipped)
+  shard 441: already done (skipped)
+  shard 442: already done (skipped)
+  shard 443: already done (skipped)
+  shard 444: already done (skipped)
+  shard 445: already done (skipped)
+  shard 446: already done (skipped)
+  shard 447: already done (skipped)
+  shard 448: already done (skipped)
+  shard 449: already done (skipped)
+  shard 450: already done (skipped)
+  shard 451: already done (skipped)
+  shard 452: already done (skipped)
+  shard 453: already done (skipped)
+  shard 454: already done (skipped)
+  shard 455: already done (skipped)
+  shard 456: already done (skipped)
+  shard 457: already done (skipped)
+  shard 458: already done (skipped)
+  shard 459: already done (skipped)
+  shard 460: already done (skipped)
+  shard 461: already done (skipped)
+  shard 462: already done (skipped)
+  shard 463: already done (skipped)
+  shard 464: already done (skipped)
+  shard 465: already done (skipped)
+  shard 466: already done (skipped)
+  shard 467: already done (skipped)
+  shard 468: already done (skipped)
+  shard 469: already done (skipped)
+  shard 470: already done (skipped)
+  shard 471: already done (skipped)
+  shard 472: already done (skipped)
+  shard 473: already done (skipped)
+  shard 474: already done (skipped)
+  shard 475: already done (skipped)
+  shard 476: already done (skipped)
+  shard 477: already done (skipped)
+  shard 478: already done (skipped)
+  shard 479: already done (skipped)
+  shard 480: already done (skipped)
+  shard 481: already done (skipped)
+  shard 482: already done (skipped)
+  shard 483: already done (skipped)
+  shard 484: already done (skipped)
+  shard 485: already done (skipped)
+  shard 486: already done (skipped)
+  shard 487: already done (skipped)
+  shard 488: already done (skipped)
+  shard 489: already done (skipped)
+  shard 490: already done (skipped)
+  shard 491: already done (skipped)
+  shard 492: already done (skipped)
+  shard 493: already done (skipped)
+  shard 494: already done (skipped)
+  shard 495: already done (skipped)
+  shard 496: already done (skipped)
+  shard 497: already done (skipped)
+  shard 498: already done (skipped)
+  shard 499: already done (skipped)
+  shard 500: already done (skipped)
+  shard 501: already done (skipped)
+  shard 502: already done (skipped)
+  shard 503: already done (skipped)
+  shard 504: already done (skipped)
+  shard 505: already done (skipped)
+  shard 506: already done (skipped)
+  shard 507: already done (skipped)
+  shard 508: already done (skipped)
+  shard 509: already done (skipped)
+  shard 510: already done (skipped)
+  shard 511: already done (skipped)
+  shard 512: already done (skipped)
+  shard 513: already done (skipped)
+  shard 514: already done (skipped)
+  shard 515: already done (skipped)
+  shard 516: already done (skipped)
+  shard 517: already done (skipped)
+  shard 518: already done (skipped)
+  shard 519: already done (skipped)
+  shard 520: already done (skipped)
+  shard 521: already done (skipped)
+  shard 522: already done (skipped)
+  shard 523: already done (skipped)
+  shard 524: already done (skipped)
+  shard 525: already done (skipped)
+  shard 526: already done (skipped)
+  shard 527: already done (skipped)
+  shard 528: already done (skipped)
+  shard 529: already done (skipped)
+  shard 530: already done (skipped)
+  shard 531: already done (skipped)
+  shard 532: already done (skipped)
+  shard 533: already done (skipped)
+  shard 534: already done (skipped)
+  shard 535: already done (skipped)
+  shard 536: already done (skipped)
+  shard 537: already done (skipped)
+  shard 538: already done (skipped)
+  shard 539: already done (skipped)
+  shard 540: already done (skipped)
+  shard 541: already done (skipped)
+  shard 542: already done (skipped)
+  shard 543: already done (skipped)
+  shard 544: already done (skipped)
+  shard 545: already done (skipped)
+  shard 546: already done (skipped)
+  shard 547: already done (skipped)
+  shard 548: already done (skipped)
+  shard 549: already done (skipped)
+  shard 550: already done (skipped)
+  shard 551: already done (skipped)
+  shard 552: already done (skipped)
+  shard 553: already done (skipped)
+  shard 554: already done (skipped)
+  shard 555: already done (skipped)
+  shard 556: already done (skipped)
+  shard 557: already done (skipped)
+  shard 558: already done (skipped)
+  shard 559: already done (skipped)
+  shard 560: already done (skipped)
+  shard 561: already done (skipped)
+  shard 562: already done (skipped)
+  shard 563: already done (skipped)
+  shard 564: already done (skipped)
+  shard 565: already done (skipped)
+  shard 566: already done (skipped)
+  shard 567: already done (skipped)
+  shard 568: already done (skipped)
+  shard 569: already done (skipped)
+  shard 570: already done (skipped)
+  shard 571: already done (skipped)
+  shard 572: already done (skipped)
+  shard 573: already done (skipped)
+  shard 574: already done (skipped)
+  shard 575: already done (skipped)
+  shard 576: already done (skipped)
+  shard 577: already done (skipped)
+  shard 578: already done (skipped)
+  shard 579: already done (skipped)
+  shard 580: already done (skipped)
+  shard 581: already done (skipped)
+  shard 582: already done (skipped)
+  shard 583: already done (skipped)
+  shard 584: already done (skipped)
+  shard 585: already done (skipped)
+  shard 586: already done (skipped)
+  shard 587: already done (skipped)
+  shard 588: already done (skipped)
+  shard 589: already done (skipped)
+  shard 590: already done (skipped)
+  shard 591: already done (skipped)
+  shard 592: already done (skipped)
+  shard 593: already done (skipped)
+  shard 594: already done (skipped)
+  shard 595: already done (skipped)
+  shard 596: already done (skipped)
+  shard 597: already done (skipped)
+  shard 598: already done (skipped)
+  shard 599: already done (skipped)
+  shard 600: already done (skipped)
+  shard 601: already done (skipped)
+  shard 602: already done (skipped)
+  shard 603: already done (skipped)
+  shard 604: already done (skipped)
+  shard 605: already done (skipped)
+  shard 606: already done (skipped)
+  shard 607: already done (skipped)
+  shard 608: already done (skipped)
+  shard 609: already done (skipped)
+  shard 610: already done (skipped)
+  shard 611: already done (skipped)
+  shard 612: already done (skipped)
+  shard 613: already done (skipped)
+  shard 614: already done (skipped)
+  shard 615: already done (skipped)
+  shard 616: already done (skipped)
+  shard 617: already done (skipped)
+  shard 618: already done (skipped)
+  shard 619: already done (skipped)
+  shard 620: already done (skipped)
+  shard 621: already done (skipped)
+  shard 622: already done (skipped)
+  shard 623: already done (skipped)
+  shard 624: already done (skipped)
+  shard 625: already done (skipped)
+  shard 626: already done (skipped)
+  shard 627: already done (skipped)
+  shard 628: already done (skipped)
+  shard 629: already done (skipped)
+  shard 630: already done (skipped)
+  shard 631: already done (skipped)
+  shard 632: already done (skipped)
+  shard 633: already done (skipped)
+  shard 634: already done (skipped)
+  shard 635: already done (skipped)
+  shard 636: already done (skipped)
+  shard 637: already done (skipped)
+  shard 638: already done (skipped)
+  shard 639: already done (skipped)
+  shard 640: already done (skipped)
+  shard 641: already done (skipped)
+  shard 642: already done (skipped)
+  shard 643: already done (skipped)
+  shard 644: already done (skipped)
+  shard 645: already done (skipped)
+  shard 646: already done (skipped)
+  shard 647: already done (skipped)
+  shard 648: already done (skipped)
+  shard 649: already done (skipped)
+  shard 650: already done (skipped)
+  shard 651: already done (skipped)
+  shard 652: already done (skipped)
+  shard 653: already done (skipped)
+  shard 654: already done (skipped)
+  shard 655: already done (skipped)
+  shard 656: already done (skipped)
+  shard 657: already done (skipped)
+  shard 658: already done (skipped)
+  shard 659: already done (skipped)
+  shard 660: already done (skipped)
+  shard 661: already done (skipped)
+  shard 662: already done (skipped)
+  shard 663: already done (skipped)
+  shard 664: already done (skipped)
+  shard 665: already done (skipped)
+  shard 666: already done (skipped)
+  shard 667: already done (skipped)
+  shard 668: already done (skipped)
+  shard 669: already done (skipped)
+  shard 670: already done (skipped)
+  shard 671: already done (skipped)
+  shard 672: already done (skipped)
+  shard 673: already done (skipped)
+  shard 674: already done (skipped)
+  shard 675: already done (skipped)
+  shard 676: already done (skipped)
+  shard 677: already done (skipped)
+  shard 678: already done (skipped)
+  shard 679: already done (skipped)
+  shard 680: already done (skipped)
+  shard 681: already done (skipped)
+  shard 682: already done (skipped)
+  shard 683: already done (skipped)
+  shard 684: already done (skipped)
+  shard 685: already done (skipped)
+  shard 686: already done (skipped)
+  shard 687: already done (skipped)
+  shard 688: already done (skipped)
+  shard 689: already done (skipped)
+  shard 690: already done (skipped)
+  shard 691: already done (skipped)
+  shard 692: already done (skipped)
+  shard 693: already done (skipped)
+  shard 694: already done (skipped)
+  shard 695: already done (skipped)
+  shard 696: already done (skipped)
+  shard 697: already done (skipped)
+  shard 698: already done (skipped)
+  shard 699: already done (skipped)
+  shard 700: already done (skipped)
+  shard 701: already done (skipped)
+  shard 702: already done (skipped)
+  shard 703: already done (skipped)
+  shard 704: already done (skipped)
+  shard 705: already done (skipped)
+  shard 706: already done (skipped)
+  shard 707: already done (skipped)
+  shard 708: already done (skipped)
+  shard 709: already done (skipped)
+  shard 710: already done (skipped)
+  shard 711: already done (skipped)
+  shard 712: already done (skipped)
+  shard 713: already done (skipped)
+  shard 714: already done (skipped)
+  shard 715: already done (skipped)
+  shard 716: already done (skipped)
+  shard 717: already done (skipped)
+  shard 718: already done (skipped)
+  shard 719: already done (skipped)
+  shard 720: already done (skipped)
+  shard 721: already done (skipped)
+  shard 722: already done (skipped)
+  shard 723: already done (skipped)
+  shard 724: already done (skipped)
+  shard 725: already done (skipped)
+  shard 726: already done (skipped)
+  shard 727: already done (skipped)
+  shard 728: already done (skipped)
+  shard 729: already done (skipped)
+  shard 730: already done (skipped)
+  shard 731: already done (skipped)
+  shard 732: already done (skipped)
+  shard 733: already done (skipped)
+  shard 734: already done (skipped)
+  shard 735: already done (skipped)
+  shard 736: already done (skipped)
+  shard 737: already done (skipped)
+  shard 738: already done (skipped)
+  shard 739: already done (skipped)
+  shard 740: already done (skipped)
+  shard 741: already done (skipped)
+  shard 742: already done (skipped)
+  shard 743: already done (skipped)
+  shard 744: already done (skipped)
+  shard 745: already done (skipped)
+  shard 746: already done (skipped)
+  shard 747: already done (skipped)
+  shard 748: already done (skipped)
+  shard 749: already done (skipped)
+  shard 750: already done (skipped)
+  shard 751: already done (skipped)
+  shard 752: already done (skipped)
+  shard 753: already done (skipped)
+  shard 754: already done (skipped)
+  shard 755: already done (skipped)
+  shard 756: already done (skipped)
+  shard 757: already done (skipped)
+  shard 758: already done (skipped)
+  shard 759: already done (skipped)
+  shard 760: already done (skipped)
+  shard 761: already done (skipped)
+  shard 762: already done (skipped)
+  shard 763: already done (skipped)
+  shard 764: already done (skipped)
+  shard 765: already done (skipped)
+  shard 766: already done (skipped)
+  shard 767: already done (skipped)
+  shard 768: already done (skipped)
+  shard 769: already done (skipped)
+  shard 770: already done (skipped)
+  shard 771: already done (skipped)
+  shard 772: already done (skipped)
+  shard 773: already done (skipped)
+  shard 774: already done (skipped)
+  shard 775: already done (skipped)
+  shard 776: already done (skipped)
+  shard 777: already done (skipped)
+  shard 778: already done (skipped)
+  shard 779: already done (skipped)
+  shard 780: already done (skipped)
+  shard 781: already done (skipped)
+  shard 782: already done (skipped)
+  shard 783: already done (skipped)
+  shard 784: already done (skipped)
+  shard 785: already done (skipped)
+  shard 786: already done (skipped)
+  shard 787: already done (skipped)
+  shard 788: already done (skipped)
+  shard 789: 871051 decisions, 200000 hand-players
+  shard 790: 870587 decisions, 200000 hand-players
+  shard 791: 870622 decisions, 200000 hand-players
+  shard 792: 680883 decisions, 200000 hand-players
+  shard 793: 679695 decisions, 200000 hand-players
+  shard 794: 679570 decisions, 200000 hand-players
+  shard 795: 682092 decisions, 200000 hand-players
+  shard 796: 681413 decisions, 200000 hand-players
+  shard 797: 682060 decisions, 200000 hand-players
+  shard 798: 682104 decisions, 200000 hand-players
+  shard 799: 681170 decisions, 200000 hand-players
+  shard 800: 683870 decisions, 200000 hand-players
+  shard 801: 678913 decisions, 200000 hand-players
+  shard 802: 678550 decisions, 200000 hand-players
+  shard 803: 677913 decisions, 200000 hand-players
+  shard 804: 677939 decisions, 200000 hand-players
+  shard 805: 677173 decisions, 200000 hand-players
+  shard 806: 675882 decisions, 200000 hand-players
+  shard 807: 671881 decisions, 200000 hand-players
+  shard 808: 671011 decisions, 200000 hand-players
+  shard 809: 671808 decisions, 200000 hand-players
+  shard 810: 689376 decisions, 200000 hand-players
+  shard 811: 688580 decisions, 200000 hand-players
+  shard 812: 688738 decisions, 200000 hand-players
+  shard 813: 558110 decisions, 200000 hand-players
+  shard 814: 558839 decisions, 200000 hand-players
+  shard 815: 563850 decisions, 200000 hand-players
+  shard 816: 495354 decisions, 200000 hand-players
+  shard 817: 492266 decisions, 200000 hand-players
+  shard 818: 498995 decisions, 200000 hand-players
+  shard 819: 675692 decisions, 200000 hand-players
+  shard 820: 675479 decisions, 200000 hand-players
+  shard 821: 675108 decisions, 200000 hand-players
+  shard 822: 677463 decisions, 200000 hand-players
+  shard 823: 676861 decisions, 200000 hand-players
+  shard 824: 676804 decisions, 200000 hand-players
+  shard 825: 675439 decisions, 200000 hand-players
+  shard 826: 674923 decisions, 200000 hand-players
+  shard 827: 674065 decisions, 200000 hand-players
+  shard 828: 693781 decisions, 200000 hand-players
+  shard 829: 691692 decisions, 200000 hand-players
+  shard 830: 692116 decisions, 200000 hand-players
+  shard 831: 872527 decisions, 200000 hand-players
+  shard 832: 872652 decisions, 200000 hand-players
+  shard 833: 872729 decisions, 200000 hand-players
+  shard 834: 685453 decisions, 200000 hand-players
+  shard 835: 683253 decisions, 200000 hand-players
+  shard 836: 683796 decisions, 200000 hand-players
+  shard 837: 686144 decisions, 200000 hand-players
+  shard 838: 684924 decisions, 200000 hand-players
+  shard 839: 686165 decisions, 200000 hand-players
+  shard 840: 686591 decisions, 200000 hand-players
+  shard 841: 684941 decisions, 200000 hand-players
+  shard 842: 686471 decisions, 200000 hand-players
+  shard 843: 682940 decisions, 200000 hand-players
+  shard 844: 681486 decisions, 200000 hand-players
+  shard 845: 682583 decisions, 200000 hand-players
+  shard 846: 681701 decisions, 200000 hand-players
+  shard 847: 680294 decisions, 200000 hand-players
+  shard 848: 680827 decisions, 200000 hand-players
+  shard 849: 676782 decisions, 200000 hand-players
+  shard 850: 675141 decisions, 200000 hand-players
+  shard 851: 676900 decisions, 200000 hand-players
+  shard 852: 695835 decisions, 200000 hand-players
+  shard 853: 694119 decisions, 200000 hand-players
+  shard 854: 694866 decisions, 200000 hand-players
+  shard 855: 555135 decisions, 200000 hand-players
+  shard 856: 557246 decisions, 200000 hand-players
+  shard 857: 557323 decisions, 200000 hand-players
+  shard 858: 503166 decisions, 200000 hand-players
+  shard 859: 505509 decisions, 200000 hand-players
+  shard 860: 507381 decisions, 200000 hand-players
+  shard 861: 680805 decisions, 200000 hand-players
+  shard 862: 679815 decisions, 200000 hand-players
+  shard 863: 679293 decisions, 200000 hand-players
+  shard 864: 682169 decisions, 200000 hand-players
+  shard 865: 680642 decisions, 200000 hand-players
+  shard 866: 681045 decisions, 200000 hand-players
+  shard 867: 676223 decisions, 200000 hand-players
+  shard 868: 674599 decisions, 200000 hand-players
+  shard 869: 674840 decisions, 200000 hand-players
+NEW-this-run decisions=54504029  hand_players=16200000
+[BUILD_STATES] 2026-09-15T11:23:51-04:00
+building enriched table...
+rows: 586026414
+Traceback (most recent call last):
+  File "C:\Users\vince\programming\projects\poker-player-comparison\src\build_states.py", line 71, in <module>
+    con.execute("""
+_duckdb.OutOfMemoryException: Out of Memory Error: failed to allocate data of size 4.0 KiB (14.9 GiB/14.9 GiB used)
+
+Possible solutions:
+* Reducing the number of threads (SET threads=X)
+* Disabling insertion-order preservation (SET preserve_insertion_order=false)
+* Increasing the memory limit (SET memory_limit='...GB')
+
+See also https://duckdb.org/docs/stable/guides/performance/how_to_tune_workloads
+[POLICY_EVAL_EXPR_RESUME] 2026-09-16T13:20:52-04:00
